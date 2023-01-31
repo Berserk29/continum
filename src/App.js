@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Footer from "./routes/footer/footer.component";
+import HomePage from "./routes/home/home.component";
+import Navigation from "./routes/navigation/navigation.component";
 
+// TODO the nav and footer... etc component need to be insert
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigation/>}>
+      <Route path="/" element={<Footer/>}>
+          <Route index element={<HomePage/>} />
+          <Route path="categories" element={'Other Component Route'} />
+      </Route>
+      </Route>
+    </Routes>
   );
 }
 
