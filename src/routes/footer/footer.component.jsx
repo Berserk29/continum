@@ -21,7 +21,9 @@ const Footer = () => {
           <FooterCategory>
             <FooterContinumLogo src={logoContinumWhite} alt={'logo-continum'}/>
           </FooterCategory>
+          <FooterCategory>
 
+          </FooterCategory>
         </FooterLinksContainer>
       </FooterContainer>
     </Fragment>
