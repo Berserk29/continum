@@ -13,7 +13,7 @@ export const HeaderContainerOther = styled(HeaderContainerHome)`
     text-align: center;
 `
 
-export const TitleHeaderOther = styled.h1`
+export const TitleHeaderOther = styled.h2`
     color: var(--color-white);
     font-size: 4rem;
     font-weight: 500;

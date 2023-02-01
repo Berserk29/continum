@@ -26,6 +26,7 @@ const headerArray = [
     {
         url : AboutImage,
         main: 'About Us',
+        
     },
     {
         url: BusinessImage,
