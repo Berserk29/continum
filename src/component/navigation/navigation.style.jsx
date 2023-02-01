@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+export const NavLink = styled(Link)`
+    color: var(--color-white);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all .2s;
+    padding: 3rem 2rem;
+`
+
 export const NavigationContainer = styled.div`
     position: relative;
     display: flex;
@@ -10,6 +18,25 @@ export const NavigationContainer = styled.div`
     width: 100%;
     z-index: 100;
     transition: all .4s;
+    background-color: transparent;
+    &:hover{
+        background-color: var(--color-white);
+    }
+    &:hover ${NavLink}{
+        color: var(--color-black);
+    }
+    `
+
+export const NavLi = styled.li`
+    &:hover ${NavLink} {
+        color: var(--color-primary)
+    }
+`
+
+export const NavLinksContainer = styled.ul`
+    display: flex;
+    align-items: center;
+    list-style: none;
 `
 
 export const NavLogo = styled.img`
@@ -17,21 +44,7 @@ export const NavLogo = styled.img`
     cursor: pointer;
 `
 
-export const NavLinksContainer = styled.div`
-    display: flex;
-    align-items: center;
-    list-style: none;
-`
 
-export const NavLink = styled(Link)`
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: all .2s;
-    padding: 3rem 2rem;
-    &:hover{
-        color: var(--color-primary)
-    }
-`
 
 export const NavIconsContainer = styled.div`
     display: flex;

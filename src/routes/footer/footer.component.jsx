@@ -38,8 +38,8 @@ const categories = [
   },
   {
     id: 3,
-    title: 'Substainability',
-    path: 'substainability',
+    title: 'Sustainability',
+    path: 'sustainability',
     linkName: ['Ethical Management', 'Quality Management','Safety and Health Enviroment', 'Shared Growth']
   },
   {
@@ -50,8 +50,8 @@ const categories = [
   },
   {
     id: 5,
-    title: 'Recruitment',
-    path: 'recruitment',
+    title: 'Contact Us',
+    path: 'contact',
     linkName: ['Talent', 'HR System', 'Jobs']
   },
 ]
