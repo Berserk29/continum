@@ -6,7 +6,6 @@ import {
     TextContainer,
 } from "./card.style";
 
-// TODO CSS STYLED ...ECT 
 const Card = ({card})=> {
 const {imageFirst, imageUrl, heading, text} = card;
 

@@ -19,35 +19,33 @@ import ContactImage from '../src/assets/contact/contactus_bg_01.png'
 
 const headerArray = [
     {
-        url: HomeImage,
+        imageUrl: HomeImage,
         main: 'Envisioning Tomorrow',
         sub: 'with smart technologies'
     },
     {
-        url : AboutImage,
+        imageUrl: AboutImage,
         main: 'About Us',
         
     },
     {
-        url: BusinessImage,
+        imageUrl: BusinessImage,
         main: 'Business & Solutions',
     },
     {
-        url: SubtainabilityImage,
+        imageUrl: SubtainabilityImage,
         main: 'Sustainability'
     },
     {
-        url: PrImage,
+        imageUrl: PrImage,
         main: 'PR'
     },
     {
-        url: ContactImage,
+        imageUrl: ContactImage,
         main: 'Contact Us'
     },
 ]
 
-
-// TODO the nav and footer... etc component need to be insert
 function App() {
   return (
     <Routes>
