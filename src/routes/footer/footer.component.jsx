@@ -3,11 +3,11 @@ import { Outlet } from "react-router-dom";
 
 import FooterLinkContainer from "../../component/footerLinkContainer/footerLinkContainer.component";
 
-import logoContinumWhite from '../../assets/logo_vertical_w.png'
-import logoYoutube from '../../assets/logo_youtube.png'
-import logoFacebook from '../../assets/logo_facebook.png'
-import logoTwitter from '../../assets/logo_twitter.png'
-import logoInsta from '../../assets/logo_insta.png'
+import logoContinumWhite from '../../assets/icon/logo_vertical_w.png'
+import logoYoutube from '../../assets/icon/logo_youtube.png'
+import logoFacebook from '../../assets/icon/logo_facebook.png'
+import logoTwitter from '../../assets/icon/logo_twitter.png'
+import logoInsta from '../../assets/icon/logo_insta.png'
 
 import {
     FooterContainer,

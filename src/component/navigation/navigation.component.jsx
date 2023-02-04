@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import continumBlack from '../../assets/logo_horizontal_b.png'
-import continumWhite from '../../assets/logo_horizontal_w.png' 
-import globeBlack from '../../assets/icon_globe_b.png'
-import globeWhite from '../../assets/icon_globe_w.png'  
-import hamBlack from '../../assets/icon_hamburger_b.png'
-import hamWhite from '../../assets/icon_hamburger_w.png'
+import continumBlack from '../../assets/icon/logo_horizontal_b.png'
+import continumWhite from '../../assets/icon/logo_horizontal_w.png' 
+import globeBlack from '../../assets/icon/icon_globe_b.png'
+import globeWhite from '../../assets/icon/icon_globe_w.png'  
+import hamBlack from '../../assets/icon/icon_hamburger_b.png'
+import hamWhite from '../../assets/icon/icon_hamburger_w.png'
 
 import { 
   NavGlobe,

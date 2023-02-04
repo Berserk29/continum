@@ -1,6 +1,5 @@
 import { HeadingSection } from "./sectionHeading.style";
 
-
 const SectionHeading = ({title}) => {
     
     return(

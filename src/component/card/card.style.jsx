@@ -16,7 +16,8 @@ export const AboutImage = styled.img`
 export const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 45%;
+    gap: 2rem;
 `
 
 export const CardHeading = styled.h4`
