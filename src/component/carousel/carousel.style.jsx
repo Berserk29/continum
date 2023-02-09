@@ -10,6 +10,7 @@ export const CarouselContainer = styled.div`
     padding-left: 12.5rem;
     background-size: cover;
     background-position: center;
+    
 `
 
 export const ItemContainer = styled.ul`

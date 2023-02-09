@@ -1,16 +1,28 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { ArrowView, BtnView, ViewContainer, MovingArrowView } from "./viewBtn.style"
+import { ArrowView, BtnView, ViewContainer, MovingArrowView, ArrowViewVisible, VisibleArrowView } from "./viewBtn.style"
 
 import arrowBtnImg from '../../assets/icon/button_arrow.png'
 
-const ViewBtn = ({link}) => {
+const ViewBtn = ({link, displayOff = false}) => {
     const navigate = useNavigate()
     const [hoverState, setHoverState] = useState(false)
     const hoverHandlerOn = () => setHoverState(true);
     const hoverHandlerOff = () => setHoverState(false);
 
     const viewHandler = () => navigate(link)
+
+    const arrowLogic = () => {
+      if(!displayOff){
+        if(hoverState) return <MovingArrowView src={arrowBtnImg}/>
+        return <ArrowView src={arrowBtnImg}/>
+      };
+      
+      if(displayOff){
+        if(hoverState) return <VisibleArrowView src={arrowBtnImg}/>
+        return <ArrowViewVisible src={arrowBtnImg}/>
+      };
+    }
 
     return (
         <ViewContainer>
@@ -20,14 +32,10 @@ const ViewBtn = ({link}) => {
               onMouseLeave={hoverHandlerOff}
               >View More
             </BtnView>
-            {
-              hoverState ? 
-              <MovingArrowView src={arrowBtnImg}/>
-              :
-              <ArrowView src={arrowBtnImg}/>
-            }
+            {arrowLogic()}
         </ViewContainer>
     )
 }
 
 export default ViewBtn;
+

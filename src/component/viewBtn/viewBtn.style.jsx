@@ -19,10 +19,22 @@ export const BtnView = styled.a`
     }
 `
 const MovingRight = keyframes`
-    0% { opacity: 0;}
+    0% { 
+        opacity: 0;
+    }
     100% {
         opacity: 1;
         transform: translateX(1.5rem);
+    }
+`
+
+const BringColor = keyframes`
+    0% { 
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+        filter: invert(47%) sepia(99%) saturate(1132%) hue-rotate(346deg) brightness(100%) contrast(104%);
     }
 `
 
@@ -33,6 +45,16 @@ export const ArrowView = styled.img`
     opacity: 0;
 `
 
+export const ArrowViewVisible = styled(ArrowView)`
+    margin-left: .3rem;
+    opacity: .7;
+    filter: invert(83%) sepia(2%) saturate(4%) hue-rotate(334deg) brightness(83%) contrast(89%);
+`
+
 export const MovingArrowView = styled(ArrowView)`
     animation: ${MovingRight} 0.8s forwards;
+`
+
+export const VisibleArrowView = styled(ArrowViewVisible)`
+    animation: ${BringColor} 0.8s forwards;
 `

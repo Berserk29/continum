@@ -44,8 +44,6 @@ export const NavLogo = styled.img`
     cursor: pointer;
 `
 
-
-
 export const NavIconsContainer = styled.div`
     display: flex;
     align-items: center;
