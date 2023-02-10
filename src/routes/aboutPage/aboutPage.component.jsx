@@ -1,5 +1,7 @@
 import Header from "../../component/header/header.component"
-import { AboutContainer, TextHeading } from "./aboutPage.style";
+import TextHeading from "../../component/textHeading/textHeading.component";
+import { AboutContainer} from "./aboutPage.style";
+
 
 import Card from "../../component/card/card.component";
 
@@ -38,7 +40,7 @@ const AboutPage = ({header}) => {
         <div>
             <Header header={header}/>
             <AboutContainer>
-                <TextHeading>We bring tomorrow's dreams to life and create a smarter world with our customers by adding value to technology.</TextHeading>
+                <TextHeading title={"We bring tomorrow's dreams to life and create a smarter world with our customers by adding value to technology."}/>
                 {
                     cardArray.map(el => <Card card={el} key={el.id}/>)
                 }
