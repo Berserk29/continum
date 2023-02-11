@@ -2,7 +2,7 @@ import Header from "../../component/header/header.component";
 import TextHeading from "../../component/textHeading/textHeading.component";
 import StoryNews from "../../component/storyNews/storyNews.component";
 import BessCard from "../../component/BessCard/BessCard.component";
-import RelatedCard from "../../component/relatedCard/relatedCard.component";
+import InfoCard from "../../component/infoCard/infoCard.component";
 
 import {
     TextCss,
@@ -72,7 +72,6 @@ const bessArray = [
         heading: 'Rapid incident response and handling',
         bulletPoint: ['Leverage Continum solar network', 'Emergency dispatch and immediate recovery',],
     },
-
 ]
 
 const relatedArray = [
@@ -112,7 +111,7 @@ const BusinessPage = ({header}) => {
                 <TextHeading title={'Related business'}/>
                 <TextCss>The integrated control center of Hanwha Convergence remotely monitors the power plant 24 hours a day and diagnose its operating status and performance. Through this, we organically collaborate with the field to optimize power generation performance and maximize asset value.</TextCss>
                 <RelatedCardContainer>
-                    {relatedArray.map(el => <RelatedCard key={el.id} props={el}/>)}
+                    {relatedArray.map(el => <InfoCard key={el.id} props={el}/>)}
                 </RelatedCardContainer>
             </RelatedContainer>
         </BuisinessContainer>
