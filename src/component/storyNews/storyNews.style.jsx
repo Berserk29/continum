@@ -23,6 +23,11 @@ export const StoryText = styled.p`
     color: var(--color-grey);
 `
 
+export const ClockIcon = styled.img`
+    width: .7rem;
+    height: .7rem;
+`
+
 export const StoryTime = styled.p`
     margin-top: 1rem;
     font-size: .9rem;

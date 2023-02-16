@@ -46,9 +46,17 @@ export const RelatedContainer = styled.div`
     padding: 5rem 2rem;
 `
 
-export const RelatedCardContainer = styled.div`
+export const FlexCenter = styled.div`
     display: flex;
-    gap: 10px;
     justify-content: center;
 `
+
+export const RelatedCardContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    flex: 1400px 0 1;
+    gap: 20px;
+`
+
+
 

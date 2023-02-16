@@ -1,9 +1,13 @@
+import { Fragment } from "react";
 import { 
     CardContainer,
     HeadingCard,
     ImageCard,
     TextCard,
-    TextContainer
+    TextContainer,
+    WhiteCardContainer,
+    HeadingWhiteCard,
+    TextWhiteCard,
 } from "./infoCard.style";
 
 
@@ -17,13 +21,26 @@ const InfoCard = ({props, border = false, colorWhite = false}) => {
     }
 
     return (
-        <CardContainer style={borderOn()}>
-            <ImageCard src={imageUrl}/>
-            <TextContainer>
-                <HeadingCard>{heading}</HeadingCard>
-                <TextCard>{text}</TextCard>
-            </TextContainer>
-        </CardContainer>
+        <Fragment>
+            {
+                !colorWhite ?
+            <CardContainer style={borderOn()}>
+                <ImageCard src={imageUrl}/>
+                <TextContainer>
+                    <HeadingCard>{heading}</HeadingCard>
+                    <TextCard>{text}</TextCard>
+                </TextContainer>
+            </CardContainer>
+            :
+            <WhiteCardContainer style={borderOn()}>
+                <ImageCard src={imageUrl}/>
+                <TextContainer>
+                    <HeadingWhiteCard>{heading}</HeadingWhiteCard>
+                    <TextWhiteCard>{text}</TextWhiteCard>
+                </TextContainer>
+            </WhiteCardContainer>
+            }
+        </Fragment>
     )
 }
 

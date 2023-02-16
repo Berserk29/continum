@@ -12,7 +12,8 @@ import {
     CardContainer,
     RelatedContainer,
     RelatedCardContainer,
-    BuisinessContainer
+    BuisinessContainer,
+    FlexCenter,
 } from "./businessPage.style";
 
 import iconBusiness1 from '../../assets/business/business_icon_01.png';
@@ -110,9 +111,11 @@ const BusinessPage = ({header}) => {
             <RelatedContainer>
                 <TextHeading title={'Related business'}/>
                 <TextCss>The integrated control center of Hanwha Convergence remotely monitors the power plant 24 hours a day and diagnose its operating status and performance. Through this, we organically collaborate with the field to optimize power generation performance and maximize asset value.</TextCss>
-                <RelatedCardContainer>
-                    {relatedArray.map(el => <InfoCard key={el.id} props={el}/>)}
-                </RelatedCardContainer>
+                <FlexCenter>
+                    <RelatedCardContainer>
+                        {relatedArray.map(el => <InfoCard key={el.id} props={el}/>)}
+                    </RelatedCardContainer>
+                </FlexCenter>
             </RelatedContainer>
         </BuisinessContainer>
     )

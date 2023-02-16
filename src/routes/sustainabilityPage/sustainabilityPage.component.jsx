@@ -1,7 +1,17 @@
 import Header from "../../component/header/header.component";
 import TextHeading from "../../component/textHeading/textHeading.component";
 import InfoCard from "../../component/infoCard/infoCard.component";
-import { EthicalContainer, SubstainContainer, TextCss } from "./sustainabilityPage.style";
+
+import useMediaQuery from "../../helper/useMediaQuery";
+
+import { 
+    EthicalContainer,
+    Container,
+    HowToReportContainer,
+    SubstainContainer,
+    TextCss,
+    FlexCenter,
+} from "./sustainabilityPage.style";
 
 import substainImg1 from '../../assets/sustainability/sustainability_icon_01.png'
 import substainImg2 from '../../assets/sustainability/sustainability_icon_02.png'
@@ -37,7 +47,40 @@ const EthicalArray = [
     },
 ]
 
-const SustainabilityPage = ({header}) => {    
+const reportArray = [
+    {
+        id: 1,
+        imageUrl: substainImg5,
+        heading: 'Post',
+        text: '100 Overlook Center, Princeton, NJ 08540 United States',
+    },
+    {
+        id: 2,
+        imageUrl: substainImg6,
+        heading: 'E-mail',
+        text: 'ethics.cvg@continum.com',
+    },
+
+]
+
+const reportTypeArray = [
+    {
+        id: 1,
+        heading: 'Receiving rewards from stakeholders',
+        text: 'Money, recreation and entertainment, porvision of convenience, borrowing, debt repayment, guarantee, money loan, guarantee for the future'
+    },
+    {
+        id: 2,
+        heading: 'Receiving rewards from stakeholders',
+        text: 'Money, recreation and entertainment, porvision of convenience, borrowing, debt repayment, guarantee, money loan, guarantee for the future'
+    },
+]
+
+
+
+const SustainabilityPage = ({header}) => {
+    const isBigScreen = useMediaQuery('(min-width: 2000px)')
+    
     return (
         <div>
             <Header header={header}/>
@@ -50,6 +93,20 @@ const SustainabilityPage = ({header}) => {
                     {EthicalArray.map(el => <InfoCard key={el.id} props={el} border={true}/>)}
                 </EthicalContainer>
             </SubstainContainer>
+            <Container>
+                <TextHeading title={'Report type'} textCenter={false}/>
+
+
+            </Container>
+            <Container>
+                <TextHeading title={'How to report'} textCenter={ isBigScreen ? true : false}/>
+                <FlexCenter>
+                <HowToReportContainer>
+                    {reportArray.map(el => <InfoCard key={el.id} props={el} border={true} colorWhite={true}/>)}
+                </HowToReportContainer>
+                </FlexCenter>
+            </Container>
+
         </div>
     )
 }

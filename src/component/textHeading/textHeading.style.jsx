@@ -5,3 +5,7 @@ export const TextHeadingCss = styled.h3`
     font-weight: 700;
     text-align: center;
 `
+
+export const TextHeadingStart = styled(TextHeadingCss)`
+    text-align: start;
+`

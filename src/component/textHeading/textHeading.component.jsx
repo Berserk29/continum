@@ -1,9 +1,17 @@
-import { TextHeadingCss } from "./textHeading.style";
+import { Fragment } from "react";
+import { TextHeadingCss, TextHeadingStart } from "./textHeading.style";
 
-const TextHeading = ({title}) => {
+const TextHeading = ({title , textCenter = true}) => {
 
-    return( 
-        <TextHeadingCss>{title}</TextHeadingCss>
+    return(
+        <Fragment>
+            {
+                textCenter ?
+                <TextHeadingCss>{title}</TextHeadingCss>
+                :
+                <TextHeadingStart>{title}</TextHeadingStart>
+            } 
+        </Fragment>
     )
 }
 
