@@ -34,7 +34,7 @@ const BringColor = keyframes`
     }
     100% {
         opacity: 1;
-        filter: invert(47%) sepia(99%) saturate(1132%) hue-rotate(346deg) brightness(100%) contrast(104%);
+        filter: var(--filter-primary);
     }
 `
 
@@ -48,7 +48,7 @@ export const ArrowView = styled.img`
 export const ArrowViewVisible = styled(ArrowView)`
     margin-left: .3rem;
     opacity: .7;
-    filter: invert(83%) sepia(2%) saturate(4%) hue-rotate(334deg) brightness(83%) contrast(89%);
+    filter: var(--filter-grey);
 `
 
 export const MovingArrowView = styled(ArrowView)`

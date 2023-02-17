@@ -5,6 +5,7 @@ import {
     WhiteContainer,
     WhiteHeadingContainer,
     ListContainer,
+    SubjectContainer,
     IconImg,
     WithDot,
     WithoutDot,
@@ -15,7 +16,8 @@ export const TableType = {
     whiteCenter: 'whiteCenter',
     white: 'white',
     whiteHeading: 'whiteHeading',
-    listContainer: 'listContainer'
+    listContainer: 'listContainer',
+    subject: 'subject'
 }
 
 const Table = ({content, type = TableType.white, fullBorder = false, icon = false}) => {
@@ -40,6 +42,7 @@ const Table = ({content, type = TableType.white, fullBorder = false, icon = fals
         if(type === 'whiteCenter') return <WhiteCenterContainer style={border()}>{content}</WhiteCenterContainer>
         if(type === 'white') return <WhiteContainer style={border()}>{content}</WhiteContainer>
         if(type === 'listContainer') return <ListContainer style={border()}>{listContent()}</ListContainer>
+        if(type === 'subject') return <SubjectContainer style={border()}>{content}</SubjectContainer>
     }
 
     return (

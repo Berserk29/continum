@@ -7,6 +7,9 @@
   --color-grey-light-2: rgb(221, 221, 221);
   --color-grey-light-3: rgb(246, 246, 246);
   --color-drop-menu: rgb(62, 56, 77);
+
+  --filter-primary: invert(47%) sepia(99%) saturate(1132%) hue-rotate(346deg) brightness(100%) contrast(104%);
+  --filter-grey: invert(83%) sepia(2%) saturate(4%) hue-rotate(334deg) brightness(83%) contrast(89%);
 }
 
 *,

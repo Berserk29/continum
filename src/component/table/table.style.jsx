@@ -10,6 +10,10 @@ export const WhiteContainer = styled.div`
     border-bottom: 1px solid var(--color-grey-light-2);
 `
 
+export const SubjectContainer = styled(WhiteContainer)`
+    overflow: hidden;
+`
+
 export const ListContainer = styled(WhiteContainer)`
     align-items: flex-start;
     justify-content: center;
