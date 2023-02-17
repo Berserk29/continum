@@ -1,8 +1,10 @@
+import useMediaQuery from "../../helper/useMediaQuery";
+import { Fragment } from "react";
+
 import Header from "../../component/header/header.component";
 import TextHeading from "../../component/textHeading/textHeading.component";
 import InfoCard from "../../component/infoCard/infoCard.component";
-
-import useMediaQuery from "../../helper/useMediaQuery";
+import Table, { TableType } from "../../component/table/table.component";
 
 import { 
     EthicalContainer,
@@ -10,7 +12,10 @@ import {
     HowToReportContainer,
     SubstainContainer,
     TextCss,
+    BulletLi,
     FlexCenter,
+    BulletContainer,
+    TableContainer,
 } from "./sustainabilityPage.style";
 
 import substainImg1 from '../../assets/sustainability/sustainability_icon_01.png'
@@ -67,16 +72,29 @@ const reportTypeArray = [
     {
         id: 1,
         heading: 'Receiving rewards from stakeholders',
-        text: 'Money, recreation and entertainment, porvision of convenience, borrowing, debt repayment, guarantee, money loan, guarantee for the future'
+        text: 'Money, recreation and entertainment, porvision of convenience, borrowing, debt repayment, guarantee, money loan, guarantee for the future',
     },
     {
         id: 2,
-        heading: 'Receiving rewards from stakeholders',
-        text: 'Money, recreation and entertainment, porvision of convenience, borrowing, debt repayment, guarantee, money loan, guarantee for the future'
+        heading: 'Unfair equity participation in business partners',
+        text: 'Stock exchange and investment, public investment, and acquisition of common property',
+    },
+    {
+        id: 3,
+        heading: 'Lack of transparency in supplier selection',
+        text: 'Unfair opportunity, unfair trade practices, supplier information leakage',
+    },
+    {
+        id: 4,
+        heading: 'Illegal/unjust use of company assets',
+        text: 'Use of tangible/intangible assets for other purposes, embezzlement, and misappropriation of public money',
+    },
+    {
+        id: 5,
+        heading: 'Manipulation and falsification of documents and calculations',
+        text: 'Accounting fraud, information manipulation',
     },
 ]
-
-
 
 const SustainabilityPage = ({header}) => {
     const isBigScreen = useMediaQuery('(min-width: 2000px)')
@@ -95,8 +113,25 @@ const SustainabilityPage = ({header}) => {
             </SubstainContainer>
             <Container>
                 <TextHeading title={'Report type'} textCenter={false}/>
-
-
+                <TableContainer>
+                    {
+                        reportTypeArray.map(el => {
+                            return (
+                                <Fragment key={el.id}>
+                                    <Table content={el.heading} type={TableType.greyHeading}/>
+                                    <Table content={el.text}/>
+                                </Fragment>
+                            )
+                        })
+                    }
+                </TableContainer>
+            </Container>
+            <Container>
+                <TextHeading title={'Operation of reporting'} textCenter={false}/>
+                <BulletContainer>
+                    <BulletLi>Priority is given to prompt and accurate handling of reports in violation of compliance management. The processing result will be notified by phone or e-mail as soon as possible.</BulletLi>
+                    <BulletLi>The informant's identity, reported matters, and confidentiality of the informant are thoroughly protected, and reporting is made in principle by real name.</BulletLi>
+                </BulletContainer>
             </Container>
             <Container>
                 <TextHeading title={'How to report'} textCenter={ isBigScreen ? true : false}/>
@@ -106,7 +141,6 @@ const SustainabilityPage = ({header}) => {
                 </HowToReportContainer>
                 </FlexCenter>
             </Container>
-
         </div>
     )
 }

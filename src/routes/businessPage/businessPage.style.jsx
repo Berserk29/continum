@@ -16,7 +16,7 @@ export const UpperText = styled.h4`
 export const TextCss = styled.div`
     font-weight: 500;
     text-align: center;
-    margin: 1rem 2rem 4rem 2rem;
+    margin: 1rem 5rem 4rem 5rem;
     line-height: 1.5rem;
 `
 
@@ -44,6 +44,7 @@ export const CardContainer = styled.div`
 
 export const RelatedContainer = styled.div`
     padding: 5rem 2rem;
+    width: 100%;
 `
 
 export const FlexCenter = styled.div`

@@ -4,7 +4,7 @@ export const SubstainContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 2rem 5rem 2rem;
+    padding: 5rem 2rem 3rem 2rem;
     gap: 2rem
 `
 
@@ -23,19 +23,31 @@ export const EthicalContainer = styled.div`
 `
 
 export const Container = styled.div`
-    padding: 0 4rem 5rem 4rem;
+    padding: 3rem 4rem 3rem 4rem;
 `
 
-/* export const GridContainer = styled.div`
+export const TableContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(autofit, );
-` */
+    padding-top: 2rem;
+    grid-template-columns: 400px 1fr;
+`
+
+export const BulletContainer = styled.ul`
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem 0 0 1rem;
+`
+
+export const BulletLi = styled.li`
+    margin-left: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+`
 
 export const FlexCenter = styled.div`
     display: flex;
     justify-content: center;
 `
-
 
 export const HowToReportContainer = styled.div`
     display: grid;

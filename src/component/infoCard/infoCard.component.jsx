@@ -10,8 +10,6 @@ import {
     TextWhiteCard,
 } from "./infoCard.style";
 
-
-
 const InfoCard = ({props, border = false, colorWhite = false}) => {
     const {imageUrl, heading, text} = props;
 
