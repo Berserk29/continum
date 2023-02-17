@@ -4,6 +4,9 @@ import Table, { TableType } from "../../component/table/table.component";
 import TextHeading from "../../component/textHeading/textHeading.component";
 import { ContactContainer, TableContainer } from "./contactPage.style";
 
+import phoneIcon from '../../assets/icon/icon_phone.png';
+import mailIcon from '../../assets/icon/icon_mail.png';
+
 const headingArray = ['Areas', 'Detailed Businesses', 'Manager', 'Contact'];
 
 const contactArray = [
@@ -13,6 +16,7 @@ const contactArray = [
         details: ['Smart factory', 'Utility integrated control', '3D production / facility integrated control', 'Data platform'],
         manager: 'Olivier Trudeau',
         contact: ['438-5080-8477', 'oliviertrudeau@continum.com'],
+        imageUrl: [phoneIcon, mailIcon],
     },
     {
         id: 2,
@@ -20,6 +24,7 @@ const contactArray = [
         details: ['Process control'],
         manager: 'Healim Cho',
         contact: ['438-5080-8467', 'healimcho@continum.com'],
+        imageUrl: [phoneIcon, mailIcon],
     },
     {
         id: 3,
@@ -27,6 +32,7 @@ const contactArray = [
         details: ['VPP-based power trading'],
         manager: 'Sonia Fortin',
         contact: ['438-5080-8480', 'soniafortin@continum.com'],
+        imageUrl: [phoneIcon, mailIcon],
     },
     {
         id: 4,
@@ -34,11 +40,10 @@ const contactArray = [
         details: ['Overseas'],
         manager: 'Stephane Trudeau',
         contact: ['438-5080-8482', 'stephanetrudeau@continum.com'],
+        imageUrl: [phoneIcon, mailIcon],
     },
 ]
 
-
-// TODO  Make it work with li on Table!!
 
 const ContactPage = ({header}) => {
 
@@ -53,9 +58,9 @@ const ContactPage = ({header}) => {
                         return (
                             <Fragment key={el.id}>
                                 <Table content={el.areas} fullBorder={true} type={TableType.whiteHeading}/>
-                                <Table content={el.details} fullBorder={true}/>
+                                <Table content={el.details} fullBorder={true} type={TableType.listContainer}/>
                                 <Table content={el.manager} fullBorder={true} type={TableType.whiteCenter}/>
-                                <Table content={el.contact} fullBorder={true}/>
+                                <Table content={el.contact} fullBorder={true} type={TableType.listContainer} icon={el.imageUrl}/>
                             </Fragment>
                         )
                     })}

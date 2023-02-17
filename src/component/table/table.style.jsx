@@ -10,6 +10,12 @@ export const WhiteContainer = styled.div`
     border-bottom: 1px solid var(--color-grey-light-2);
 `
 
+export const ListContainer = styled(WhiteContainer)`
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+`
+
 export const WhiteCenterContainer = styled(WhiteContainer)`
     justify-content: center;
 `
@@ -23,5 +29,21 @@ export const GreyHeadingContainer = styled(WhiteContainer)`
 
 export const WhiteHeadingContainer = styled(GreyHeadingContainer)`
     background-color: var(--color-white);
+`
+
+export const IconImg = styled.img`
+    width: .8rem;
+    height: .8rem;
+    margin: 0 .6rem;
+`
+
+export const WithDot = styled.li`
+    line-height: 1.6rem;
+    list-style: inside;
+`
+
+export const WithoutDot = styled.li`
+    line-height: 1.8rem;
+    list-style: none;
 `
 
