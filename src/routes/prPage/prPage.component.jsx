@@ -4,7 +4,15 @@ import Header from "../../component/header/header.component";
 import Table , {TableType} from "../../component/table/table.component";
 import TextHeading from "../../component/textHeading/textHeading.component";
 
-import { ButtonContainer, GridContainer, PrContainer, CirclePage, MaxHeight, ArrowIcon, ArrowHiddenIcon } from "./prPage.style";
+import {
+    ButtonContainer,
+    GridContainer,
+    PrContainer,
+    CirclePage,
+    MaxHeight,
+    ArrowIcon,
+    ArrowHiddenIcon
+} from "./prPage.style";
 
 import arrowLeft from '../../assets/icon/arrow_left.png'
 import arrowRight from '../../assets/icon/arrow_right.png'

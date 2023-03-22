@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { backToLife } from "../../animation/animation.style";
 
 // Home for homepage and Other for other page
+
 export const HeaderContainerHome = styled.div`
     height: 90vh;
     width: 100%;
@@ -29,7 +31,7 @@ export const TitleHeaderHome = styled.h1`
     gap: 1rem;
     top: 30%;
     margin-left: 12.5rem;
-    /* animation-name: backToLife;  */
+    animation-name: ${backToLife}; 
     animation-duration: 3s;
 `
 

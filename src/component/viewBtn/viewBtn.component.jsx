@@ -4,7 +4,7 @@ import { ArrowView, BtnView, ViewContainer, MovingArrowView, ArrowViewVisible, V
 
 import arrowBtnImg from '../../assets/icon/button_arrow.png'
 
-const ViewBtn = ({link, displayOff = false}) => {
+const ViewBtn = ({link, displayOff = false, animation = false, time = false, color = 'var(--color-grey-light)'}) => {
     const navigate = useNavigate()
     const [hoverState, setHoverState] = useState(false)
     const hoverHandlerOn = () => setHoverState(true);
@@ -26,10 +26,13 @@ const ViewBtn = ({link, displayOff = false}) => {
 
     return (
         <ViewContainer>
-            <BtnView 
+            <BtnView
+              color={color} 
               onClick={viewHandler}
               onMouseEnter={hoverHandlerOn}
               onMouseLeave={hoverHandlerOff}
+              animation={animation ? animation : ''}
+              time={time ? time : ''}
               >View More
             </BtnView>
             {arrowLogic()}

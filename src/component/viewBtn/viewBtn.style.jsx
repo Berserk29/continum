@@ -1,4 +1,6 @@
 import styled, { keyframes } from "styled-components";
+import { AnimationChoice } from "../../animation/animation.style";
+
 
 export const ViewContainer = styled.div`
     display: flex;
@@ -10,9 +12,11 @@ export const BtnView = styled.a`
     font-weight: 500;
     font-size: 1rem;
     text-decoration: none;
-    color: var(--color-grey-light);
+    color: ${props => props.color};
     transition: all .2s;
     cursor: pointer;
+
+    ${AnimationChoice}
 
     &:hover {
         color: var(--color-primary)

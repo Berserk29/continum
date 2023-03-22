@@ -1,16 +1,22 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
+import { comingRight, comingUp, comingBack, AnimationChoice } from "../../animation/animation.style";
 
-export const CarouselContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2.5rem;
-    height: 60rem;
-    padding-left: 12.5rem;
+export const Section = styled.div`
     background-size: cover;
     background-position: center;
-    
+    transition: all .8s;
+    position: relative;
+    height: 60rem;
+`
+
+export const CarouselContainer = styled.div`
+    position: absolute;
+    top: 26%;
+    margin-left: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
 `
 
 export const ItemContainer = styled.ul`
@@ -26,6 +32,44 @@ export const CarouselItem = styled.li`
     &:first-child{
         list-style: none;
     }
+`
+
+export const HeadingCarousel = styled.h2`
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+`
+
+export const UpperHeading = styled.span`
+    font-weight: 400;
+    font-size: 3rem;
+
+    ${AnimationChoice}
+
+    /* animation: ${comingRight} 1s; */
+`
+
+export const LowerHeading = styled.span`
+    font-weight: 700;
+    font-size: 3.2rem;
+
+    ${AnimationChoice}
+
+    /* animation: ${comingUp} 1.5s; */
+`
+
+export const CarouselText = styled.p`
+    color: var(--color-grey-light);
+    font-weight: 500;
+    line-height: 1.6rem;
+    max-width: 500px;
+    
+    ${AnimationChoice}
+`
+
+export const animationComing = css`
+    animation: ${comingBack} 1.7s;
 `
 
 export const CarouselBtn = styled.a`
