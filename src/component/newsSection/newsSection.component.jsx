@@ -4,7 +4,7 @@ import {
     ImgContainer,
     ImgContainerItems,
     NewsContainer,
-    StoryContainer,
+    StoryContainer, 
     } from "./newsSection.style";
 
 import NewsImg from '../../assets/home/main_bg_02.png'
@@ -40,8 +40,6 @@ const NewsSection = () => {
         threshold: 0.5,
     });
 
-    console.log(boxInView, 'NewSection')
-
     return (
        <NewsContainer ref={boxRef}>
             <ImgContainer style={{backgroundImage: `url(${NewsImg})`}}>
@@ -59,7 +57,7 @@ const NewsSection = () => {
             </ImgContainer>
             <StoryContainer>
                 { 
-                    storyArray.map(el => <StoryNews story={el} key={el.id} className={boxInView ? 'arriveUp': 'hidden'}/> )
+                    storyArray.map(el => <StoryNews link='/pr' story={el} key={el.id} className={boxInView ? 'arriveUp': 'hidden'}/> )
                 }
             </StoryContainer>
        </NewsContainer>

@@ -1,17 +1,21 @@
 import { ArrowBtn, StoryContainerItems, StoryHeading, StoryText, ClockIcon, StoryTime, TextContainer } from "./storyNews.style";
+import { useNavigate } from "react-router-dom";
 
 import iconClock from '../../assets/icon/icon_clock.png'
 import arrowBtn from '../../assets/icon/button_arrow.png'
 
-const StoryNews = ({story, className = ''}) => {
+const StoryNews = ({link, story, className = ''}) => {
+    const navigate = useNavigate()
     const {heading, text, time} = story;
 
+    const viewHandler = () => navigate(link)
+
     return (
-        <StoryContainerItems className={className}>
+        <StoryContainerItems className={className} onClick={viewHandler}>
             <TextContainer>
                 <StoryHeading>{heading}</StoryHeading>
                 <StoryText>{text}</StoryText>
-                <StoryTime><ClockIcon src={iconClock}/> {time}</StoryTime>
+                <StoryTime><ClockIcon src={iconClock}/>{time}</StoryTime>
             </TextContainer>
             <ArrowBtn src={arrowBtn}/>
         </StoryContainerItems>

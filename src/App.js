@@ -49,14 +49,14 @@ const headerArray = [
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Footer/>}>
-          <Route index element={<HomePage header={headerArray[0]}/>} />
-          <Route path="about" element={<AboutPage header={headerArray[1]}/>} />
-          <Route path="business" element={<BusinessPage header={headerArray[2]}/>} />
-          <Route path="sustainability" element={<SustainabilityPage header={headerArray[3]}/>} />
-          <Route path="pr" element={<PrPage header={headerArray[4]}/>} />
-          <Route path="contact" element={<ContactPage header={headerArray[5]}/>} />
-      </Route>
+            <Route path="/" element={<Footer/>}>
+                <Route index element={<HomePage header={headerArray[0]}/>} />
+                <Route path="about" element={<AboutPage header={headerArray[1]}/>} />
+                <Route path="business" element={<BusinessPage header={headerArray[2]}/>} />
+                <Route path="sustainability" element={<SustainabilityPage header={headerArray[3]}/>} />
+                <Route path="pr" element={<PrPage header={headerArray[4]}/>} />
+                <Route path="contact" element={<ContactPage header={headerArray[5]}/>} />
+            </Route>
     </Routes>
   );
 }

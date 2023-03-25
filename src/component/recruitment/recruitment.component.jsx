@@ -13,8 +13,6 @@ const Recruitment = () => {
         threshold: 0.6,
     })
 
-    console.log(inView, 'inView')
-
     return (
         <RecruitmentContainer ref={ref} style={{backgroundImage: `url(${recruitImg})`}}>
             <InfoHeading title={'Recruitment'} className={inView ? 'arriveUp': 'hidden'}/>

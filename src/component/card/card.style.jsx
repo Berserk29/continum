@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-// To Put motion into styled component!!! styled(motion.div)
+// To Put motion into styled component !!! styled(motion.div) or styled(motion.h4) ... etc
 
 export const CardContainer = styled.div`
     display: flex;

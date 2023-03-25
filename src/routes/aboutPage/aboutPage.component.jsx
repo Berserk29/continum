@@ -8,7 +8,6 @@ import AboutImage1 from '../../assets/about/aboutus_img_01.png'
 import AboutImage2 from '../../assets/about/aboutus_img_02.png'
 import AboutImage3 from '../../assets/about/aboutus_img_03.png'
 
-
 const cardArray = [
     {
         id: 1,

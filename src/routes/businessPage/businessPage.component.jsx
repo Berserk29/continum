@@ -99,7 +99,7 @@ const BusinessPage = ({header}) => {
             <TextHeading title={'Total O&M Solution'}/>
             <TextCss>A group of experts with global 1GW O&M operation experience provides meticulous and systematic total O&M services</TextCss>
             <StoryContainer>
-                {storyArray.map(el => <StoryNews story={el} key={el.id}/>)}
+                {storyArray.map(el => <StoryNews link='/pr' story={el} key={el.id}/>)}
             </StoryContainer>
             <BessContainer>
                 <TextHeading title={'BESS O&M'}/>
