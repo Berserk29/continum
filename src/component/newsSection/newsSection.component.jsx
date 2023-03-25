@@ -1,3 +1,5 @@
+import { useInView } from "react-intersection-observer";
+
 import { 
     ImgContainer,
     ImgContainerItems,
@@ -34,18 +36,30 @@ const storyArray = [
 ]
 
 const NewsSection = () => {
+    const { ref: boxRef, inView: boxInView} = useInView({
+        threshold: 0.5,
+    });
+
+    console.log(boxInView, 'NewSection')
+
     return (
-       <NewsContainer>
+       <NewsContainer ref={boxRef}>
             <ImgContainer style={{backgroundImage: `url(${NewsImg})`}}>
                 <ImgContainerItems>
-                    <InfoHeading title={'News'}/>
-                    <SectionHeading title={<p>See<br/> the latest<br/> News Now</p>}/>
-                    <ViewBtn link={'business'}/>
+                    <InfoHeading 
+                        title={'News'} 
+                        className={boxInView ? 'arriveLeft' : 'hidden'}
+                    />
+                    <SectionHeading 
+                        title={<p>See<br/> the latest<br/> News Now</p>}
+                        className={boxInView ? 'arriveLeft' : 'hidden'}
+                        />
+                    <ViewBtn link={'business'} className={boxInView ? 'show' : 'hidden'}/>
                 </ImgContainerItems>
             </ImgContainer>
             <StoryContainer>
                 { 
-                    storyArray.map(el => <StoryNews story={el} key={el.id}/> )
+                    storyArray.map(el => <StoryNews story={el} key={el.id} className={boxInView ? 'arriveUp': 'hidden'}/> )
                 }
             </StoryContainer>
        </NewsContainer>

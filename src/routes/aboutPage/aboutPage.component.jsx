@@ -2,7 +2,6 @@ import Header from "../../component/header/header.component"
 import TextHeading from "../../component/textHeading/textHeading.component";
 import { AboutContainer} from "./aboutPage.style";
 
-
 import Card from "../../component/card/card.component";
 
 import AboutImage1 from '../../assets/about/aboutus_img_01.png'
@@ -35,7 +34,7 @@ const cardArray = [
 ]
 
 const AboutPage = ({header}) => {
-    
+
     return (
         <div>
             <Header header={header}/>

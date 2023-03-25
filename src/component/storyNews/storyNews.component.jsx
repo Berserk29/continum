@@ -3,11 +3,11 @@ import { ArrowBtn, StoryContainerItems, StoryHeading, StoryText, ClockIcon, Stor
 import iconClock from '../../assets/icon/icon_clock.png'
 import arrowBtn from '../../assets/icon/button_arrow.png'
 
-const StoryNews = ({story}) => {
+const StoryNews = ({story, className = ''}) => {
     const {heading, text, time} = story;
 
     return (
-        <StoryContainerItems>
+        <StoryContainerItems className={className}>
             <TextContainer>
                 <StoryHeading>{heading}</StoryHeading>
                 <StoryText>{text}</StoryText>

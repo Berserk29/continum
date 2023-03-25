@@ -5,7 +5,7 @@ export const NavLink = styled(Link)`
     color: var(--color-white);
     font-size: 1.1rem;
     text-decoration: none;
-    transition: all .2s;
+    transition: all .3s;
     padding: 3rem 2rem;
 `
 
@@ -17,7 +17,7 @@ export const NavigationContainer = styled.div`
     height: 6rem;
     width: 100%;
     z-index: 100;
-    transition: all .4s;
+    transition: all .3s;
     background-color: transparent;
     &:hover{
         background-color: var(--color-white);
@@ -29,7 +29,7 @@ export const NavigationContainer = styled.div`
 
 export const NavLi = styled.li`
     &:hover ${NavLink} {
-        color: var(--color-primary)
+        color: var(--color-primary);
     }
 `
 

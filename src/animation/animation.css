@@ -1,0 +1,56 @@
+.hidden {
+    opacity: 0;
+    transition: all 1.4s;
+}
+
+.show {
+    opacity: 1;
+    transition: all 1.4s;
+}
+
+.arriveLeft {
+    animation-name: arrive-left;
+    animation-duration: 1.4s;
+}
+
+@keyframes arrive-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.arriveRight {
+    animation-name: arrive-right;
+    animation-duration: 1.4s;
+}
+
+@keyframes arrive-right {
+    0% {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.arriveUp {
+    animation-name: arrive-up;
+    animation-duration: 1.6s;
+}
+
+@keyframes arrive-up {
+    0% {
+        opacity: 0;
+        transform: translateY(200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

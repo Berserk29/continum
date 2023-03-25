@@ -1,9 +1,13 @@
+import React from "react";
 import { TitleInfo } from "./infoHeading.style";
 
-const InfoHeading = ({title}) => {
+const InfoHeading = ({title, className = ''}, ref,) => {
     return (
-        <TitleInfo>{title}</TitleInfo>
+        <TitleInfo ref={ref} className={className}>{title}</TitleInfo>
     )
 }
 
-export default InfoHeading;
+// If it's a component --> we need to bring the props ref and forwardRef()
+const forwardedInfoHeading = React.forwardRef(InfoHeading)
+
+export default forwardedInfoHeading;

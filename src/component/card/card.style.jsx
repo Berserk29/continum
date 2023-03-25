@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
+// To Put motion into styled component!!! styled(motion.div)
 
 export const CardContainer = styled.div`
     display: flex;
@@ -9,11 +12,11 @@ export const CardContainer = styled.div`
     align-items: center;
 `
 
-export const AboutImage = styled.img`
+export const AboutImage = styled(motion.img)`
     height: 100%;
 `
 
-export const TextContainer = styled.div`
+export const TextContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;
     width: 45%;

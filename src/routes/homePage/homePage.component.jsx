@@ -4,10 +4,7 @@ import NewsSection from "../../component/newsSection/newsSection.component";
 import Recruitment from "../../component/recruitment/recruitment.component";
 
 
-
-
 const HomePage = ({header}) => {
-
     return (
         <div>
             <Header header={header}/>

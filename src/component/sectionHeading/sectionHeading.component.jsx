@@ -1,9 +1,9 @@
 import { HeadingSection } from "./sectionHeading.style";
 
-const SectionHeading = ({title}) => {
+const SectionHeading = ({title, className = ''}) => {
     
     return(
-        <HeadingSection>{title}</HeadingSection>
+        <HeadingSection className={className}>{title}</HeadingSection>
     )
 }
 

@@ -50,20 +50,19 @@ const Carousel = () => {
     const [carouselNum, setCarouselNum] = useState(0)
     const [animationOn, setAnimationOn] = useState(false)
 
-
     const CarouselHandler = (num) => {
         setCarouselNum(num)
         setAnimationOn(true)
     }
 
     // Carousel Timer
-    useEffect(() => {
-        const interval = setInterval(() => {
-            carouselNum === carouselArray.length - 1 ? setCarouselNum(0) : setCarouselNum(carouselNum + 1)
-            setAnimationOn(true)
-        }, 12000)
-        return () => clearInterval(interval)
-    }, [carouselNum])
+        useEffect(() => {
+            const interval = setInterval(() => {
+                carouselNum === carouselArray.length - 1 ? setCarouselNum(0) : setCarouselNum(carouselNum + 1)
+                setAnimationOn(true)
+            }, 12000)
+            return () => clearInterval(interval)
+        }, [carouselNum])
 
 
     // onAnimationEnd={()=> setAnimationOn(false)} At the end of the animation -> animation false !!

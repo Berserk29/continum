@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const NewsContainer = styled.div`
     display: flex;
     height: 55rem;
