@@ -38,7 +38,7 @@ export const CirclePage = styled.div`
 export const ArrowIcon = styled.img`
     width: 2rem;
     height: 2rem;
-    transition: all .3s;
+    transition: filter .3s;
 
     &:hover{
         filter: var(--filter-primary) ;

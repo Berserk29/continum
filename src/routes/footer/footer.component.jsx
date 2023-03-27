@@ -1,8 +1,11 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
 
 import FooterLinkContainer from "../../component/footerLinkContainer/footerLinkContainer.component";
 
+import logoContinumTablet from '../../assets/icon/logo_horizontal_w.png'
 import logoContinumWhite from '../../assets/icon/logo_vertical_w.png'
 import logoYoutube from '../../assets/icon/logo_youtube.png'
 import logoFacebook from '../../assets/icon/logo_facebook.png'
@@ -56,16 +59,16 @@ const categories = [
   },
 ]
   
-
-
 const Footer = () => {
+  const isTablet = useMediaQuery(mediaQuery.useTablet);
+
   return (
     <Fragment>
       <Outlet/>
       <FooterContainer>
         <FooterLinksContainer>
           <CategoryContainer>
-            <ContinumLogo src={logoContinumWhite} alt={'logo-continum'}/>
+            {isTablet ? '' : <ContinumLogo src={logoContinumWhite} alt='logo-continum'/>}
           </CategoryContainer>
           {
             categories.map((el) => 
@@ -73,9 +76,13 @@ const Footer = () => {
                 <FooterLinkContainer  category={el}/>
               </CategoryContainer>)
           }
+          {isTablet ? <ContinumLogo src={logoContinumTablet} alt='logo-continum'/> : ''}
         </FooterLinksContainer>
         <LowerPartContainer>
-          <TextLine2>500 Chem. De Polytechnique, Montréal, Qc &nbsp;&nbsp; | &nbsp;&nbsp; TEL(514)340-4711 &nbsp;&nbsp; | &nbsp;&nbsp; FAX(514)340-4712<br/>Copyright &copy; 2022 Continum Convergence. All Rights Reserved</TextLine2>
+          <div>
+            <TextLine2>500 Chem. De Polytechnique, Montréal, Qc &nbsp;&nbsp; | &nbsp;&nbsp; TEL(514)340-4711 &nbsp;&nbsp; | &nbsp;&nbsp; FAX(514)340-4712</TextLine2>
+            <TextLine2>Copyright &copy; 2022 Continum Convergence. All Rights Reserved</TextLine2>
+          </div>
           <div>
             <Text>PRIVACY &nbsp;&nbsp; BUSINESS SITES &nbsp;&nbsp; FAMILY SITE</Text>
             <IconContainer>

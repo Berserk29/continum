@@ -40,6 +40,14 @@ a {
 }
 
 
-/* html {
-  font-size: 62.5%;
-} */
+@media (max-width: 1224px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 60%;
+  }
+}

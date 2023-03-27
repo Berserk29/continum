@@ -1,12 +1,16 @@
 import styled, {css} from "styled-components";
-import { comingRight, comingUp, comingBack, AnimationChoice } from "../../animation/animation.style";
+import { comingBack, AnimationChoice } from "../../animation/animation.style";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const Section = styled.div`
     background-size: cover;
     background-position: center;
-    transition: all .8s;
+    transition: background-image .8s;
     position: relative;
     height: 60rem;
+    @media ${mediaQuery.styledTablet} {
+        background-blend-mode: darken;
+    }
 `
 
 export const CarouselContainer = styled.div`
@@ -17,6 +21,10 @@ export const CarouselContainer = styled.div`
     flex-direction: column;
     gap: 2.5rem;
     justify-content: center;
+    @media ${mediaQuery.styledTablet} {
+        margin-left: 0;
+        padding: 0 5rem;
+    }
 `
 
 export const ItemContainer = styled.ul`
@@ -46,8 +54,6 @@ export const UpperHeading = styled.span`
     font-size: 3rem;
 
     ${AnimationChoice}
-
-    /* animation: ${comingRight} 1s; */
 `
 
 export const LowerHeading = styled.span`
@@ -55,8 +61,6 @@ export const LowerHeading = styled.span`
     font-size: 3.2rem;
 
     ${AnimationChoice}
-
-    /* animation: ${comingUp} 1.5s; */
 `
 
 export const CarouselText = styled.p`
@@ -74,11 +78,15 @@ export const animationComing = css`
 
 export const CarouselBtn = styled.a`
     color: var(--color-grey-light);
-    transition: all .2s;
+    transition: color .2s;
     cursor: pointer;
     
     &:hover{
         color: var(--color-primary);
+    }
+    /* TODO TESTING */
+    @media ${mediaQuery.styledTablet} {
+        color: var(--color-grey-light-2)
     }
 `
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { backToLife } from "../../animation/animation.style";
+import mediaQuery from "../../helper/mediaQuery";
 
 // Home for homepage and Other for other page
 
@@ -33,6 +34,10 @@ export const TitleHeaderHome = styled.h1`
     margin-left: 12.5rem;
     animation-name: ${backToLife}; 
     animation-duration: 3s;
+    @media ${mediaQuery.styledTablet} {
+        margin-left: 0;
+        padding: 0 5rem;
+    }
 `
 
 export const HeaderMain = styled.span`

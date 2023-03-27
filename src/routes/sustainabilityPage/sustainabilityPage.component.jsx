@@ -1,4 +1,6 @@
-import useMediaQuery from "../../helper/useMediaQuery";
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
+
 import { Fragment } from "react";
 
 import Header from "../../component/header/header.component";
@@ -97,7 +99,7 @@ const reportTypeArray = [
 ]
 
 const SustainabilityPage = ({header}) => {
-    const isBigScreen = useMediaQuery('(min-width: 2000px)')
+    const isBigScreen = useMediaQuery(mediaQuery.useBigScreen)
     
     return (
         <div>

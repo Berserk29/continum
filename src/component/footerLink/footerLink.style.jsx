@@ -9,7 +9,7 @@ export const LinksContainer = styled.div`
 
 export const FooterLinkCss = styled.a`
     color: var(--color-grey);
-    transition: all .2s;
+    transition: color .2s;
     cursor: pointer;
         &:hover{
             color: var(--color-primary);

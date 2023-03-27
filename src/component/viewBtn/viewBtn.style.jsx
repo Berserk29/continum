@@ -13,7 +13,7 @@ export const BtnView = styled.a`
     font-size: 1rem;
     text-decoration: none;
     color: ${props => props.color};
-    transition: all .2s;
+    transition: color .2s;
     cursor: pointer;
 
     ${AnimationChoice}
@@ -45,7 +45,7 @@ const BringColor = keyframes`
 export const ArrowView = styled.img`
     width: 2.5rem;
     height: 2.5rem;
-    transition: all .5s;
+    transition: color .5s;
     opacity: 0;
 `
 

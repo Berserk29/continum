@@ -68,7 +68,7 @@ const Carousel = () => {
     // onAnimationEnd={()=> setAnimationOn(false)} At the end of the animation -> animation false !!
 
     return (
-        <Section style={{backgroundImage: `url(${carouselArray[carouselNum].imageUrl})`}}>
+        <Section style={{backgroundImage: `url(${carouselArray[carouselNum].imageUrl}), linear-gradient(to right, #00000010 , #00000060)`}}>
             <CarouselContainer>
                 <ItemContainer>
                     {

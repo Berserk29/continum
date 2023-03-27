@@ -1,11 +1,11 @@
 .hidden {
+    transition: opacity 1.4s;
     opacity: 0;
-    transition: all 1.4s;
 }
 
 .show {
+    transition: opacity 1.4s;
     opacity: 1;
-    transition: all 1.4s;
 }
 
 .arriveLeft {
