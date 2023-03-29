@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StoryContainerItems = styled.div`
+export const StoryContainerItems = styled(motion.div)`
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,8 +1,10 @@
 import styled, { keyframes } from "styled-components";
 import { AnimationChoice } from "../../animation/animation.style";
+import { motion } from "framer-motion";
+import mediaQuery from "../../helper/mediaQuery";
 
 
-export const ViewContainer = styled.div`
+export const ViewContainer = styled(motion.div)`
     display: flex;
     align-items: center;
 `
@@ -20,6 +22,9 @@ export const BtnView = styled.a`
 
     &:hover {
         color: var(--color-primary)
+    }
+    @media ${mediaQuery.styledMobile} {
+        font-size: 1.5rem;
     }
 `
 const MovingRight = keyframes`

@@ -1,8 +1,13 @@
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const NewsContainer = styled.div`
     display: flex;
     height: 55rem;
+    @media ${mediaQuery.styledTablet} {
+        flex-direction: column;
+        height: 65rem;
+    }
 `
 
 export const ImgContainer = styled.div`
@@ -13,6 +18,12 @@ export const ImgContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media ${mediaQuery.styledTablet} {
+        width: 100%;
+        justify-content: start;
+        padding-left: 3rem;
+        margin-top: 3rem;
+    }
 `
 
 export const ImgContainerItems = styled.div`
@@ -30,6 +41,11 @@ export const StoryContainer = styled.div`
     justify-content: center;
     gap: 2rem;
     padding: 0 1rem;
+    @media ${mediaQuery.styledTablet} {
+        width: 100%;
+        padding: 0 3rem;
+        margin-bottom: 5rem;
+    }
 `
 
 

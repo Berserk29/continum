@@ -1,4 +1,9 @@
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { useMediaQuery } from "react-responsive";
+import { useAnimation } from "framer-motion";
+import mediaQuery from "../../helper/mediaQuery";
+import { variantLeft, variantScale, variantUp } from "../../helper/animationMotion";
 
 import { 
     ImgContainer,
@@ -36,28 +41,44 @@ const storyArray = [
 ]
 
 const NewsSection = () => {
-    const { ref: boxRef, inView: boxInView} = useInView({
+    const isTablet = useMediaQuery(mediaQuery.useTablet)
+    const control = useAnimation();
+
+
+    const { ref, inView} = useInView({
         threshold: 0.5,
     });
 
+    useEffect(() => {
+        if(inView) control.start('visible')
+    }, [control, inView])
+
+    const imageLogic = (image) => {
+        if(isTablet) return ''
+        return `url(${image})` 
+    }
+
     return (
-       <NewsContainer ref={boxRef}>
-            <ImgContainer style={{backgroundImage: `url(${NewsImg})`}}>
+       <NewsContainer ref={ref}>
+            <ImgContainer  style={{backgroundImage: imageLogic(NewsImg)}}>
                 <ImgContainerItems>
                     <InfoHeading 
                         title={'News'} 
-                        className={boxInView ? 'arriveLeft' : 'hidden'}
+                        animate={control}
+                        variants={variantLeft}
                     />
-                    <SectionHeading 
+                    <SectionHeading
+                        color={isTablet ? 'var(--color-black)' : 'var(--color-white)'} 
                         title={<p>See<br/> the latest<br/> News Now</p>}
-                        className={boxInView ? 'arriveLeft' : 'hidden'}
+                        animate={control}
+                        variants={variantLeft}
                         />
-                    <ViewBtn link={'business'} className={boxInView ? 'show' : 'hidden'}/>
+                    <ViewBtn link={'business'} animate={control} variants={variantScale}/>
                 </ImgContainerItems>
             </ImgContainer>
             <StoryContainer>
                 { 
-                    storyArray.map(el => <StoryNews link='/pr' story={el} key={el.id} className={boxInView ? 'arriveUp': 'hidden'}/> )
+                    storyArray.map(el => <StoryNews link='/pr' story={el} key={el.id} animate={control} variants={variantUp}/> )
                 }
             </StoryContainer>
        </NewsContainer>

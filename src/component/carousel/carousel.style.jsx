@@ -25,6 +25,10 @@ export const CarouselContainer = styled.div`
         margin-left: 0;
         padding: 0 5rem;
     }
+    @media ${mediaQuery.styledTablet} {
+        margin-left: 0;
+        padding: 0 3rem;
+    }
 `
 
 export const ItemContainer = styled.ul`
@@ -70,6 +74,10 @@ export const CarouselText = styled.p`
     max-width: 500px;
     
     ${AnimationChoice}
+    @media ${mediaQuery.styledMobile} {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
 `
 
 export const animationComing = css`

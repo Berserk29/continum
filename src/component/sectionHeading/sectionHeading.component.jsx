@@ -1,9 +1,15 @@
 import { HeadingSection } from "./sectionHeading.style";
 
-const SectionHeading = ({title, className = ''}) => {
+const SectionHeading = ({title, color = 'var(--color-white)', animate, variants}) => {
     
     return(
-        <HeadingSection className={className}>{title}</HeadingSection>
+        <HeadingSection 
+            color={color} 
+            animate={animate}
+            initial='hidden'
+            variants={variants}
+        >{title}
+        </HeadingSection>
     )
 }
 

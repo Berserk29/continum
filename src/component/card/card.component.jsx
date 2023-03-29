@@ -1,6 +1,9 @@
 import { useAnimation } from "framer-motion";
 import { useEffect} from "react";
 import { useInView } from "react-intersection-observer";
+import { variantLeft, variantRight} from "../../helper/animationMotion";
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
 
 import {
     AboutImage,
@@ -12,7 +15,10 @@ import {
 
 
 const Card = ({card}) => {
-const {imageFirst, imageUrl, heading, text} = card;
+let {imageFirst} = card;    
+const {imageUrl, heading, text} = card;
+const isMobile = useMediaQuery(mediaQuery.useMobile)
+if(isMobile) imageFirst = true;
 
 const control = useAnimation()
 const [ref, inView] = useInView({
@@ -20,24 +26,13 @@ const [ref, inView] = useInView({
 })
 
 useEffect(() => {
-    if(inView){
-        control.start('visible')
-    }
+    if(inView) control.start('visible')
 }, [control, inView])
-
-const variantLeft = {
-    visible: {opacity: 1, x: 0, transition: {duration: 1.2}},
-    hidden: {opacity: 0, x: -1000}
-}
-
-const variantRight = {
-    visible: {opacity: 1, x: 0, transition: {duration: 1.2}},
-    hidden: {opacity: 0, x: 1000}
-}
 
 const arriveDirection = () => {
     return imageFirst ? variantRight : variantLeft;
 }
+
 
     return (
         <CardContainer ref={ref}>
