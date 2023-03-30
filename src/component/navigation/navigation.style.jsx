@@ -3,7 +3,7 @@ import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
 export const NavLink = styled(Link)`
-    color: var(--color-white);
+    color: ${props => props.color};
     font-weight: 500;
     font-size: 1.1rem;
     text-decoration: none;
@@ -20,10 +20,10 @@ export const NavigationContainer = styled.div`
     width: 100%;
     z-index: 100;
     transition: background-color .25s;
-    background-color: transparent;
-    &:hover{
+    background-color: ${props => props.color};
+    /* &:hover{
         background-color: var(--color-white);
-    }
+    } */
     &:hover ${NavLink}{
         color: var(--color-black);
     }
