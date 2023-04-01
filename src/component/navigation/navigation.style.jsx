@@ -1,14 +1,12 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import mediaQuery from "../../helper/mediaQuery";
 
 export const NavLinks = styled(NavLink)`
     color: ${props => props.color};
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 1.6rem;
     text-decoration: none;
     transition: color .25s;
-    padding: 0.5rem 1.5rem;
     &.active{
         color: var(--color-primary);
     }
@@ -17,25 +15,19 @@ export const NavLinks = styled(NavLink)`
 export const NavigationContainer = styled.div`
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    height: 8.2rem;
     width: 100%;
     z-index: 100;
     transition: background-color .25s;
+    padding: 0 4rem;
     background-color: ${props => props.color};
-    /* &:hover{
-        background-color: var(--color-white);
-    } */
+
     &:hover ${NavLinks}{
         color: var(--color-black);
     }
-
-    @media ${mediaQuery.styledTablet} {
-        justify-content: space-between;
-        padding: 0 4rem;
-    }
-    `
+`
 
 export const NavLi = styled.li`
     &:hover ${NavLinks} {
@@ -47,10 +39,11 @@ export const NavLinksContainer = styled.ul`
     display: flex;
     align-items: center;
     list-style: none;
+    gap: 3.2rem;
 `
 
 export const NavLogo = styled.img`
-    width: 11rem;
+    width: 13.75rem;
     cursor: pointer;
 `
 
@@ -61,6 +54,6 @@ export const NavIconsContainer = styled.div`
 `
 
 export const NavHam = styled.img`
-    width: 2.5rem;
+    width: 3.6rem;
     cursor: pointer; 
 `

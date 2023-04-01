@@ -12,16 +12,15 @@ export const HeaderContainerHome = styled.div`
 `
 
 export const HeaderContainerOther = styled(HeaderContainerHome)`
-    height: 80vh;
+    height: 53rem;
     text-align: center;
 `
 
 export const TitleHeaderOther = styled.h2`
     color: var(--color-white);
-    font-size: 4rem;
-    font-weight: 500;
-    letter-spacing: -2px;
-    margin-top: 13rem;
+    font-size: 5rem;
+    font-weight: 800;
+    margin-top: 14rem;
 `
 
 export const TitleHeaderHome = styled.h1`
@@ -29,9 +28,9 @@ export const TitleHeaderHome = styled.h1`
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2.4rem;
     top: 30%;
-    margin-left: 12.5rem;
+    margin-left: 13.4rem;
     animation-name: ${backToLife}; 
     animation-duration: 3s;
     @media ${mediaQuery.styledTablet} {
@@ -41,14 +40,13 @@ export const TitleHeaderHome = styled.h1`
 `
 
 export const HeaderMain = styled.span`
-    font-weight: 500;
-    font-size: 4.5rem;
-    letter-spacing: -2px;
+    font-weight: 800;
+    font-size: 5rem;
 `
 
 export const HeaderSub = styled.span`
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.6rem;
 `
 
 

@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Fragment, useState } from "react";
 import { useMediaQuery } from 'react-responsive'
 import mediaQuery from "../../helper/mediaQuery";

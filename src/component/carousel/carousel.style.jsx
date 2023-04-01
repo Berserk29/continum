@@ -7,7 +7,7 @@ export const Section = styled.div`
     background-position: center;
     transition: background-image .8s;
     position: relative;
-    height: 60rem;
+    height: 76rem;
     @media ${mediaQuery.styledTablet} {
         background-blend-mode: darken;
     }
@@ -16,10 +16,9 @@ export const Section = styled.div`
 export const CarouselContainer = styled.div`
     position: absolute;
     top: 26%;
-    margin-left: 12.5rem;
+    margin-left: 13.4rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
     justify-content: center;
     @media ${mediaQuery.styledTablet} {
         margin-left: 0;
@@ -33,12 +32,14 @@ export const CarouselContainer = styled.div`
 
 export const ItemContainer = styled.ul`
     display: flex;
-    gap: 1rem;
+    gap: 3.2rem;
+    margin-bottom: 3.2rem;
     justify-content: start;
 `
 
+// TODO --> place the dot at the right place
 export const CarouselItem = styled.li`
-    margin-right: 16px;
+    font-size: 1.6rem;
     color: var(--color-white);
     
     &:first-child{
@@ -50,28 +51,33 @@ export const HeadingCarousel = styled.h2`
     color: var(--color-white);
     display: flex;
     flex-direction: column;
-    gap: .7rem;
+    gap: .8rem;
+    margin-bottom: 2.4rem;
 `
 
 export const UpperHeading = styled.span`
-    font-weight: 400;
-    font-size: 3rem;
+    font-weight: 700;
+    font-size: 4rem;
+    letter-spacing: -2%;
+
 
     ${AnimationChoice}
 `
 
 export const LowerHeading = styled.span`
     font-weight: 700;
-    font-size: 3.2rem;
+    letter-spacing: -2%;
+    font-size: 4rem;
 
     ${AnimationChoice}
 `
 
 export const CarouselText = styled.p`
     color: var(--color-grey-light);
-    font-weight: 500;
-    line-height: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 160%;
     max-width: 500px;
+    margin-bottom: 6.4rem;
     
     ${AnimationChoice}
     @media ${mediaQuery.styledMobile} {
@@ -85,11 +91,15 @@ export const animationComing = css`
 `
 
 export const CarouselBtn = styled.a`
-    color: var(--color-grey-light);
-    transition: color .2s;
+    color: var(--color-white);
+    font-weight: 700;
+    opacity: .6;
+    font-size: 1.4rem;
+    transition: color .2s , opacity .2s;
     cursor: pointer;
     
     &:hover{
+        opacity: 1;
         color: var(--color-primary);
     }
     /* TODO TESTING */
@@ -99,6 +109,7 @@ export const CarouselBtn = styled.a`
 `
 
 export const CarouselBtnActive = styled(CarouselBtn)`
+    opacity: 1;
     font-weight: 700;
     color: var(--color-primary);
 `

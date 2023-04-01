@@ -6,10 +6,10 @@ export const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
-    padding: 5rem 2rem;
+    gap: 8rem;
+    padding: 10.4rem 4rem;
     @media ${mediaQuery.styledTablet} {
-        padding: 5rem 1rem;
+        padding: 8rem 4rem;
     }
     @media ${mediaQuery.styledMobile} {
         padding: 4rem 2.5rem;
@@ -17,7 +17,7 @@ export const AboutContainer = styled.div`
 `
 
 export const UpperText = styled.h4`
-    font-size: 2rem;
+    color: var(--color-black);
+    font-size: 4rem;
     text-align: center;
-    max-width: 80rem;
 `

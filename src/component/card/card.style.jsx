@@ -7,9 +7,10 @@ import mediaQuery from '../../helper/mediaQuery'
 export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 3.2rem;
     width: 100%;
-    height: 35rem;
+    max-width: 120rem;
+    height: 51rem;
     align-items: center;
     @media ${mediaQuery.styledTablet} {
         gap: 2.5rem;
@@ -50,8 +51,10 @@ export const TextContainer = styled(motion.div)`
 `
 
 export const CardHeading = styled.h4`
-    font-size: 1.8rem;
+    color: var(--color-black);
+    font-size: 2.6rem;
     font-weight: 700;
+    line-height: 140%;
     @media ${mediaQuery.styledTablet} {
         font-size: 1.6rem;
     }
@@ -62,8 +65,9 @@ export const CardHeading = styled.h4`
 `
 
 export const CardText = styled.p`
-    line-height: 2rem;
-    font-weight: 500;
+    color: var(--color-black);
+    font-size: 1.6rem;
+    line-height: 160%;
     @media ${mediaQuery.styledTablet} {
         line-height: 1.7rem;
     }

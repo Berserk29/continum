@@ -12,7 +12,7 @@ export const ViewContainer = styled(motion.div)`
 export const BtnView = styled.a`
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: ${props => props.color};
     transition: color .2s;

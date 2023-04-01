@@ -71,16 +71,14 @@ const Carousel = () => {
         <Section style={{backgroundImage: `url(${carouselArray[carouselNum].imageUrl}), linear-gradient(to right, #00000010 , #00000060)`}}>
             <CarouselContainer>
                 <ItemContainer>
-                    {
-                        carouselArray.map((el,i) => {
-                            return (
-                                carouselNum !== i ?
-                                <CarouselItem key={i}><CarouselBtn onClick={() => CarouselHandler(i)}>{el.buttonText}</CarouselBtn></CarouselItem>
-                                :
-                                <CarouselItem key={i}><CarouselBtnActive>{el.buttonText}</CarouselBtnActive></CarouselItem>
-                            )
-                        })
-                    }
+                    {carouselArray.map((el,i) => {
+                        return (
+                            carouselNum !== i ?
+                            <CarouselItem key={i}><CarouselBtn onClick={() => CarouselHandler(i)}>{el.buttonText}</CarouselBtn></CarouselItem>
+                            :
+                            <CarouselItem key={i}><CarouselBtnActive>{el.buttonText}</CarouselBtnActive></CarouselItem>
+                        )
+                    })}
                 </ItemContainer>
                 <HeadingCarousel>
                     <UpperHeading
