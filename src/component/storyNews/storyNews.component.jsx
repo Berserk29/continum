@@ -11,13 +11,13 @@ const StoryNews = ({link, story, animate, variants}) => {
     const viewHandler = () => navigate(link)
 
     return (
-        <StoryContainerItems animate={animate} variants={variants} initial='hidden' onClick={viewHandler}>
+        <StoryContainerItems animate={animate} variants={variants} initial='hidden'>
             <TextContainer>
                 <StoryHeading>{heading}</StoryHeading>
                 <StoryText>{text}</StoryText>
                 <StoryTime><ClockIcon src={iconClock}/>{time}</StoryTime>
             </TextContainer>
-            <ArrowBtn src={arrowBtn}/>
+            <ArrowBtn src={arrowBtn} onClick={viewHandler}/>
         </StoryContainerItems>
     )
 }

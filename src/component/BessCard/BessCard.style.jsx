@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// TODO RESIZE BESS COMPONENT
 
 export const ContentContainer = styled.div`
     display: flex;
@@ -16,9 +17,9 @@ export const ImageBusiness = styled.img`
 `
 
 export const HeadingCard = styled.h5`
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     text-align: center;
-    height: 3rem;
+    height: 4rem;
 `
 
 export const BulletContainer = styled.ul`

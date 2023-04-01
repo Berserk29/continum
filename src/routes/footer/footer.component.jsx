@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
-import FooterLinkContainer from "../../component/footerLinkContainer/footerLinkContainer.component";
+import FooterLink from "../../component/footerLink/footerLink.component";
 
 import logoContinumTablet from '../../assets/icon/logo_horizontal_w.png'
 import logoContinumWhite from '../../assets/icon/logo_vertical_w.png'
@@ -15,10 +15,10 @@ import logoInsta from '../../assets/icon/logo_insta.png'
 import {
     FooterContainer,
     FooterLinksContainer,
-    CategoryContainer,
     ContinumLogo,
     LowerPartContainer,
     TextLine2,
+    CategoryContainer,
     Text,
     IconContainer,
     FooterIcon,
@@ -73,7 +73,7 @@ const Footer = () => {
           {
             categories.map((el) => 
               <CategoryContainer key={el.id}>
-                <FooterLinkContainer  category={el}/>
+                <FooterLink  category={el}/>
               </CategoryContainer>)
           }
           {isTablet ? <ContinumLogo src={logoContinumTablet} alt='logo-continum'/> : ''}

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const RecruitmentContainer = styled.div`
-    height: 55rem;
-    gap: 3rem;
+    height: 76rem;
+    gap: 3.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -5,7 +5,7 @@ import mediaQuery from "../../helper/mediaQuery";
 export const Section = styled.div`
     background-size: cover;
     background-position: center;
-    transition: background-image .8s;
+    transition: background-image .4s;
     position: relative;
     height: 76rem;
     @media ${mediaQuery.styledTablet} {
@@ -32,16 +32,15 @@ export const CarouselContainer = styled.div`
 
 export const ItemContainer = styled.ul`
     display: flex;
-    gap: 3.2rem;
+    gap: 1.8rem;
     margin-bottom: 3.2rem;
     justify-content: start;
+    list-style-position: inside;
 `
 
-// TODO --> place the dot at the right place
 export const CarouselItem = styled.li`
     font-size: 1.6rem;
     color: var(--color-white);
-    
     &:first-child{
         list-style: none;
     }

@@ -7,16 +7,21 @@ export const BuisinessContainer = styled.div`
 `
 
 export const UpperText = styled.h4`
-    margin: 7rem 0;
-    font-size: 2rem;
+    color: var(--color-black);
+    margin: 10.4rem 0;
+    font-size: 2.6rem;
     text-align: center;
-    max-width: 80rem;
+    max-width: 95rem;
+    letter-spacing: -2%;
+    line-height: 140%;
 `
 
 export const TextCss = styled.div`
+    color: var(--color-black);
+    font-size: 1.6rem;
     font-weight: 500;
     text-align: center;
-    margin: 1rem 5rem 4rem 5rem;
+    margin: 1.5rem 5rem 4rem 5rem;
     line-height: 1.5rem;
 `
 
@@ -27,12 +32,12 @@ export const StoryContainer = styled.div`
     gap: 2rem;
     margin-bottom: 8rem;
     width: 100%;
-    max-width: 80rem;
+    max-width: 100rem;
 `
 
 export const BessContainer = styled.div`
     background-color: var(--color-grey-light-3);
-    padding: 5rem 2rem;
+    padding: 5rem 4rem;
     width: 100%;
 `
 

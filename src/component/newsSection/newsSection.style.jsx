@@ -3,20 +3,20 @@ import mediaQuery from "../../helper/mediaQuery";
 
 export const NewsContainer = styled.div`
     display: flex;
-    height: 55rem;
+    height: 76rem;
     @media ${mediaQuery.styledTablet} {
         flex-direction: column;
-        height: 65rem;
+        height: 76rem;
     }
 `
 
 export const ImgContainer = styled.div`
+    position: relative;
     background-size: cover;
     background-position: center;
     width: 35%;
     height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     @media ${mediaQuery.styledTablet} {
         width: 100%;
@@ -27,10 +27,12 @@ export const ImgContainer = styled.div`
 `
 
 export const ImgContainerItems = styled.div`
+    position: absolute;
+    top: 24%;
     display: flex;
     align-items: start;
     flex-direction: column;
-    gap: 3rem;
+    gap: 3.2rem;
 `
 
 export const StoryContainer = styled.div`
@@ -39,8 +41,8 @@ export const StoryContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
-    padding: 0 1rem;
+    gap: 2.45rem;
+    padding: 0 4rem 0 8px;
     @media ${mediaQuery.styledTablet} {
         width: 100%;
         padding: 0 3rem;

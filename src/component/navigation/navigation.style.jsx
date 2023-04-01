@@ -7,9 +7,6 @@ export const NavLinks = styled(NavLink)`
     font-size: 1.6rem;
     text-decoration: none;
     transition: color .25s;
-    &.active{
-        color: var(--color-primary);
-    }
 `
 
 export const NavigationContainer = styled.div`

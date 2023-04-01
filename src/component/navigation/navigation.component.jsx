@@ -64,7 +64,7 @@ const Navigation = () => {
             <NavigationContainer onMouseEnter={hoverHandlerOn} onMouseLeave={hoverHandlerOff} color={hoverState ? 'white' : 'transparent'}>
               <NavLogo src={hoverState ? continumBlack : continumWhite} alt={"logo"} onClick={navLogoHandler}/>
               <NavLinksContainer>
-                <NavLi><NavLinks color={hoverLogic()} to='/about' activeClassName='active' >About Us</NavLinks></NavLi>
+                <NavLi><NavLinks color={hoverLogic()} to='/about'>About Us</NavLinks></NavLi>
                 <NavLi><NavLinks color={hoverLogic()} to='/business'>Business & Solutions</NavLinks></NavLi>
                 <NavLi><NavLinks color={hoverLogic()} to='/sustainability'>Sustainability Management</NavLinks></NavLi>
                 <NavLi><NavLinks color={hoverLogic()} to='/pr'>PR</NavLinks></NavLi>

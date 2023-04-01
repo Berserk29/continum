@@ -66,9 +66,12 @@ const Carousel = () => {
 
 
     // onAnimationEnd={()=> setAnimationOn(false)} At the end of the animation -> animation false !!
+    
+    // TRANSITION DOES NOT WORK WITH THAT BUG TODO 
+    // backgroundImage -->  , linear-gradient(to right, #00000010 , #00000060)`
 
     return (
-        <Section style={{backgroundImage: `url(${carouselArray[carouselNum].imageUrl}), linear-gradient(to right, #00000010 , #00000060)`}}>
+        <Section style={{backgroundImage: `url(${carouselArray[carouselNum].imageUrl})`}}>
             <CarouselContainer>
                 <ItemContainer>
                     {carouselArray.map((el,i) => {

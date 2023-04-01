@@ -1,13 +1,28 @@
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
-export const LinksContainer = styled.div`
+export const FooterContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-top: 1.2rem;
+    gap: 1.6rem;
 `
 
-export const FooterLinkCss = styled.a`
+export const Heading = styled.h3`
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 8px;
+    @media ${mediaQuery.styledTablet} {
+        font-size: 1.2rem;
+        cursor: pointer;
+        :hover{
+            color: var(--color-primary);
+        }
+    }
+`
+
+export const Link = styled.a`
+    font-size: 1.4rem;
     color: var(--color-grey);
     transition: color .2s;
     cursor: pointer;

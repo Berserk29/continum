@@ -1,15 +1,27 @@
-import { FooterLinkCss, LinksContainer } from "./footerLink.style";
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
 import { useNavigate } from "react-router-dom";
 
-const FooterLink = ({linkName, path}) => {
-    const navigate = useNavigate()
- 
-    const pathHandler = () => navigate(path)
+import { Heading, Link, FooterContainer } from "./footerLink.style";
+
+const FooterLink = ({category}) => {
+const isTablet = useMediaQuery(mediaQuery.useTablet);
+const navigate = useNavigate()
+const navigateHandler = () => navigate(category.path);
+
 
     return (
-        <LinksContainer>
-            <FooterLinkCss onClick={pathHandler}>{linkName}</FooterLinkCss>
-        </LinksContainer>
+        <FooterContainer>
+            { isTablet ?
+                <Heading onClick={navigateHandler}>{category.title}</Heading>
+                    : 
+                <Heading>{category.title}</Heading>
+            }
+            { isTablet ? '' 
+                : category.linkName.map((el,i) =>
+                    <Link onClick={navigateHandler} key={i}>{el}</Link>
+            )}
+        </FooterContainer>
     )
 }
 

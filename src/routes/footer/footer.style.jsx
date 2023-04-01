@@ -17,10 +17,7 @@ export const FooterContainer = styled.div`
 
 export const FooterLinksContainer = styled.div`
     display: flex;
-    gap: 4rem;
-    @media ${mediaQuery.styledBigScreen} {
-        gap: 7rem;
-    }
+    gap: 8rem;
 
     @media ${mediaQuery.styledTablet} {
         flex-direction: column;
@@ -38,7 +35,7 @@ export const CategoryContainer = styled.div`
 `
 
 export const ContinumLogo = styled.img`
-    width: 8rem;
+    width: 10.4rem;
     @media ${mediaQuery.styledTablet} {
         width: 18rem;
         margin-top: 3rem;
@@ -49,7 +46,7 @@ export const LowerPartContainer = styled.div`
     width: 90%;
     display: flex;
     justify-content: space-between;
-    padding: 3rem 0;
+    padding: 4rem 0;
     border-top: 1px solid rgba(102, 102, 102, .7);
     @media ${mediaQuery.styledTablet} {
         border-top: none;
@@ -61,6 +58,7 @@ export const LowerPartContainer = styled.div`
 
 export const Text = styled.p`
     color: var(--color-grey-light);
+    font-size: 1.3rem;
     line-height: 1.6rem;
     opacity: .8;
 `
@@ -83,6 +81,6 @@ export const IconContainer = styled.div`
 
 export const FooterIcon = styled.img`
     cursor: pointer;
-    width: 2rem;
+    width: 2.3rem;
     margin-left: 1rem;
 `
