@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
-export const NavLink = styled(Link)`
+export const NavLinks = styled(NavLink)`
     color: ${props => props.color};
     font-weight: 500;
     font-size: 1.1rem;
     text-decoration: none;
     transition: color .25s;
-    padding: 3rem 2rem;
+    padding: 0.5rem 1.5rem;
+    &.active{
+        color: var(--color-primary);
+    }
 `
 
 export const NavigationContainer = styled.div`
@@ -24,7 +27,7 @@ export const NavigationContainer = styled.div`
     /* &:hover{
         background-color: var(--color-white);
     } */
-    &:hover ${NavLink}{
+    &:hover ${NavLinks}{
         color: var(--color-black);
     }
 
@@ -35,7 +38,7 @@ export const NavigationContainer = styled.div`
     `
 
 export const NavLi = styled.li`
-    &:hover ${NavLink} {
+    &:hover ${NavLinks} {
         color: var(--color-primary);
     }
 `

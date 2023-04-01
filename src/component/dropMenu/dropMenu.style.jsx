@@ -1,35 +1,74 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const DropMenuContainer = styled.div`
-    /* display: flex; */
-    /* justify-content: space-around; */
-    /* align-items: center; */
-    /* transition: background-color .25s; */
+    display: flex;
     position: absolute;
-    height: 30vh;
+    height: 60vh;
     width: 100%;
     z-index: 150;
-    background-color: red;
+    background: linear-gradient(90deg, var(--color-white) 50%, var(--color-grey-light-3) 50%);
 `
 
 export const DropMenuUl = styled.ul`
+    height: 100%;
+    width: 50%;
     display: flex;
-    align-items: center;
+    padding: 3rem 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
     list-style: none;
 `
 
-export const MenuLink = styled(Link)`
-    color: var(--color-white);
+export const MenuLi = styled.li`
+    cursor: pointer;
     font-weight: 500;
-    font-size: 1.1rem;
-    text-decoration: none;
+    font-size: 2rem;
     transition: color .25s;
-    padding: 3rem 2rem;
+    &:hover {
+        color: var(--color-primary);
+        font-weight: 700;
+    }
+    &.active {
+        color: var(--color-primary);
+        font-weight: 700;
+    }
 `
 
-export const MenuLi = styled.li`
-    &:hover ${MenuLink} {
-        color: var(--color-primary);
+export const MenuContainer = styled.div`
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+`
+
+
+export const MenuLink = styled.li`
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-align: start;
+    color: var(--color-grey);
+    transition: color .3s;
+    &:hover {
+        color: var(--color-black);
+        &::before{
+            transform: scaleX(1);
+        }
+    }
+    &::before {
+        content: '';
+        opacity: .2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+        background-color: red;
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+        transform: scaleX(0);
     }
 `

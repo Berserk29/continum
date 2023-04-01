@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Fragment, useState } from "react";
 import { useMediaQuery } from 'react-responsive'
 import mediaQuery from "../../helper/mediaQuery";
@@ -9,12 +9,14 @@ import continumBlack from '../../assets/icon/logo_horizontal_b.png'
 import continumWhite from '../../assets/icon/logo_horizontal_w.png' 
 import hamBlack from '../../assets/icon/icon_hamburger_b.png'
 import hamWhite from '../../assets/icon/icon_hamburger_w.png'
+import globeWhite from '../../assets/icon/icon_globe_w.png'
+import globeBlack from '../../assets/icon/icon_globe_b.png'
 
 import { 
   NavHam,
   NavIconsContainer,
   NavigationContainer,
-  NavLink,
+  NavLinks,
   NavLinksContainer,
   NavLi,
   NavLogo,
@@ -62,12 +64,13 @@ const Navigation = () => {
             <NavigationContainer onMouseEnter={hoverHandlerOn} onMouseLeave={hoverHandlerOff} color={hoverState ? 'white' : 'transparent'}>
               <NavLogo src={hoverState ? continumBlack : continumWhite} alt={"logo"} onClick={navLogoHandler}/>
               <NavLinksContainer>
-                <NavLi><NavLink color={hoverLogic()} to='/about'>About Us</NavLink></NavLi>
-                <NavLi><NavLink color={hoverLogic()} to='/business'>Business & Solutions</NavLink></NavLi>
-                <NavLi><NavLink color={hoverLogic()} to='/sustainability'>Sustainability Management</NavLink></NavLi>
-                <NavLi><NavLink color={hoverLogic()} to='/pr'>PR</NavLink></NavLi>
-                <NavLi><NavLink color={hoverLogic()} to='/contact'>Contact Us</NavLink></NavLi>
+                <NavLi><NavLinks color={hoverLogic()} to='/about' activeClassName='active' >About Us</NavLinks></NavLi>
+                <NavLi><NavLinks color={hoverLogic()} to='/business'>Business & Solutions</NavLinks></NavLi>
+                <NavLi><NavLinks color={hoverLogic()} to='/sustainability'>Sustainability Management</NavLinks></NavLi>
+                <NavLi><NavLinks color={hoverLogic()} to='/pr'>PR</NavLinks></NavLi>
+                <NavLi><NavLinks color={hoverLogic()} to='/contact'>Contact Us</NavLinks></NavLi>
               </NavLinksContainer>
+              <NavHam src={hoverState ? globeBlack : globeWhite} alt={'hamburger-menu'}/>
             </NavigationContainer>
             }
         {dropMenuOn && isTablet ? <DropMenu/> : ''}
