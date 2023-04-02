@@ -5,8 +5,7 @@ export const CardContainer = styled.div`
     display: flex;
     gap: 2rem;
     align-items: center;
-    padding: 3rem 2rem;
-    /* max-width: 38rem; */
+    padding: 5.4rem 3.2rem;
 `
 
 export const WhiteCardContainer = styled(CardContainer)`
@@ -15,8 +14,8 @@ export const WhiteCardContainer = styled(CardContainer)`
 `
 
 export const ImageCard = styled.img`
-    height: 6rem;
-    width: 6rem;
+    height: 10.8rem;
+    width: 10.8rem;
 `
 
 export const TextContainer = styled.div`
@@ -26,7 +25,7 @@ export const TextContainer = styled.div`
 `
 
 export const HeadingCard = styled.h5`
-    font-size: 1.8rem;
+    font-size: 2.6rem;
 ` 
 
 export const HeadingWhiteCard = styled.h5`
@@ -36,10 +35,9 @@ export const HeadingWhiteCard = styled.h5`
 `
 
 export const TextCard = styled.p`
-    font-size: .9rem;
+    font-size: 1.4rem;
     color: var(--color-grey);
-    font-weight: 500;
-    line-height: 1.5rem;
+    line-height: 160%;
 `
 
 export const TextWhiteCard = styled(TextCard)`

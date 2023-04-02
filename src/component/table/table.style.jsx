@@ -4,7 +4,8 @@ export const WhiteContainer = styled.div`
     display: flex;
     align-items: center;
     background-color: var(--color-white);
-    padding: 1.5rem;
+    padding: 1.9rem 1.6rem;
+    font-size: 1.4rem;
     text-align: start;
     border-top: 1px solid var(--color-grey-light-2);
     border-bottom: 1px solid var(--color-grey-light-2);
@@ -36,9 +37,9 @@ export const WhiteHeadingContainer = styled(GreyHeadingContainer)`
 `
 
 export const IconImg = styled.img`
-    width: .8rem;
-    height: .8rem;
-    margin: 0 .6rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0 .9rem;
 `
 
 export const WithDot = styled.li`

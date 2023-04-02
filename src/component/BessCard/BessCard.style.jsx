@@ -7,19 +7,21 @@ export const ContentContainer = styled.div`
     flex-direction: column;
     background-color: var(--color-white);
     align-items: center;
-    gap: 1.5rem;
-    padding:2rem 1rem;
+    gap: 1.6rem;
+    padding: 2.4rem 1rem;
 `
 
 export const ImageBusiness = styled.img`
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 5.4rem;
+    width: 5.4rem;
 `
 
 export const HeadingCard = styled.h5`
+    color: var(--color-black);
     font-size: 1.8rem;
     text-align: center;
-    height: 4rem;
+    height: 6rem;
+    max-width: 25rem;
 `
 
 export const BulletContainer = styled.ul`
@@ -29,12 +31,14 @@ export const BulletContainer = styled.ul`
     align-items: flex-start;
     gap: .7rem;
     border-top: 1px solid var(--color-grey-light);
-    padding: 1rem 0;
+    padding: 2.4rem 0 0 0;
 `
 
 export const BulletLi = styled.li`
+    color: var(--color-grey-dark);
+    font-size: 1.4rem;
     margin-left: 1rem;
-    line-height: 1.5rem;
-    font-weight: 500;
+    line-height: 160%;
+    font-weight: 400;
 `
 

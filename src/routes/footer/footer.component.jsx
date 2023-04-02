@@ -12,6 +12,8 @@ import logoFacebook from '../../assets/icon/logo_facebook.png'
 import logoTwitter from '../../assets/icon/logo_twitter.png'
 import logoInsta from '../../assets/icon/logo_insta.png'
 
+import { categories } from "./footer.data";
+
 import {
     FooterContainer,
     FooterLinksContainer,
@@ -24,40 +26,6 @@ import {
     FooterIcon,
 } from "./footer.style";
 
-
-// TODO Bring into Context
-const categories = [
-  {
-    id: 1,
-    title: 'About Us',
-    path: 'about',
-    linkName: ['About Us', 'History', 'Business Sites']
-  },
-  {
-    id: 2,
-    title: 'Business & Solutions',
-    path: 'business',
-    linkName: ['Business', 'Solution',]
-  },
-  {
-    id: 3,
-    title: 'Sustainability',
-    path: 'sustainability',
-    linkName: ['Ethical Management', 'Quality Management','Safety and Health Enviroment', 'Shared Growth']
-  },
-  {
-    id: 4,
-    title: 'PR',
-    path: 'pr',
-    linkName: ['Press', 'Notice', 'CONTACT US']
-  },
-  {
-    id: 5,
-    title: 'Contact Us',
-    path: 'contact',
-    linkName: ['Talent', 'HR System', 'Jobs']
-  },
-]
   
 const Footer = () => {
   const isTablet = useMediaQuery(mediaQuery.useTablet);
