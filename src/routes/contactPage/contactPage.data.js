@@ -2,6 +2,7 @@ import phoneIcon from '../../assets/icon/icon_phone.png';
 import mailIcon from '../../assets/icon/icon_mail.png';
 
 export const headingArray = ['Areas', 'Detailed Businesses', 'Manager', 'Contact'];
+export const headingArrayTablet = ['Areas', 'Detail Information'];
 
 export const contactArray = [
     {

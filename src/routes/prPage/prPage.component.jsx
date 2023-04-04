@@ -1,4 +1,6 @@
 import { Fragment, useState } from "react";
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
 
 import Header from "../../component/header/header.component";
 import Table , {TableType} from "../../component/table/table.component";
@@ -13,15 +15,17 @@ import {
     CirclePage,
     MaxHeight,
     ArrowIcon,
-    ArrowHiddenIcon
+    ArrowHiddenIcon,
 } from "./prPage.style";
 
 import arrowLeft from '../../assets/icon/arrow_left.png'
 import arrowRight from '../../assets/icon/arrow_right.png'
 
+//   TODO NEED TO CHECK MAX HEIGHT RESPONSIBLE WHEN SCREEN LOWER THAN 500PX
 
 const PrPage = ({header}) => {
     const [page, setPage] = useState(1)
+    const isMobile = useMediaQuery(mediaQuery.useMobile)
 
     const handlerPageUp = function() {
         if(page < maxNumberPage())
@@ -33,12 +37,17 @@ const PrPage = ({header}) => {
         setPage( page - 1)
     }
 
+    const smallerDate = (el) => {
+        if(isMobile) return el.slice(2)
+        return el
+    }
+
     return (
         <div>
             <Header header={header}/>
             <PrContainer>
-                <TextHeading title={'Press Release'} />
-                <MaxHeight style={{height: `${PageType.numberPage * 85}px`}}>
+                <TextHeading title={'Report Type'} />
+                <MaxHeight style={{height: `${PageType.numberPage * 80}px`}}>
                     <GridContainer>
                         {headingArray.map((el,i) => <Table content={el} key={i} type={TableType.greyHeading}/>)}
 
@@ -47,7 +56,7 @@ const PrPage = ({header}) => {
                                 <Fragment key={el.id}>
                                     <Table content={el.id} type={TableType.whiteHeading}/>
                                     <Table content={el.subject} type={TableType.subject}/>
-                                    <Table content={el.date} type={TableType.whiteCenter}/>
+                                    <Table content={smallerDate(el.date)} type={TableType.whiteCenter}/>
                                     <Table content={el.writer} type={TableType.whiteCenter}/>
                                 </Fragment>
                             )

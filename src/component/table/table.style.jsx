@@ -52,3 +52,26 @@ export const WithoutDot = styled.li`
     list-style: none;
 `
 
+export const SubClassContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+`
+
+export const SubContainer = styled(SubClassContainer)`
+    gap: .6rem;
+`
+
+export const SubClassHeading = styled.h5`
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -3%;
+    font-size: 1.4rem;
+`
+
+export const SubClassLi = styled(WithoutDot)`
+    font-size: 1.2rem;
+    line-height: 140%;
+    letter-spacing: -3%;
+`
+

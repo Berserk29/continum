@@ -43,15 +43,15 @@ export const PressArray = [
     },
     {
         id: 7,
-        subject: 'Create a business environment that prioritizes safety',
-        date: '2022-12-01',
-        writer: 'Continum', 
-    },
-    {
-        id: 8,
         subject: 'Mergers and acquisitions',
         date: '2022-11-19',
         writer: 'John', 
+    },
+    {
+        id: 8,
+        subject: 'Create a business environment that prioritizes safety',
+        date: '2022-12-01',
+        writer: 'Continum', 
     },
     {
         id: 9,
