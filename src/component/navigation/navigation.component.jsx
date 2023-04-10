@@ -31,6 +31,7 @@ const Navigation = () => {
   const [dropMenuOn, setDropMenuOn] = useState(false)
   
   const isTablet = useMediaQuery(mediaQuery.useTablet)
+  const isMobile = useMediaQuery(mediaQuery.useMobile)
   const hoverHandlerOn = () => setHoverState(true);
   const hoverHandlerOff = () => setHoverState(false);
 
@@ -54,10 +55,10 @@ const Navigation = () => {
     return (
       <Fragment>
           {  isTablet ?  
-            <NavigationContainer onMouseEnter={hoverHandlerOn} onMouseLeave={hoverHandlerOff} color={hoverState || dropMenuOn ? 'white' : 'transparent'}>
-              <NavLogo src={hoverState || dropMenuOn ? continumBlack : continumWhite} alt={"logo"} onClick={navLogoHandler}/>
+            <NavigationContainer onMouseEnter={hoverHandlerOn} onMouseLeave={hoverHandlerOff} color={hoverState || dropMenuOn || isMobile ? 'white' : 'transparent'}>
+              <NavLogo src={hoverState || dropMenuOn || isMobile ? continumBlack : continumWhite} alt={"logo"} onClick={navLogoHandler}/>
               <NavIconsContainer>
-                <NavHam src={hoverState || dropMenuOn ? hamBlack : hamWhite} alt={'hamburger-menu'} onClick={clickHandler}/>
+                <NavHam src={hoverState || dropMenuOn || isMobile ? hamBlack : hamWhite} alt={'hamburger-menu'} onClick={clickHandler}/>
               </NavIconsContainer>
             </NavigationContainer>
                 :

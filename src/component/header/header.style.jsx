@@ -14,6 +14,9 @@ export const HeaderContainerHome = styled.div`
 export const HeaderContainerOther = styled(HeaderContainerHome)`
     height: 53rem;
     text-align: center;
+    @media ${mediaQuery.styledMobile} {
+        height: 40rem;
+    }
 `
 
 export const TitleHeaderOther = styled.h2`
@@ -21,6 +24,12 @@ export const TitleHeaderOther = styled.h2`
     font-size: 5rem;
     font-weight: 800;
     margin-top: 14rem;
+    @media ${mediaQuery.styledMobile} {
+        font-size: 3.25rem;
+        font-weight: 700;
+        padding: 0 1rem;
+        margin-top: 13rem;
+    }
 `
 
 export const TitleHeaderHome = styled.h1`

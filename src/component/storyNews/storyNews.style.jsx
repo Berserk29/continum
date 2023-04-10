@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const StoryContainerItems = styled(motion.div)`
     display: flex;
@@ -7,6 +8,9 @@ export const StoryContainerItems = styled(motion.div)`
     align-items: center;
     padding: 2.45rem 2.4rem 0 2.4rem;
     border-top: 2px solid rgba(255, 116, 26, .4);
+    @media ${mediaQuery.styledMobile} {
+        padding: 2.45rem 0 0 0;
+    }
 `
 
 export const TextContainer = styled.div`
@@ -29,6 +33,10 @@ export const ClockIcon = styled.img`
     width: .7rem;
     height: .7rem;
     margin-right: 8px;
+    @media ${mediaQuery.styledMobile} {
+        width: .875rem;
+        height: .875rem;
+    }
 `
 
 export const StoryTime = styled.p`

@@ -15,6 +15,10 @@ export const UpperText = styled.h4`
     max-width: 95rem;
     letter-spacing: -2%;
     line-height: 140%;
+    @media ${mediaQuery.styledMobile} {
+        font-size: 2.25rem;
+        padding: 5rem 2rem 10rem 2rem;
+    }
 `
 
 export const TextCss = styled.p`
@@ -23,6 +27,10 @@ export const TextCss = styled.p`
     text-align: center;
     margin: 1.5rem 5rem 4rem 5rem;
     line-height: 160%;
+    @media ${mediaQuery.styledMobile} {
+        font-size: 1.75rem;
+        margin: 1rem 0 3rem 0;
+    }
 `
 
 export const StoryContainer = styled.div`
@@ -39,6 +47,9 @@ export const BessContainer = styled.div`
     background-color: var(--color-grey-light-3);
     padding: 5rem 4rem;
     width: 100%;
+    @media ${mediaQuery.styledMobile} {
+        padding: 5rem 2rem;
+    }
 `
 
 export const CardContainer = styled.div`
@@ -51,6 +62,9 @@ export const CardContainer = styled.div`
 export const RelatedContainer = styled.div`
     padding: 5rem 4rem;
     width: 100%;
+    @media ${mediaQuery.styledMobile} {
+        padding: 5rem 2rem;
+    }
 `
 
 export const FlexCenter = styled.div`

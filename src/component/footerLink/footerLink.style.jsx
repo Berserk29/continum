@@ -13,7 +13,7 @@ export const Heading = styled.h3`
     color: var(--color-white);
     margin-bottom: 8px;
     @media ${mediaQuery.styledTablet} {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         cursor: pointer;
         :hover{
             color: var(--color-primary);

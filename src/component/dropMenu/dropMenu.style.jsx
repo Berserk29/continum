@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DropMenuContainer = styled.div`
     display: flex;
     position: absolute;
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     z-index: 150;
     background: linear-gradient(90deg, var(--color-white) 50%, var(--color-grey-light-3) 50%);
@@ -25,6 +25,7 @@ export const MenuLi = styled.li`
     font-weight: 500;
     font-size: 2rem;
     transition: color .25s;
+    text-align: start;
     &:hover {
         color: var(--color-primary);
         font-weight: 700;

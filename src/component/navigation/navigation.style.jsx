@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const NavLinks = styled(NavLink)`
     color: ${props => props.color};
@@ -23,6 +24,10 @@ export const NavigationContainer = styled.div`
 
     &:hover ${NavLinks}{
         color: var(--color-black);
+    }
+    @media ${mediaQuery.styledMobile} {
+        padding: 0 2rem;
+        height: 7rem;
     }
 `
 

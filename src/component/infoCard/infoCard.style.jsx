@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const CardContainer = styled.div`
     background-color: var(--color-grey-light-3);
@@ -6,6 +7,9 @@ export const CardContainer = styled.div`
     gap: 2rem;
     align-items: center;
     padding: 5.4rem 3.2rem;
+    @media ${mediaQuery.styledMobile} {
+        padding: 4rem 1rem;
+    }
 `
 
 export const WhiteCardContainer = styled(CardContainer)`
@@ -15,7 +19,9 @@ export const WhiteCardContainer = styled(CardContainer)`
 
 export const ImageCard = styled.img`
     height: 10.8rem;
-    width: 10.8rem;
+    @media ${mediaQuery.styledMobile} {
+        height: 9.25rem;
+    }
 `
 
 export const TextContainer = styled.div`
@@ -26,6 +32,9 @@ export const TextContainer = styled.div`
 
 export const HeadingCard = styled.h5`
     font-size: 2.6rem;
+    @media ${mediaQuery.styledMobile} {
+        font-size: 2.25rem;
+    }
 ` 
 
 export const HeadingWhiteCard = styled.h5`
