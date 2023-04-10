@@ -24,9 +24,11 @@ const BusinessPage = ({header}) => {
         <BuisinessContainer>
             <Header header={header}/>
             <UpperText>We provide outstanding O&M service to the global solar market based on Continum Group's solar and BESS business capabilities and IT technologies</UpperText>
-            <TextHeading title={'Total O&M Solution'}/>
-            <TextCss>A group of experts with global 1GW O&M operation experience provides meticulous and systematic total O&M services</TextCss>
             <StoryContainer>
+                <div>
+                    <TextHeading title={'Total O&M Solution'}/>
+                    <TextCss>A group of experts with global 1GW O&M operation experience provides meticulous and systematic total O&M services</TextCss>
+                </div>
                 {storyArray.map(el => <StoryNews link='/pr' story={el} key={el.id}/>)}
             </StoryContainer>
             <BessContainer>

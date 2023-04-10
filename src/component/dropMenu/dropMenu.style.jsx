@@ -1,12 +1,16 @@
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const DropMenuContainer = styled.div`
     display: flex;
     position: absolute;
-    height: 50vh;
+    height: 42rem;
     width: 100%;
     z-index: 150;
     background: linear-gradient(90deg, var(--color-white) 50%, var(--color-grey-light-3) 50%);
+    @media ${mediaQuery.styledMobile} {
+        height: 30rem;
+    }
 `
 
 export const DropMenuUl = styled.ul`
@@ -33,6 +37,9 @@ export const MenuLi = styled.li`
     &.active {
         color: var(--color-primary);
         font-weight: 700;
+    }
+    @media ${mediaQuery.styledMobile} {
+        font-size: 1.8rem;
     }
 `
 

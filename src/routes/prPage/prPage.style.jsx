@@ -17,7 +17,7 @@ export const GridContainer = styled.div`
         grid-template-columns: 8rem 1fr max-content max-content;
     }
     @media ${mediaQuery.styledMobile} {
-        grid-template-columns: max-content 1fr max-content max-content;
+        grid-template-columns: max-content 1fr max-content;
     }
 `
 

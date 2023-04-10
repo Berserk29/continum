@@ -44,7 +44,7 @@ export const TitleHeaderHome = styled.h1`
     animation-duration: 3s;
     @media ${mediaQuery.styledTablet} {
         margin-left: 0;
-        padding: 0 5rem;
+        padding: 0 3rem;
     }
 `
 

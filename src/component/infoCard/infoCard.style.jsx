@@ -15,6 +15,10 @@ export const CardContainer = styled.div`
 export const WhiteCardContainer = styled(CardContainer)`
     background-color: var(--color-white);
     padding: 2rem 2rem;
+    @media ${mediaQuery.styledMobile} {
+        gap: 1rem;
+        padding: 1rem 1rem;
+    }
 `
 
 export const ImageCard = styled.img`

@@ -2,14 +2,19 @@ import styled, {css} from "styled-components";
 import { comingBack, AnimationChoice } from "../../animation/animation.style";
 import mediaQuery from "../../helper/mediaQuery";
 
+// TODO MEDIA QUERY 
+
+
 export const Section = styled.div`
+    background-image: url(${props => props.image});
     background-size: cover;
     background-position: center;
-    transition: background-image .4s;
+    transition: background-image .8s , background-color .8s;
     position: relative;
     height: 76rem;
-    @media ${mediaQuery.styledTablet} {
-        background-blend-mode: darken;
+    @media ${mediaQuery.styledMobile} {
+    background-color: #00000050;
+    background-blend-mode: multiply;
     }
 `
 
@@ -58,8 +63,6 @@ export const UpperHeading = styled.span`
     font-weight: 700;
     font-size: 4rem;
     letter-spacing: -2%;
-
-
     ${AnimationChoice}
 `
 
@@ -67,7 +70,6 @@ export const LowerHeading = styled.span`
     font-weight: 700;
     letter-spacing: -2%;
     font-size: 4rem;
-
     ${AnimationChoice}
 `
 
@@ -77,9 +79,9 @@ export const CarouselText = styled.p`
     line-height: 160%;
     max-width: 500px;
     margin-bottom: 6.4rem;
-    
     ${AnimationChoice}
-    @media ${mediaQuery.styledMobile} {
+    @media ${mediaQuery.styledTablet} {
+        color: var(--color-grey-light-2);
         font-size: 1.4rem;
         line-height: 2rem;
     }

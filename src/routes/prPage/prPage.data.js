@@ -1,8 +1,5 @@
 export const headingArray = ['No', 'Subject', 'Date', 'Writer'];
-
-export const PageType = {
-    numberPage: 6
-}
+export const headingMobile = ['No', 'Subject', 'Details'];
 
 export const PressArray = [
     {
@@ -91,9 +88,3 @@ export const PressArray = [
     },
 ]
 
-export const maxNumberPage = function () {
-    return Math.ceil(PressArray.length / PageType.numberPage)
-}
-
-export const pageMin = (page) => (page - 1) * PageType.numberPage;
-export const pageMax = (page) => page * PageType.numberPage;

@@ -5,8 +5,12 @@ export const SubstainContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 4rem 4rem 4rem;
-    gap: 8rem
+    padding: 10.4rem 4rem 8rem 4rem;
+    gap: 6rem;
+    @media ${mediaQuery.styledMobile} {
+        gap: 4rem;
+        padding: 5rem 2rem 3.5rem 2rem;
+    }
 `
 
 export const TextCss = styled.div`
@@ -26,17 +30,27 @@ export const EthicalContainer = styled.div`
     @media ${mediaQuery.styledTablet} {
         grid-template-columns: 1fr;
     }
+    @media ${mediaQuery.styledMobile} {
+        gap: 3rem;
+        grid-template-columns: 1fr;
+    }
 `
 
 export const Container = styled.div`
-    padding: 4rem 4rem 4rem 4rem;
+    padding: 4rem;
     flex: 150rem 0 1;
+    @media ${mediaQuery.styledMobile} {
+        padding: 3.5rem 2rem;
+    }
 `
 
 export const TableContainer = styled.div`
     display: grid;
     padding-top: 2.4rem;
-    grid-template-columns: 35rem 1fr;
+    grid-template-columns: 1fr 2fr;
+    @media ${mediaQuery.styledMobile} {
+        grid-template-columns: 15rem 1fr;
+    }
 `
 
 export const BulletContainer = styled.ul`
@@ -61,4 +75,8 @@ export const HowToReportContainer = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
     gap: 2rem;
     padding: 4rem 0;
+    @media ${mediaQuery.styledMobile} {
+        grid-template-columns: 1fr;
+        padding: 3rem 0;
+    }
 `

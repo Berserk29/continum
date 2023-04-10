@@ -1,8 +1,7 @@
-import ViewBtn from "../viewBtn/viewBtn.component";
 import { useEffect, useState } from "react";
 
+import ViewBtn from "../viewBtn/viewBtn.component";
 import { comingRight, comingBack, comingUp } from "../../animation/animation.style";
-
 import { carouselArray } from "./carousel.data";
 
 import { 
@@ -19,8 +18,8 @@ import {
 } from "./carousel.style";
 
 const Carousel = () => {
-    const [carouselNum, setCarouselNum] = useState(0)
-    const [animationOn, setAnimationOn] = useState(false)
+    const [carouselNum, setCarouselNum] = useState(0);
+    const [animationOn, setAnimationOn] = useState(false);
 
     const CarouselHandler = (num) => {
         setCarouselNum(num)
@@ -39,11 +38,8 @@ const Carousel = () => {
 
     // onAnimationEnd={()=> setAnimationOn(false)} At the end of the animation -> animation false !!
     
-    // TRANSITION DOES NOT WORK WITH THAT BUG TODO 
-    // backgroundImage -->  , linear-gradient(to right, #00000010 , #00000060)`
-
     return (
-        <Section style={{backgroundImage: `url(${carouselArray[carouselNum].imageUrl})`}}>
+        <Section image={carouselArray[carouselNum].imageUrl}>
             <CarouselContainer>
                 <ItemContainer>
                     {carouselArray.map((el,i) => {

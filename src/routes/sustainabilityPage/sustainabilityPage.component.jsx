@@ -22,7 +22,7 @@ import {
 const SustainabilityPage = ({header}) => {
     
     return (
-        <div>
+        <Fragment>
             <Header header={header}/>
             <SubstainContainer>
                 <div>
@@ -65,7 +65,7 @@ const SustainabilityPage = ({header}) => {
                 </HowToReportContainer>
             </Container>
             </FlexCenter>
-        </div>
+        </Fragment>
     )
 }
 

@@ -1,7 +1,7 @@
 import { useAnimation } from "framer-motion";
 import { useEffect} from "react";
 import { useInView } from "react-intersection-observer";
-import { variantLeft, variantRight} from "../../helper/animationMotion";
+import { variantLeft, variantRight , slowVariantUp, slowVariantScale} from "../../helper/animationMotion";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
@@ -17,26 +17,27 @@ import {
 const Card = ({card}) => {
 let {imageFirst} = card;    
 const {imageUrl, heading, text} = card;
+
 const isMobile = useMediaQuery(mediaQuery.useMobile)
 if(isMobile) imageFirst = true;
 
+const thresholdNum = isMobile ? 0.3 : 0.7 ;
 const control = useAnimation()
-const [ref, inView] = useInView({
-    threshold: 0.7,
-})
+const [ref, inView] = useInView({ threshold: thresholdNum, })
 
 useEffect(() => {
     if(inView) control.start('visible')
 }, [control, inView])
 
 const arriveDirection = () => {
-    return imageFirst ? variantRight : variantLeft;
-}
-
+    if(isMobile) return slowVariantScale
+    return imageFirst ? variantRight : variantLeft;  
+} 
+const aboutImage = (variantsDirection) => <AboutImage src={imageUrl} variants={isMobile ? slowVariantUp : variantsDirection} initial='hidden' animate={control}/> ;
 
     return (
         <CardContainer ref={ref}>
-                { imageFirst ? <AboutImage src={imageUrl} variants={variantLeft} initial='hidden' animate={control}/> : ''}
+                { imageFirst ? aboutImage(variantLeft) : ''}
                     <TextContainer                             
                         variants={arriveDirection()}
                         initial='hidden'
@@ -45,10 +46,9 @@ const arriveDirection = () => {
                         <CardHeading>{heading}</CardHeading>
                         <CardText>{text}</CardText>
                     </TextContainer>
-                { !imageFirst ? <AboutImage src={imageUrl} variants={variantRight} initial='hidden' animate={control}/> : ''}
+                { !imageFirst ? aboutImage(variantRight) : ''}
         </CardContainer>
     )
 }
-
 
 export default Card;
