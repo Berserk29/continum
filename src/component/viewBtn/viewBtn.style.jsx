@@ -1,8 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { AnimationChoice } from "../../animation/animation.style";
 import { motion } from "framer-motion";
-import mediaQuery from "../../helper/mediaQuery";
-
 
 export const ViewContainer = styled(motion.div)`
     display: flex;
@@ -12,19 +10,14 @@ export const ViewContainer = styled(motion.div)`
 export const BtnView = styled.a`
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: ${props => props.color};
     transition: color .2s;
     cursor: pointer;
-
     ${AnimationChoice}
-
     &:hover {
         color: var(--color-primary)
-    }
-    @media ${mediaQuery.styledMobile} {
-        font-size: 1.5rem;
     }
 `
 const MovingRight = keyframes`
@@ -55,7 +48,7 @@ export const ArrowView = styled.img`
 `
 
 export const ArrowViewVisible = styled(ArrowView)`
-    margin-left: .3rem;
+    margin-left: 1rem;
     opacity: .7;
     filter: var(--filter-grey);
 `

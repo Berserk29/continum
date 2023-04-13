@@ -7,10 +7,9 @@ import arrowBtnImg from '../../assets/icon/button_arrow.png'
 const ViewBtn = ({link, displayOff = false, animation = false, time = false, color = 'var(--color-grey-light)', animate, variants}) => {
     const navigate = useNavigate()
     const [hoverState, setHoverState] = useState(false)
+    
     const hoverHandlerOn = () => setHoverState(true);
     const hoverHandlerOff = () => setHoverState(false);
-     
-
     const viewHandler = () => navigate(link)
 
     const arrowLogic = () => {

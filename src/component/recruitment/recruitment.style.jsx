@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const RecruitmentContainer = styled.div`
+    background-image: ${props => props.image};
+    background-size: cover;
+    background-position: center;
     height: 76rem;
     gap: 3.2rem;
     display: flex;
@@ -8,4 +11,5 @@ export const RecruitmentContainer = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 2rem;
 `

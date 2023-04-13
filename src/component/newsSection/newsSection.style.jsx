@@ -6,47 +6,49 @@ export const NewsContainer = styled.div`
     height: 76rem;
     @media ${mediaQuery.styledTablet} {
         flex-direction: column;
-        height: 76rem;
+        justify-content: center;
+        gap: 3rem;
+        padding: 8rem 4rem 4rem 5rem;
+        height: 86rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        padding: 4rem 2rem;
     }
 `
 
 export const ImgContainer = styled.div`
-    position: relative;
+    background-image: ${props => props.image};
     background-size: cover;
     background-position: center;
     width: 35%;
-    height: 100%;
     display: flex;
     justify-content: center;
     @media ${mediaQuery.styledTablet} {
         width: 100%;
         justify-content: start;
-        padding-left: 3rem;
-        margin-top: 3rem;
     }
 `
 
 export const ImgContainerItems = styled.div`
-    position: absolute;
-    top: 24%;
     display: flex;
-    align-items: start;
     flex-direction: column;
+    justify-content: center;
     gap: 3.2rem;
+    @media ${mediaQuery.styledTablet} {
+        gap: 2rem;
+        justify-content: start;
+    }
 `
 
 export const StoryContainer = styled.div`
     width: 65%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2.45rem;
-    padding: 0 4rem 0 8px;
     @media ${mediaQuery.styledTablet} {
         width: 100%;
-        padding: 0 3rem;
-        margin-bottom: 5rem;
+        margin-bottom: auto;
     }
 `
 

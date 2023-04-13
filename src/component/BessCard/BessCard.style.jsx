@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import mediaQuery from "../../helper/mediaQuery";
-
-// TODO RESIZE BESS COMPONENT
 
 export const ContentContainer = styled.div`
     display: flex;

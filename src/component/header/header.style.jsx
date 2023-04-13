@@ -39,11 +39,14 @@ export const TitleHeaderHome = styled.h1`
     flex-direction: column;
     gap: 2.4rem;
     top: 30%;
-    margin-left: 13.4rem;
+    margin-left: 10.4rem;
     animation-name: ${backToLife}; 
     animation-duration: 3s;
     @media ${mediaQuery.styledTablet} {
         margin-left: 0;
+        padding: 0 8rem
+    }
+    @media ${mediaQuery.styledMobile} {
         padding: 0 3rem;
     }
 `

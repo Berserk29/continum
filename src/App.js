@@ -8,7 +8,7 @@ import SustainabilityPage from "./routes/sustainabilityPage/sustainabilityPage.c
 import PrPage from "./routes/prPage/prPage.component";
 import ContactPage from "./routes/contactPage/contactPage.component";
 
-// TODO Put on Contest
+
 import HomeImage from '../src/assets/home/main_bg_header.png'
 import AboutImage from '../src/assets/about/aboutus_bg_01.png'
 import BusinessImage from '../src/assets/business/business_bg_01.png'

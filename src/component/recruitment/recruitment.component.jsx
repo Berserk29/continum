@@ -9,27 +9,29 @@ import recruitImg from '../../assets/home/main_bg_03.png'
 import InfoHeading from "../infoHeading/infoHeading.component";
 import SectionHeading from "../sectionHeading/sectionHeading.component";
 import ViewBtn from "../viewBtn/viewBtn.component";
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
+
 
 
 const Recruitment = () => {
+    const isMobile = useMediaQuery(mediaQuery.useMobile)
     const control = useAnimation()
-    const [ref, inView] = useInView({
-        threshold: 0.6,
-    })
+    const [ref, inView] = useInView({ threshold: 0.6,})
 
     useEffect(() => {
         if(inView) control.start('visible')
     }, [control, inView])
 
     return (
-        <RecruitmentContainer ref={ref} style={{backgroundImage: `url(${recruitImg})`}}>
+        <RecruitmentContainer ref={ref} image={`url(${recruitImg})`}>
             <InfoHeading 
                 title={'Recruitment'}
                 animate={control}
                 variants={variantUp} 
             />
             <SectionHeading 
-                title={<p>We Welcome Talented People to<br/> Join us in Continum</p>} 
+                title={<p>We Welcome Talented People to {isMobile ? '' : <br/>} Join us in Continum</p>} 
                 animate={control}
                 variants={variantLeft}
             />

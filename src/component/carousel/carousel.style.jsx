@@ -2,9 +2,6 @@ import styled, {css} from "styled-components";
 import { comingBack, AnimationChoice } from "../../animation/animation.style";
 import mediaQuery from "../../helper/mediaQuery";
 
-// TODO MEDIA QUERY 
-
-
 export const Section = styled.div`
     background-image: url(${props => props.image});
     background-size: cover;
@@ -12,9 +9,12 @@ export const Section = styled.div`
     transition: background-image .8s , background-color .8s;
     position: relative;
     height: 76rem;
-    @media ${mediaQuery.styledMobile} {
-    background-color: #00000050;
+    @media ${mediaQuery.styledTablet} {
+    background-color: #00000030;
     background-blend-mode: multiply;
+    }
+    @media ${mediaQuery.styledMobile} {
+    background-color: #00000065;
     }
 `
 
@@ -27,11 +27,11 @@ export const CarouselContainer = styled.div`
     justify-content: center;
     @media ${mediaQuery.styledTablet} {
         margin-left: 0;
-        padding: 0 5rem;
+        padding-left: 8rem;
     }
-    @media ${mediaQuery.styledTablet} {
-        margin-left: 0;
+    @media ${mediaQuery.styledMobile} {
         padding: 0 3rem;
+        top: 23%;
     }
 `
 
@@ -49,6 +49,13 @@ export const CarouselItem = styled.li`
     &:first-child{
         list-style: none;
     }
+    @media ${mediaQuery.styledMobile}{
+        list-style: outside;
+        margin-left: 1rem;
+        &:first-child{
+            margin: 0;
+        }
+    }
 `
 
 export const HeadingCarousel = styled.h2`
@@ -64,13 +71,12 @@ export const UpperHeading = styled.span`
     font-size: 4rem;
     letter-spacing: -2%;
     ${AnimationChoice}
+    @media ${mediaQuery.styledMobile} {
+        font-size: 3.25rem 
+    }
 `
 
-export const LowerHeading = styled.span`
-    font-weight: 700;
-    letter-spacing: -2%;
-    font-size: 4rem;
-    ${AnimationChoice}
+export const LowerHeading = styled(UpperHeading)`
 `
 
 export const CarouselText = styled.p`
@@ -81,7 +87,6 @@ export const CarouselText = styled.p`
     margin-bottom: 6.4rem;
     ${AnimationChoice}
     @media ${mediaQuery.styledTablet} {
-        color: var(--color-grey-light-2);
         font-size: 1.4rem;
         line-height: 2rem;
     }
@@ -98,14 +103,9 @@ export const CarouselBtn = styled.a`
     font-size: 1.4rem;
     transition: color .2s , opacity .2s;
     cursor: pointer;
-    
     &:hover{
         opacity: 1;
         color: var(--color-primary);
-    }
-    /* TODO TESTING */
-    @media ${mediaQuery.styledTablet} {
-        color: var(--color-grey-light-2)
     }
 `
 
