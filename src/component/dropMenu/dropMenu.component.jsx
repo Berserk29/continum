@@ -12,7 +12,7 @@ const DropMenu = () => {
   const clickHandler = (id) => setArrayNum(id);
 
   const linkHandler = () => {
-    if(categories[arrayNum].path === location.pathname) return window.location.reload()
+    if(categories[arrayNum].path === location.pathname) return window.location.reload(true)
     else navigate(categories[arrayNum].path)
   };
 
