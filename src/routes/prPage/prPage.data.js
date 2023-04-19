@@ -46,7 +46,7 @@ export const PressArray = [
     },
     {
         id: 8,
-        subject: 'Create a business environment that prioritizes safety',
+        subject: 'Create a business environment',
         date: '2022-12-01',
         writer: 'Continum', 
     },

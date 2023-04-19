@@ -59,7 +59,7 @@ const SustainabilityPage = ({header}) => {
             </FlexCenter>
             <FlexCenter>
             <Container>
-                <TextHeading title={'How to report'} textCenter={ false}/>
+                <TextHeading title={'How to report'} textCenter={ false }/>
                 <HowToReportContainer>
                     {reportArray.map(el => <InfoCard key={el.id} props={el} border={true} colorWhite={true}/>)}
                 </HowToReportContainer>

@@ -70,7 +70,7 @@ export const reportTypeArray = [
     },
     {
         id: 5,
-        heading: 'Manipulation and falsification of documents and calculations',
+        heading: 'Manipulation and falsification of documents',
         text: 'Accounting fraud, information manipulation',
     },
 ]

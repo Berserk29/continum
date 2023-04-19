@@ -13,6 +13,7 @@ export const NewsContainer = styled.div`
     }
     @media ${mediaQuery.styledMobile} {
         padding: 4rem 2rem;
+        height: 94rem;
     }
 `
 
@@ -45,7 +46,6 @@ export const StoryContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2.45rem;
     @media ${mediaQuery.styledTablet} {
         width: 100%;
         margin-bottom: auto;

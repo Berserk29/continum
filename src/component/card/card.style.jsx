@@ -45,10 +45,10 @@ export const CardHeading = styled.h4`
     font-weight: 700;
     line-height: 140%;
     @media ${mediaQuery.styledTablet} {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     @media ${mediaQuery.styledMobile} {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
         line-height: normal;
     }
 `

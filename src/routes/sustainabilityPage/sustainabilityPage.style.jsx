@@ -7,8 +7,11 @@ export const SubstainContainer = styled.div`
     align-items: center;
     padding: 10.4rem 4rem 8rem 4rem;
     gap: 6rem;
+    @media ${mediaQuery.styledTablet} {
+        padding: 8rem 1.6rem;
+    }
     @media ${mediaQuery.styledMobile} {
-        gap: 4rem;
+        gap: 3rem;
         padding: 5rem 2rem 3.5rem 2rem;
     }
 `
@@ -16,10 +19,14 @@ export const SubstainContainer = styled.div`
 export const TextCss = styled.div`
     color: var(--color-black);
     text-align: center;
-    margin: 1rem 2rem 0 2rem;
+    margin-top: 1rem;
     line-height: 160%;
     font-size: 1.6rem;
-    max-width: 80rem;
+    max-width: 104rem;
+    @media ${mediaQuery.styledMobile}{
+        margin-top: 1.25rem;
+        font-size: 2rem;
+    }
 `
 
 export const EthicalContainer = styled.div`
@@ -28,6 +35,7 @@ export const EthicalContainer = styled.div`
     grid-gap: 1rem;
     flex: 142rem 0 1;
     @media ${mediaQuery.styledTablet} {
+        grid-gap: 1.6rem;
         grid-template-columns: 1fr;
     }
     @media ${mediaQuery.styledMobile} {
@@ -49,7 +57,7 @@ export const TableContainer = styled.div`
     padding-top: 2.4rem;
     grid-template-columns: 1fr 2fr;
     @media ${mediaQuery.styledMobile} {
-        grid-template-columns: 15rem 1fr;
+        grid-template-columns: 16rem 1fr;
     }
 `
 
@@ -57,12 +65,19 @@ export const BulletContainer = styled.ul`
     display: grid;
     gap: 1rem;
     padding-top: 4rem;
+    @media ${mediaQuery.styledMobile} {
+        gap: 2rem;
+    }
 `
 
 export const BulletLi = styled.li`
     font-size: 1.4rem;
     margin-left: 1rem;
     line-height: 160%;
+    @media ${mediaQuery.styledMobile} {
+        gap: 2rem;
+        font-size: 1.75rem;
+    }
 `
 
 export const FlexCenter = styled.div`

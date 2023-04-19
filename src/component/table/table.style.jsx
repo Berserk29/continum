@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mediaQuery from "../../helper/mediaQuery";
 
 export const WhiteContainer = styled.div`
     display: flex;
@@ -9,6 +10,10 @@ export const WhiteContainer = styled.div`
     text-align: start;
     border-top: 1px solid var(--color-grey-light-2);
     border-bottom: 1px solid var(--color-grey-light-2);
+    @media ${mediaQuery.styledMobile}{
+        font-size: 1.75rem;
+        padding: 2.125rem 1rem;
+    }
 `
 
 export const SubjectContainer = styled(WhiteContainer)`
@@ -67,11 +72,17 @@ export const SubClassHeading = styled.h5`
     line-height: 140%;
     letter-spacing: -3%;
     font-size: 1.4rem;
+    @media ${mediaQuery.styledMobile}{
+    font-size: 1.75rem;
+    }
 `
 
 export const SubClassLi = styled(WithoutDot)`
     font-size: 1.2rem;
     line-height: 140%;
     letter-spacing: -3%;
+    @media ${mediaQuery.styledMobile}{
+    font-size: 1.5rem;
+    }
 `
 

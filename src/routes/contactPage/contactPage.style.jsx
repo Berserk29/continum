@@ -4,9 +4,12 @@ import mediaQuery from "../../helper/mediaQuery";
 export const ContactContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 10.4rem 4rem 12rem 4rem;
-    gap: 6rem
+    gap: 6rem;
+    @media ${mediaQuery.styledMobile} {
+        padding: 5rem 2rem 7rem 2rem;
+        gap: 4rem
+    }
 `
 
 export const TableContainer = styled.div`

@@ -29,7 +29,7 @@ const PrPage = ({header}) => {
     if(!isMobile) setPage(1)
   }, [isMobile]);
 
-  const heightPage = isMobile ? 140 : 80 ;
+  const heightPage = isMobile ? 160 : 75 ;
   const PageType = { numberPage: isMobile ? 3 : 6 } ;
 
   const maxNumberPage = () => Math.ceil(PressArray.length / PageType.numberPage);
@@ -64,7 +64,7 @@ const PrPage = ({header}) => {
         <div>
             <Header header={header}/>
             <PrContainer>
-                <TextHeading title={'Report Type'} />
+                <TextHeading title={'Press Release'} textCenter={isMobile ? false : true} />
                 <MaxHeight style={{height: `${PageType.numberPage * heightPage}px`}}>
                     <GridContainer>
                         {isMobile ? headingMobile.map((el,i) => tableMap(el,i)) : headingArray.map((el,i) => tableMap(el,i))}

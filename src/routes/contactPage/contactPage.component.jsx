@@ -11,6 +11,7 @@ import { headingArray, headingArrayTablet, contactArray } from "./contactPage.da
 
 const ContactPage = ({header}) => {
 const isTablet = useMediaQuery(mediaQuery.useTablet);
+const isMobile = useMediaQuery(mediaQuery.useMobile);
 
 const tableMap = (el, i) => <Table content={el} key={i} type={TableType.greyHeading} fullBorder={true}/> ;
 
@@ -37,7 +38,7 @@ const contentMap = (el) => {
         <div>
             <Header header={header}/>
             <ContactContainer>
-                <TextHeading title={'Contact Us'}/>
+                <TextHeading title={'Contact Us'} textCenter={isMobile ? false : true}/>
                 <TableContainer>
                     {isTablet ? headingArrayTablet.map((el,i) => tableMap(el,i) ) : headingArray.map((el,i) => tableMap(el, i))}
                     { contactArray.map(el => contentMap(el)) }

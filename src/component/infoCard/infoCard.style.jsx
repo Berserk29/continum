@@ -14,10 +14,10 @@ export const CardContainer = styled.div`
 
 export const WhiteCardContainer = styled(CardContainer)`
     background-color: var(--color-white);
-    padding: 2rem 2rem;
+    padding: 2.4rem 3.2rem;
     @media ${mediaQuery.styledMobile} {
         gap: 1rem;
-        padding: 1rem 1rem;
+        padding: 4rem 1rem;
     }
 `
 
@@ -42,15 +42,21 @@ export const HeadingCard = styled.h5`
 ` 
 
 export const HeadingWhiteCard = styled.h5`
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     color: var(--color-primary);
+    @media ${mediaQuery.styledMobile}{
+        font-size: 2.25rem;
+    }
 `
 
 export const TextCard = styled.p`
     font-size: 1.4rem;
     color: var(--color-grey);
     line-height: 160%;
+    @media ${mediaQuery.styledMobile}{
+        font-size: 1.625rem;
+    }
 `
 
 export const TextWhiteCard = styled(TextCard)`

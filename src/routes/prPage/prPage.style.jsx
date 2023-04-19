@@ -4,9 +4,15 @@ import mediaQuery from "../../helper/mediaQuery";
 export const PrContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5rem 2rem 3rem 2rem;
-    gap: 2rem;
+    padding: 10.4rem 4rem 10rem 4rem;
+    gap: 6rem;
+    @media ${mediaQuery.styledTablet}{
+        padding: 8rem 1.6rem;
+    }
+    @media ${mediaQuery.styledMobile}{
+        padding: 5rem 2rem;
+        gap: 3rem;
+    }
 `
 
 export const GridContainer = styled.div`
@@ -24,7 +30,7 @@ export const GridContainer = styled.div`
 export const ButtonContainer = styled.div`
     display: flex;
     gap: 2rem;
-    align-items: center;
+    align-self: center;
 `
 
 export const CirclePage = styled.div`

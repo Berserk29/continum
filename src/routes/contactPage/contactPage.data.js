@@ -34,7 +34,7 @@ export const contactArray = [
         areas: 'Global O&M',
         details: ['Overseas'],
         manager: 'Stephane Trudeau',
-        contact: ['438-5080-8482', 'stephanetrudeau@continum.com'],
+        contact: ['438-5080-8482', 'stephane333@continum.com'],
         imageUrl: [phoneIcon, mailIcon],
     },
 ]
