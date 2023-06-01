@@ -15,6 +15,7 @@ import {
     CarouselText,
     CarouselBtn,
     CarouselBtnActive,
+    SectionImg,
 } from "./carousel.style";
 
 const Carousel = () => {
@@ -36,10 +37,19 @@ const Carousel = () => {
         }, [carouselNum])
 
 
+        const imgControl = (i) => {
+            if(i === carouselNum) return true
+            return false 
+        }
+
     // onAnimationEnd={()=> setAnimationOn(false)} At the end of the animation -> animation false !!
-    
+    // image={carouselArray[carouselNum].imageUrl}
+
     return (
-        <Section image={carouselArray[carouselNum].imageUrl}>
+        <Section >
+                <SectionImg opacity={imgControl(0)} image={carouselArray[0].imageUrl}/>
+                <SectionImg opacity={imgControl(1)} image={carouselArray[1].imageUrl}/>
+                <SectionImg opacity={imgControl(2)} image={carouselArray[2].imageUrl}/>
             <CarouselContainer>
                 <ItemContainer>
                     {carouselArray.map((el,i) => {

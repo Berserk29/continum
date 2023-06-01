@@ -3,13 +3,24 @@ import { comingBack, AnimationChoice } from "../../animation/animation.style";
 import mediaQuery from "../../helper/mediaQuery";
 
 export const Section = styled.div`
+    position: relative;
+    height: 76rem;
+    width: 100%;
+    background-color: black;
+`
+
+export const SectionImg = styled.div`
+    opacity: ${props => props.opacity || 0};
     background-image: url(${props => props.image});
     background-size: cover;
     background-position: center;
-    transition: background-image .8s , background-color .8s;
-    position: relative;
-    height: 76rem;
-    @media ${mediaQuery.styledTablet} {
+    transition: opacity .8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+        @media ${mediaQuery.styledTablet} {
     background-color: #00000030;
     background-blend-mode: multiply;
     }
