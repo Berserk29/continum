@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { backToLife } from "../../animation/animation.style";
+import { backToLife, upAndDown } from "../../animation/animation.style";
 import mediaQuery from "../../helper/mediaQuery";
 
 // Home for homepage and Other for other page
 
 export const HeaderContainerHome = styled.div`
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -16,6 +16,31 @@ export const HeaderContainerOther = styled(HeaderContainerHome)`
     text-align: center;
     @media ${mediaQuery.styledMobile} {
         height: 40rem;
+    }
+`
+
+export const Mouse = styled.div`
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 2rem;
+    height: 3rem;
+    opacity: .9;
+    border-radius: 40%;
+    border: 2px solid white;
+    animation-name: ${backToLife}; 
+    animation-duration: 4s;
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: .2rem;
+        left: 0.7rem;
+        width: .2rem;
+        height: .7rem;
+        background-color: white;
+        color: white;
+        animation: ${upAndDown} 2.5s infinite;
     }
 `
 

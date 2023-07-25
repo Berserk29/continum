@@ -37,3 +37,8 @@ export const comingBack = keyframes`
 export const AnimationChoice = css`
     animation: ${props => props.animation} ${props => props.time}s;
 `
+
+export const upAndDown = keyframes`
+    0%, 100% {transform: translateY(0)}
+    50% {transform: translateY(-1rem)}
+`

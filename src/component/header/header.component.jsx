@@ -9,6 +9,7 @@ import {
     TitleHeaderHome,
     HeaderMain,
     HeaderSub,
+    Mouse,
 } from "./header.style";
 
 
@@ -23,7 +24,8 @@ const {imageUrl, main, sub} = header;
                         <TitleHeaderHome>
                             <HeaderMain>{main}</HeaderMain>
                             <HeaderSub>{sub}</HeaderSub>
-                        </TitleHeaderHome> 
+                        </TitleHeaderHome>
+                        <Mouse /> 
                 </HeaderContainerHome>
                     :
                 <HeaderContainerOther style={{backgroundImage: `url(${imageUrl})`}}>
