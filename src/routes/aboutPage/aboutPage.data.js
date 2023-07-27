@@ -7,21 +7,21 @@ export const cardArray = [
         id: 1,
         imageFirst: true,   
         imageUrl: AboutImage1,
-        heading: "Opening the future of smart industrial sites by converging OT and IT technologies",
-        text: "Continum enhances customer's competitiveness by implementing a smart factory where facilities and machines independently exchange information, monitor all integrated processes, and automatically control them."
+        heading: "Technology for the future space access",
+        text: "We will play a crucial role in ushering in a new space era by developing a repeatedly reusable launch vehicle. We will take part in the Artemis project and unlock new opportunities on the moon. We will locally source and produce the resources needed for sustainable space development to secure the technology designed to travel further into the universe."
     },
     {
         id: 2,
         imageFirst: false,
         imageUrl: AboutImage2,
-        heading: "Presenting realistic alternatives in the carbon-neutral era by supplying green energy",
-        text: "Continum configures and operates optimal renewable energy collective resource(VPP,virtual power plant),contributing to grid stability and maximizing customer profits through power trading and RE100 solutions based on power generation forecasting.",
+        heading: "Technology for the earth Eco-friendly mobility systems",
+        text: "A hybrid propulsion system, combined with an electric propulsion system, is applied to a variety of mobility systems to maximize engine efficiency and minimize carbon and other harmful gas emissions. A carbon-free power system, built with hydrogen and ammonia, is applied to all mobility systems, including ships, aircraft, and armoured vehicles, to achieve carbon neutrality on the planet.",
     },
     {
         id: 3,
         imageFirst: true,
         imageUrl: AboutImage3,
-        heading: "Creating new value for customers through continuous R&D",
-        text: "Continum enhances customer's competitiveness by implementing a smart factory where facilities and machines independently exchange information, monitor all integrated processes, and automatically control them.",
+        heading: "Technology for people Autonomous mobility systems",
+        text: "Unmanned operation through the autonomous navigation platform control technology. Our high-performance autonomous navigation platform control technology is applied to all mobility platforms, including automobiles, drones, ships, UAMs, and robots, to evolve into an unmanned operation system.",
     }
 ]

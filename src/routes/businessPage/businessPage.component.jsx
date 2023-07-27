@@ -23,17 +23,17 @@ const BusinessPage = ({header}) => {
     return (
         <BuisinessContainer>
             <Header header={header}/>
-            <UpperText>We provide outstanding O&M service to the global solar market based on Continum Group's solar and BESS business capabilities and IT technologies</UpperText>
+            <UpperText>We discover untapped opportunities for future generations in uncharted territories.</UpperText>
             <StoryContainer>
                 <div>
-                    <TextHeading title={'Total O&M Solution'}/>
-                    <TextCss>A group of experts with global 1GW O&M operation experience provides meticulous and systematic total O&M services</TextCss>
+                    <TextHeading title={'Our planet, our space'}/>
+                    <TextCss>We lead all aspects of Canada's satellite industry, from satellites, telecommunications and the supply of satellite services.</TextCss>
                 </div>
                 {storyArray.map(el => <StoryNews link='/pr' story={el} key={el.id}/>)}
             </StoryContainer>
             <BessContainer>
-                <TextHeading title={'BESS O&M'}/>
-                <TextCss>Continum ranked No.1 in BESS O&M capacity, maintains Bess in optimal condition based on global operation experience and the know-how of professional personnel.</TextCss>
+                <TextHeading title={'Exploration for maritime'}/>
+                <TextCss>We lead all aspects of Canada's satellite industry,from satellites, telecommunications and the supply of satellite services.</TextCss>
                 <FlexCenter>
                     <CardContainer>
                         {bessArray.map(el => <BessCard props={el} key={el.id}/>)}                

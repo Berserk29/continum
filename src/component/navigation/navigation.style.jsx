@@ -5,9 +5,10 @@ import mediaQuery from "../../helper/mediaQuery";
 export const NavLinks = styled(NavLink)`
     color: ${props => props.color};
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-decoration: none;
     transition: color .25s;
+    text-transform: capitalize;
 `
 
 export const NavigationContainer = styled.div`
@@ -15,7 +16,7 @@ export const NavigationContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8.2rem;
+    height: 8.4rem;
     width: 100%;
     z-index: 100;
     transition: background-color .25s;
@@ -41,7 +42,7 @@ export const NavLinksContainer = styled.ul`
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 3.2rem;
+    gap: 4.8rem;
 `
 
 export const NavLogo = styled.img`

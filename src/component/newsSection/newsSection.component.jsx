@@ -40,13 +40,13 @@ const NewsSection = () => {
             <ImgContainer image={imageLogic(NewsImg)}>
                 <ImgContainerItems>
                     <InfoHeading 
-                        title={'News'} 
+                        title={'News & Media'} 
                         animate={control}
                         variants={variantLeft}
                     />
                     <SectionHeading
                         color={isTablet ? 'var(--color-black)' : 'var(--color-white)'} 
-                        title={<p>See<br/> the latest<br/> News Now</p>}
+                        title={<p>Newsroom<br/> Of Continum</p>}
                         animate={control}
                         variants={variantLeft}
                         />

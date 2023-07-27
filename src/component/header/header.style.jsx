@@ -49,6 +49,7 @@ export const TitleHeaderOther = styled.h2`
     font-size: 5rem;
     font-weight: 800;
     margin-top: 14rem;
+    text-transform: capitalize;
     @media ${mediaQuery.styledMobile} {
         font-size: 3.25rem;
         font-weight: 700;
@@ -63,6 +64,7 @@ export const TitleHeaderHome = styled.h1`
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    text-transform: capitalize;
     top: 30%;
     margin-left: 10.4rem;
     animation-name: ${backToLife}; 
@@ -79,6 +81,7 @@ export const TitleHeaderHome = styled.h1`
 export const HeaderMain = styled.span`
     font-weight: 800;
     font-size: 5rem;
+    text-transform: capitalize;
 `
 
 export const HeaderSub = styled.span`

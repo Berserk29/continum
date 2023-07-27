@@ -11,7 +11,7 @@ const AboutPage = ({header}) => {
         <Fragment>
             <Header header={header}/>
             <AboutContainer>
-                <UpperText>We bring tomorrow's dreams to life and create a smarter world with our customers by adding value to technology</UpperText>
+                <UpperText>We create sustainable technologies to protect human-beings and our planet.</UpperText>
                 { cardArray.map(el => <Card card={el} key={el.id}/>) }
             </AboutContainer>
         </Fragment>

@@ -25,24 +25,23 @@ const headerArray = [
     },
     {
         imageUrl: AboutImage,
-        main: 'About Us',
-        
+        main: 'Who we are',
     },
     {
         imageUrl: BusinessImage,
-        main: 'Business & Solutions',
+        main: 'What we do',
     },
     {
         imageUrl: SubtainabilityImage,
-        main: 'Sustainability'
+        main: 'Media'
     },
     {
         imageUrl: PrImage,
-        main: 'PR'
+        main: 'Esg'
     },
     {
         imageUrl: ContactImage,
-        main: 'Contact Us'
+        main: 'Contact'
     },
 ]
 

@@ -26,12 +26,12 @@ const Recruitment = () => {
     return (
         <RecruitmentContainer ref={ref} image={`url(${recruitImg})`}>
             <InfoHeading 
-                title={'Recruitment'}
+                title={'Sustainable Management'}
                 animate={control}
                 variants={variantUp} 
             />
             <SectionHeading 
-                title={<p>We Welcome Talented People to {isMobile ? '' : <br/>} Join us in Continum</p>} 
+                title={<p>Make variety efforts {isMobile ? '' : <br/>} in every area</p>} 
                 animate={control}
                 variants={variantLeft}
             />
