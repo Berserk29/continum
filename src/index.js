@@ -7,13 +7,15 @@ import '../src/animation/animation.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ScrollToTop from './helper/ScrollToTop';
+import GlobalStyles from './globalStyles';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
   <BrowserRouter>
     <ScrollToTop />
-      <App />
+    <GlobalStyles />
+    <App />  
   </BrowserRouter>
   // </React.StrictMode>
 );

@@ -36,6 +36,7 @@ export const Title2 = styled.h2`
     ${titleCss};
     font-size: 4.3rem;
     color: var(--color-white);
+    text-align: center;
 `
 
 export const Title3 = styled.h3`
@@ -43,6 +44,7 @@ export const Title3 = styled.h3`
     ${titleCss2};
     letter-spacing: -2%;
     font-size: 3.6rem;
+    text-align: center;
 `
 
 export const Title4 = styled.h4`

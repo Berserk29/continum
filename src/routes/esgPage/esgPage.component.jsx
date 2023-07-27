@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import { ethicalArray, reportArray, reportTypeArray  } from "./sustainabilityPage.data";
+import { ethicalArray, reportArray, reportTypeArray  } from "./esgPage.data";
 
 import Header from "../../component/header/header.component";
 import TextHeading from "../../component/textHeading/textHeading.component";
@@ -17,9 +17,9 @@ import {
     FlexCenter,
     BulletContainer,
     TableContainer,
-} from "./sustainabilityPage.style";
+} from "./esgPage.style";
 
-const SustainabilityPage = ({header}) => {
+const EsgPage = ({header}) => {
     
     return (
         <Fragment>
@@ -69,4 +69,4 @@ const SustainabilityPage = ({header}) => {
     )
 }
 
-export default SustainabilityPage;
+export default EsgPage;

@@ -16,16 +16,3 @@ export const AboutContainer = styled.div`
         gap: 5rem;
     }
 `
-
-export const UpperText = styled.h4`
-    color: var(--color-black);
-    font-size: 4rem;
-    text-align: center;
-    @media ${mediaQuery.styledTablet} {
-        font-size: 3.2rem;
-    }
-    @media ${mediaQuery.styledMobile} {
-        font-size: 2.75rem;
-    }
-
-`

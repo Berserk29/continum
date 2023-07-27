@@ -11,6 +11,7 @@ import {
     HeaderSub,
     Mouse,
 } from "./header.style";
+import Typo, { TypoType } from "../typo/typo.component";
 
 
 const Header = ({header}) => {
@@ -30,7 +31,9 @@ const {imageUrl, main, sub} = header;
                     :
                 <HeaderContainerOther style={{backgroundImage: `url(${imageUrl})`}}>
                     <Navigation/>
-                    <TitleHeaderOther>{main}</TitleHeaderOther>
+                    <TitleHeaderOther>
+                        <Typo type={TypoType.Title2_W}>{main}</Typo>
+                    </TitleHeaderOther>
                 </HeaderContainerOther>
             }
         </Fragment>

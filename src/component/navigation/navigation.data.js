@@ -12,12 +12,12 @@ export const navLinkArray = [
     {
         id: 3,
         heading: 'Media',
-        path: '/sustainability',
+        path: '/media',
     },
     {
         id: 4,
         heading: 'Esg',
-        path: '/pr',
+        path: '/esg',
     },
     {
         id: 5,

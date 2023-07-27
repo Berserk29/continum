@@ -6,7 +6,7 @@ import Header from "../../component/header/header.component";
 import Table , {TableType} from "../../component/table/table.component";
 import TextHeading from "../../component/textHeading/textHeading.component";
 
-import { headingArray, headingMobile, PressArray} from "./prPage.data";
+import { headingArray, headingMobile, PressArray} from "./mediaPage.data";
 
 import {
     ButtonContainer,
@@ -16,12 +16,12 @@ import {
     MaxHeight,
     ArrowIcon,
     ArrowHiddenIcon,
-} from "./prPage.style";
+} from "./mediaPage.style";
 
 import arrowLeft from '../../assets/icon/arrow_left.png';
 import arrowRight from '../../assets/icon/arrow_right.png';
 
-const PrPage = ({header}) => {
+const MediaPage = ({header}) => {
   const [page, setPage] = useState(1);
   const isMobile = useMediaQuery(mediaQuery.useMobile);
 
@@ -81,4 +81,4 @@ const PrPage = ({header}) => {
     );
 }
 
-export default PrPage;
+export default MediaPage;

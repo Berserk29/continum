@@ -1,32 +1,32 @@
 export const categories = [
     {
       id: 0,
-      title: 'About Us',
+      title: 'Who we are',
       path: '/about',
-      linkName: ['About Us', 'History', 'Business Sites']
+      linkName: ['Company', 'History', 'Location']
     },
     {
       id: 1,
-      title: 'Business & Solutions',
+      title: 'What we do',
       path: '/business',
-      linkName: ['Business', 'Solution']
+      linkName: ['Sustainable tech', 'Product & service', 'Discover', 'Protect']
     },
     {
       id: 2,
-      title: 'Sustainability',
-      path: '/sustainability',
-      linkName: ['Ethical Management', 'Quality Management','Safety and Health Enviroment', 'Shared Growth']
+      title: 'Media',
+      path: '/media',
+      linkName: ['Newsroom', 'Library', 'Notice']
     },
     {
       id: 3,
-      title: 'PR',
-      path: '/pr',
-      linkName: ['Press', 'Notice', 'CONTACT US']
+      title: 'Esg',
+      path: '/esg',
+      linkName: ['Environmental', 'Social', 'Governance']
     },
     {
       id: 4,
       title: 'Contact Us',
       path: '/contact',
-      linkName: ['Talent', 'HR System', 'Jobs']
+      linkName: ['Jobs']
     },
   ]

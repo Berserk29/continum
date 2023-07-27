@@ -39,20 +39,6 @@ export const AboutImage = styled(motion.img)`
     }
 `
 
-export const CardHeading = styled.h4`
-    color: var(--color-black);
-    font-size: 2.6rem;
-    font-weight: 700;
-    line-height: 140%;
-    @media ${mediaQuery.styledTablet} {
-        font-size: 1.8rem;
-    }
-    @media ${mediaQuery.styledMobile} {
-        font-size: 2.75rem;
-        line-height: normal;
-    }
-`
-
 export const TextContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;
@@ -67,18 +53,5 @@ export const TextContainer = styled(motion.div)`
         width: 100%;
         align-items: center;
         text-align: center;
-    }
-`
-
-export const CardText = styled.p`
-    color: var(--color-black);
-    font-size: 1.6rem;
-    line-height: 160%;
-    @media ${mediaQuery.styledTablet} {
-        line-height: 120%;
-    }
-    @media ${mediaQuery.styledMobile} {
-        line-height: 160%;
-        font-size: 1.75rem;
     }
 `

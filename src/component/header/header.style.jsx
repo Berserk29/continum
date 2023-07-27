@@ -45,14 +45,8 @@ export const Mouse = styled.div`
 `
 
 export const TitleHeaderOther = styled.h2`
-    color: var(--color-white);
-    font-size: 5rem;
-    font-weight: 800;
     margin-top: 14rem;
-    text-transform: capitalize;
     @media ${mediaQuery.styledMobile} {
-        font-size: 3.25rem;
-        font-weight: 700;
         padding: 0 1rem;
         margin-top: 13rem;
     }
