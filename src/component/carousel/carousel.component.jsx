@@ -32,14 +32,14 @@ const Carousel = () => {
             const interval = setInterval(() => {
                 carouselNum === carouselArray.length - 1 ? setCarouselNum(0) : setCarouselNum(carouselNum + 1)
                 setAnimationOn(true)
-            }, 12000)
+            }, 8000)
             return () => clearInterval(interval)
         }, [carouselNum])
 
 
         const imgControl = (i) => {
-            if(i === carouselNum) return true
-            return false 
+            if(i === carouselNum) return 1
+            return 0
         }
 
     // onAnimationEnd={()=> setAnimationOn(false)} At the end of the animation -> animation false !!

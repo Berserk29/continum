@@ -1,7 +1,6 @@
 import { useAnimation } from "framer-motion";
 import { useEffect} from "react";
 import { useInView } from "react-intersection-observer";
-import { variantLeft, variantRight , slowVariantUp, slowVariantScale} from "../../helper/animationMotion";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
@@ -11,42 +10,35 @@ import {
     TextContainer,
 } from "./card.style";
 
+import { variantUp } from "../../helper/animationMotion";
 import Typo, { TypoType } from "../typo/typo.component";
 
 
 const Card = ({card}) => {
-    let {imageFirst} = card;    
-    const {imageUrl, heading, text} = card;
+    const {imageUrl, heading, text, imageFirst} = card;
 
-    const isMobile = useMediaQuery(mediaQuery.useMobile)
-    if(isMobile) imageFirst = true;
+    const isTablet = useMediaQuery(mediaQuery.useTablet)
 
-    const thresholdNum = isMobile ? 0.3 : 0.7 ;
+    const thresholdNum = isTablet ? 0.1 : 0.4;
     const control = useAnimation()
-    const [ref, inView] = useInView({ threshold: thresholdNum, })
+    const [ref, inView] = useInView({ threshold: thresholdNum })
 
     useEffect(() => {
         if(inView) control.start('visible')
     }, [control, inView])
 
-    const arriveDirection = () => {
-        if(isMobile) return slowVariantScale
-        return imageFirst ? variantRight : variantLeft;  
-    } 
-    const aboutImage = (variantsDirection) => <AboutImage src={imageUrl} variants={isMobile ? slowVariantUp : variantsDirection} initial='hidden' animate={control}/> ;
 
     return (
-        <CardContainer ref={ref}>
-                { imageFirst ? aboutImage(variantLeft) : ''}
-                    <TextContainer                             
-                        variants={arriveDirection()}
-                        initial='hidden'
-                        animate={control}
-                    >
-                        <Typo type={TypoType.TitleNoto1_B}>{heading}</Typo>
-                        <Typo type={TypoType.Text3_B}>{text}</Typo>
-                    </TextContainer>
-                { !imageFirst ? aboutImage(variantRight) : ''}
+        <CardContainer ref={ref} imagefirst={imageFirst}>
+            <AboutImage src={imageUrl} variants={variantUp} initial='hidden' animate={control}/>
+            <TextContainer                             
+                variants={variantUp}
+                initial='hidden'
+                animate={control}
+            >
+                <Typo type={TypoType.Title5_B}>{heading}</Typo>
+                <Typo type={TypoType.Text3_B}>{text}</Typo>
+            </TextContainer>
         </CardContainer>
     )
 }

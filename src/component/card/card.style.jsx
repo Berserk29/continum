@@ -7,15 +7,18 @@ import mediaQuery from '../../helper/mediaQuery'
 export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
+    flex-direction: ${props => props.imagefirst ? 'row' : 'row-reverse'};
     gap: 8rem;
     width: 100%;
-    max-width: 120rem;
-    height: 51rem;
     align-items: center;
+    max-width: 93.2rem;
+    height: 41rem;
+    /* max-width: 120.2rem; */
+    /* height: 50rem; */
     @media ${mediaQuery.styledTablet} {
-        gap: 2.5rem;
+        gap: 4rem;
+        flex-direction: column;
         height: auto;
-        width: 100%;
     }
     @media ${mediaQuery.styledMobile} {
         gap: 3rem;
@@ -27,14 +30,9 @@ export const CardContainer = styled.div`
 export const AboutImage = styled(motion.img)`
     height: 100%;
     @media ${mediaQuery.styledTablet} {
-        height: auto;
-        width: 40%;
-    }
-    @media ${mediaQuery.styledMobile} {
         object-fit: cover;
-        aspect-ratio: 1.17/1;
         max-width: 100%;
-        max-height: 280px;
+        max-height: 38.1rem;
         width: auto;
     }
 `
@@ -43,15 +41,10 @@ export const TextContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;
     width: 45%;
-    gap: 2rem;
-    font-size: 1.6rem;
+    gap: 2.4rem;
     @media ${mediaQuery.styledTablet} {
-        width: 50%;
-        gap: 1.5rem;
-    }
-    @media ${mediaQuery.styledMobile} {
-        width: 100%;
-        align-items: center;
         text-align: center;
+        width: 100%;
+        max-width: 70.4rem;
     }
 `

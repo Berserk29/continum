@@ -23,7 +23,7 @@ const StoryNews = ({link, props, animate, variants}) => {
     return (
         <StoryContainerItems animate={animate} variants={variants} initial='hidden'>
             <TextContainer>
-                <Typo type={TypoType.TitleNoto2_B}>{heading}</Typo>
+                <Typo type={TypoType.TitleNoto1_B}>{heading}</Typo>
                 <Typo type={TypoType.Text5_B}>{text}</Typo>
             </TextContainer>
             {!isMobile && <ArrowBtn src={arrowBtn} onClick={viewHandler}/>}
