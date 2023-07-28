@@ -34,14 +34,6 @@ export const CategoryContainer = styled.div`
     }
 `
 
-export const ContinumLogo = styled.img`
-    width: 10.4rem;
-    @media ${mediaQuery.styledTablet} {
-        width: 18rem;
-        margin-top: 3rem;
-    }
-`
-
 export const LowerPartContainer = styled.div`
     width: 90%;
     display: flex;

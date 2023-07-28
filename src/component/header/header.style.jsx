@@ -53,34 +53,9 @@ export const TitleHeaderOther = styled.h2`
 `
 
 export const TitleHeaderHome = styled.h1`
-    color: var(--color-white);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
-    text-transform: capitalize;
-    top: 30%;
-    margin-left: 10.4rem;
+    margin-top: 35vh;
     animation-name: ${backToLife}; 
     animation-duration: 3s;
-    @media ${mediaQuery.styledTablet} {
-        margin-left: 0;
-        padding: 0 8rem
-    }
-    @media ${mediaQuery.styledMobile} {
-        padding: 0 3rem;
-    }
-`
-
-export const HeaderMain = styled.span`
-    font-weight: 800;
-    font-size: 5rem;
-    text-transform: capitalize;
-`
-
-export const HeaderSub = styled.span`
-    font-weight: 400;
-    font-size: 2.6rem;
 `
 
 

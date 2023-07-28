@@ -1,34 +1,33 @@
-import HomeImage from '../src/assets/home/main_bg_header.png'
-import AboutImage from '../src/assets/about/aboutus_bg_01.png'
-import BusinessImage from '../src/assets/business/business_bg_01.png'
-import SubtainabilityImage from '../src/assets/sustainability/sustainability_bg_01.png'
-import PrImage from '../src/assets/pr/pr_bg_01.png'
-import ContactImage from '../src/assets/contact/contactus_bg_01.png'
+
+import aboutImage from '../src/assets/image/subpage_cover_01.jpg'
+import businessImage from '../src/assets/image/subpage_cover_02.jpg'
+import mediaImage from '../src/assets/image/subpage_cover_03.jpg'
+import esgImage from '../src/assets/image/subpage_cover_04.jpg'
+import contactImage from '../src/assets/image/subpage_cover_05.jpg'
 
 export const headerArray = [
     {
-        imageUrl: HomeImage,
-        main: 'Envisioning Tomorrow',
-        sub: 'with smart technologies'
+        // TODO CHANGE WHEN I GOT THE VIDEO
+        imageUrl: businessImage,
     },
     {
-        imageUrl: AboutImage,
+        imageUrl: aboutImage,
         main: 'Who we are',
     },
     {
-        imageUrl: BusinessImage,
+        imageUrl: businessImage,
         main: 'What we do',
     },
     {
-        imageUrl: SubtainabilityImage,
+        imageUrl: mediaImage,
         main: 'Media'
     },
     {
-        imageUrl: PrImage,
+        imageUrl: esgImage,
         main: 'Esg'
     },
     {
-        imageUrl: ContactImage,
+        imageUrl: contactImage,
         main: 'Contact'
     },
 ]

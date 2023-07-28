@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { ArrowView, BtnView, ViewContainer, MovingArrowView, ArrowViewVisible, VisibleArrowView } from "./viewBtn.style"
 
-import arrowBtnImg from '../../assets/icon/button_arrow.png'
+import arrowBtnImg from '../../assets/icon/btn_arrow_default.png'
 
 const ViewBtn = ({link, displayOff = false, animation = false, time = false, color = 'var(--color-grey-light)', animate, variants}) => {
     const navigate = useNavigate()

@@ -5,7 +5,8 @@ import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
 import { variantLeft, variantScale, variantUp } from "../../helper/animationMotion";
-import { storyArray } from "./newsSection.data";
+
+import { storyArray, newsBgImg } from "./newsSection.data";
 
 import { 
     ImgContainer,
@@ -15,11 +16,9 @@ import {
 } from "./newsSection.style";
 
 import SectionHeading from "../sectionHeading/sectionHeading.component";
-import ViewBtn from "../viewBtn/viewBtn.component";
-import InfoHeading from "../infoHeading/infoHeading.component";
 import StoryNews from "../storyNews/storyNews.component";
-import NewsImg from '../../assets/home/main_bg_02.png'
 
+import { headingHome03 } from "../sectionHeading/sectionHeading.data";
 
 const NewsSection = () => {
     const isTablet = useMediaQuery(mediaQuery.useTablet)
@@ -37,26 +36,13 @@ const NewsSection = () => {
 
     return (
        <NewsContainer ref={ref}>
-            <ImgContainer image={imageLogic(NewsImg)}>
+            <ImgContainer image={imageLogic(newsBgImg)}>
                 <ImgContainerItems>
-                    <InfoHeading 
-                        title={'News & Media'} 
-                        animate={control}
-                        variants={variantLeft}
-                    />
-                    <SectionHeading
-                        color={isTablet ? 'var(--color-black)' : 'var(--color-white)'} 
-                        title={<p>Newsroom<br/> Of Continum</p>}
-                        animate={control}
-                        variants={variantLeft}
-                        />
-                    <ViewBtn link={'business'} animate={control} variants={variantScale}/>
+                    <SectionHeading props={headingHome03}/>
                 </ImgContainerItems>
             </ImgContainer>
             <StoryContainer>
-                { 
-                    storyArray.map(el => <StoryNews link='/pr' story={el} key={el.id} animate={control} variants={variantUp}/> )
-                }
+                { storyArray.map(el => <StoryNews link='/media' props={el} key={el.id} animate={control} variants={variantUp}/> ) }
             </StoryContainer>
        </NewsContainer>
     )

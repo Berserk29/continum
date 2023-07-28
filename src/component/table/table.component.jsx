@@ -66,7 +66,7 @@ const Table = ({content, type = TableType.white, fullBorder = false, icon = fals
 
     return (
         <Fragment>
-            { containerType()}
+            { containerType() }
         </Fragment>
     )
 }

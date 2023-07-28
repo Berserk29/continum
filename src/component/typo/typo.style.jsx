@@ -7,7 +7,6 @@ const titleCss = css`
    font-weight: 700;
    font-size: 3.2rem;
    line-height: 120%;
-   text-transform: capitalize;
 `
 
 const titleCss2 = css`
@@ -111,4 +110,12 @@ export const Text4 = styled(Text1)`
     font-size: 1.5rem;
     letter-spacing: 0%;
     color: var(--color-grey);
+`
+
+export const Text5 = styled.p`
+    ${notoCss}
+    font-weight: 400;
+    font-size: 1.4rem;
+    opacity: .6;
+    letter-spacing: -4%;
 `

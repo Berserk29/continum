@@ -4,15 +4,7 @@ import { useMediaQuery } from 'react-responsive'
 import mediaQuery from "../../helper/mediaQuery";
 
 import DropMenu from "../dropMenu/dropMenu.component";
-import { navLinkArray } from "./navigation.data";
-
-import continumBlack from '../../assets/icon/logo_horizontal_b.png'
-import continumWhite from '../../assets/icon/logo_horizontal_w.png' 
-import hamBlack from '../../assets/icon/icon_hamburger_b.png'
-import hamWhite from '../../assets/icon/icon_hamburger_w.png'
-import globeWhite from '../../assets/icon/icon_globe_w.png'
-import globeBlack from '../../assets/icon/icon_globe_b.png'
-import closeBtn from '../../assets/icon/icon_close.png'
+import { navLinkArray, navIcon } from "./navigation.data";
 
 import { 
   NavHam,
@@ -28,6 +20,8 @@ import {
 const Navigation = () => {
   const [hoverState, setHoverState] = useState(false);
   const [dropMenuOn, setDropMenuOn] = useState(false);
+  const {continumWhite, continumBlack, hamWhite, hamBlack, globeWhite, globeBlack, closeBtn} = navIcon;
+
   
   const navigate = useNavigate();
   const navLogoHandler = () => navigate('/');

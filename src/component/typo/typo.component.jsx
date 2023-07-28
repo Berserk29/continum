@@ -13,6 +13,7 @@ import {
     Text2,
     Text3,
     Text4,
+    Text5,
 } from "./typo.style";
 
 export const TypoType = {
@@ -30,6 +31,7 @@ export const TypoType = {
     Text2_W: 'Text2_W',
     Text3_B: 'Text3_B',
     Text4_G: 'Text4_G',
+    Text5_B: 'Text5_B',
 }
 
 const Typo = ({children, type}) => {
@@ -49,12 +51,12 @@ const Typo = ({children, type}) => {
         if(type === 'Text2_W') return <Text2>{children}</Text2>
         if(type === 'Text3_B') return <Text3>{children}</Text3>
         if(type === 'Text4_G') return <Text4>{children}</Text4>
+        if(type === 'Text5_B') return <Text5>{children}</Text5>
     }
 
-
     return (
-        <div>
-        {TypoChoice()}
+        <div> 
+            {TypoChoice()} 
         </div>
     )
 }

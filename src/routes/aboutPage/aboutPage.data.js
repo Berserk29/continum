@@ -1,6 +1,6 @@
-import AboutImage1 from '../../assets/about/aboutus_img_01.png'
-import AboutImage2 from '../../assets/about/aboutus_img_02.png'
-import AboutImage3 from '../../assets/about/aboutus_img_03.png'
+import AboutImage1 from '../../assets/image/subpage_contents_01.jpg'
+import AboutImage2 from '../../assets/image/subpage_contents_02.jpg'
+import AboutImage3 from '../../assets/image/subpage_contents_03.jpg'
 
 export const cardArray = [
     {

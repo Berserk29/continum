@@ -1,10 +1,29 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { motion } from "framer-motion";
 
-export const HeadingSection = styled(motion.h3)`
-    color: ${props => props.color};
-    letter-spacing: -2%;
-    font-size: 4rem;
-    line-height: 120%;
-    margin-bottom: 3.2rem;
+const flexCss = css`
+    display: flex;
+    flex-direction: column;
+`
+
+export const HeadingSection = styled(motion.div)`
+    ${flexCss};
+    gap: 6.4rem;
+    align-items:  ${props => props.alignitems || 'center'};
+    text-align: ${props => props.alignitems || 'center'};
+`
+
+export const TextSection = styled.div`
+    ${flexCss};
+    align-items: ${props => props.alignitems || 'center'};
+    gap: 3rem;
+`
+
+export const HeadingContainer = styled.div`
+    ${flexCss};
+    gap: 1.6rem;
+`
+
+export const TextContainer = styled.div`
+    max-width: ${props => props.maxwidth};
 `

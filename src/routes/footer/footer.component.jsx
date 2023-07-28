@@ -1,23 +1,13 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
-import mediaQuery from "../../helper/mediaQuery";
 
 import FooterLink from "../../component/footerLink/footerLink.component";
 
-import logoContinumTablet from '../../assets/icon/logo_horizontal_w.png'
-import logoContinumWhite from '../../assets/icon/logo_vertical_w.png'
-import logoYoutube from '../../assets/icon/logo_youtube.png'
-import logoFacebook from '../../assets/icon/logo_facebook.png'
-import logoTwitter from '../../assets/icon/logo_twitter.png'
-import logoInsta from '../../assets/icon/logo_insta.png'
-
-import { categories } from "./footer.data";
+import { categories, footerIcon } from "./footer.data";
 
 import {
     FooterContainer,
     FooterLinksContainer,
-    ContinumLogo,
     LowerPartContainer,
     TextLine2,
     CategoryContainer,
@@ -28,23 +18,19 @@ import {
 
   
 const Footer = () => {
-  const isTablet = useMediaQuery(mediaQuery.useTablet);
+  const { logoYoutube, logoInsta } = footerIcon
 
   return (
     <Fragment>
       <Outlet/>
       <FooterContainer>
         <FooterLinksContainer>
-          <CategoryContainer>
-            {isTablet ? '' : <ContinumLogo src={logoContinumWhite} alt='logo-continum'/>}
-          </CategoryContainer>
           {
             categories.map((el) => 
               <CategoryContainer key={el.id}>
                 <FooterLink  category={el}/>
               </CategoryContainer>)
           }
-          {isTablet ? <ContinumLogo src={logoContinumTablet} alt='logo-continum'/> : ''}
         </FooterLinksContainer>
         <LowerPartContainer>
           <div>
@@ -55,8 +41,6 @@ const Footer = () => {
             <Text>PRIVACY &nbsp;&nbsp; BUSINESS SITES &nbsp;&nbsp; FAMILY SITE</Text>
             <IconContainer>
               <FooterIcon  src={logoYoutube}/>
-              <FooterIcon  src={logoFacebook}/>
-              <FooterIcon  src={logoTwitter}/>
               <FooterIcon  src={logoInsta}/>
             </IconContainer>
           </div>

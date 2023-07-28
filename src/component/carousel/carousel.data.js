@@ -1,6 +1,6 @@
-import carouselImg0 from '../../assets/home/main_carousel-0.png'
-import carouselImg1 from '../../assets/home/main_carousel-1.png'
-import carouselImg2 from '../../assets/home/main_carousel-2.png'
+import carouselImg0 from '../../assets/image/main_01.jpg'
+import carouselImg1 from '../../assets/image/main_02.jpg'
+import carouselImg2 from '../../assets/image/main_03.jpg'
 
 export const carouselArray = [
     {

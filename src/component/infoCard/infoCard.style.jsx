@@ -1,64 +1,50 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
-export const CardContainer = styled.div`
-    background-color: var(--color-grey-light-3);
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    padding: 5.4rem 3.2rem;
-    @media ${mediaQuery.styledMobile} {
-        padding: 4rem 1rem;
-    }
-`
-
-export const WhiteCardContainer = styled(CardContainer)`
-    background-color: var(--color-white);
-    padding: 2.4rem 3.2rem;
-    @media ${mediaQuery.styledMobile} {
-        gap: 1rem;
-        padding: 4rem 1rem;
-    }
-`
-
-export const ImageCard = styled.img`
-    height: 10.8rem;
-    @media ${mediaQuery.styledMobile} {
-        height: 9.25rem;
-    }
-`
-
-export const TextContainer = styled.div`
+export const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    background-color: var(--color-white);
+    align-items: center;
+    gap: 1.6rem;
+    padding: 2.4rem 1rem;
+`
+
+export const ImageBusiness = styled.img`
+    height: 5.4rem;
+    width: 5.4rem;
 `
 
 export const HeadingCard = styled.h5`
-    font-size: 2.6rem;
-    @media ${mediaQuery.styledMobile} {
-        font-size: 2.25rem;
-    }
-` 
-
-export const HeadingWhiteCard = styled.h5`
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    @media ${mediaQuery.styledMobile}{
-        font-size: 2.25rem;
-    }
-`
-
-export const TextCard = styled.p`
-    font-size: 1.4rem;
-    color: var(--color-grey);
-    line-height: 160%;
-    @media ${mediaQuery.styledMobile}{
-        font-size: 1.625rem;
-    }
-`
-
-export const TextWhiteCard = styled(TextCard)`
     color: var(--color-black);
+    font-size: 1.8rem;
+    text-align: center;
+    height: 6rem;
+    max-width: 25rem;
+    @media ${mediaQuery.styledMobile}{
+        font-size: 2.25rem;
+        max-width: 31.25rem;
+    }
 `
+
+export const BulletContainer = styled.ul`
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .7rem;
+    border-top: 1px solid var(--color-grey-light);
+    padding: 2.4rem 0 0 0;
+`
+
+export const BulletLi = styled.li`
+    color: var(--color-grey-dark);
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    line-height: 160%;
+    font-weight: 400;
+    @media ${mediaQuery.styledMobile}{
+        font-size: 1.75rem;
+    }
+`
+
