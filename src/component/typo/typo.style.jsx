@@ -22,7 +22,7 @@ export const Title1 = styled.span`
     ${titleCss};
     line-height: 160%;
     color: var(--color-white);
-    @media ${mediaQuery.useMobile} {
+    @media ${mediaQuery.styledMobile} {
         font-size: 2.6rem;
     }
 `
@@ -35,8 +35,7 @@ export const Title2 = styled.h2`
     ${titleCss};
     font-size: 4.3rem;
     color: var(--color-white);
-    text-align: center;
-    @media ${mediaQuery.useMobile} {
+    @media ${mediaQuery.styledMobile} {
         font-size: 3.2rem;
     }
 `
@@ -46,14 +45,12 @@ export const Title3 = styled.h3`
     color: var(--color-black);
     letter-spacing: -0.02em;
     font-size: 3.6rem;
-    text-align: center;
     @media ${mediaQuery.styledTablet} {
         font-size: 3.2rem;
     }
     @media ${mediaQuery.styledMobile} {
         font-size: 2.4rem;
         line-height: 160%;
-        text-align: start;
     }
 `
 
@@ -115,6 +112,7 @@ export const Text1 = styled.p`
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 160%;
+    white-space: pre-line;
     @media ${mediaQuery.styledTablet} {
         font-size: 1.6rem;
     }

@@ -5,8 +5,8 @@ export const SubstainContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10.4rem 4rem 8rem 4rem;
-    gap: 6rem;
+    padding: 12rem 8rem 12rem 8rem;
+    gap: 12rem;
     @media ${mediaQuery.styledTablet} {
         padding: 8rem 1.6rem;
     }

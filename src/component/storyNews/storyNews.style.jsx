@@ -7,7 +7,6 @@ export const StoryContainerItems = styled(motion.div)`
     justify-content: space-between;
     align-items: center;
     padding: 3.2rem 0;
-    margin: 0 5.6rem;
     border-top: 1.5px solid var(--color-primary);
     :last-child {
         border-bottom: 1.5px solid var(--color-primary);

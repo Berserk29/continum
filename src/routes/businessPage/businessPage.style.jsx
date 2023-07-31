@@ -5,46 +5,32 @@ export const BuisinessContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
-
-export const UpperText = styled.h4`
-    color: var(--color-black);
-    padding: 10.4rem 3rem;
-    font-size: 2.6rem;
-    text-align: center;
-    max-width: 95rem;
-    letter-spacing: -2%;
-    line-height: 140%;
+    padding: 12rem 0;
+    gap: 8rem;
     @media ${mediaQuery.styledMobile} {
-        font-size: 2.25rem;
-        padding: 5rem 2rem 10rem 2rem;
-    }
-`
-
-export const TextCss = styled.p`
-    color: var(--color-black);
-    font-size: 1.6rem;
-    text-align: center;
-    margin: 0.8rem 5rem 4rem 5rem;
-    line-height: 160%;
-    @media ${mediaQuery.styledMobile} {
-        font-size: 1.75rem;
-        margin: 1rem 0 3rem 0;
+        padding: 6.4rem 0 12rem 0;
     }
 `
 
 export const StoryContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 0 2rem;
-    margin-bottom: 8rem;
+    padding: 0 7.8rem;
+    margin-bottom: 2rem;
     width: 100%;
     max-width: 140rem;
+    gap: 8rem;
+    @media ${mediaQuery.styledMobile} {
+        padding: 0 2rem
+    }
 `
 
-export const BessContainer = styled.div`
+export const InfoContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
     background-color: var(--color-grey-light-3);
-    padding: 8rem 4rem;
+    padding: 8rem 13.4rem;
     width: 100%;
     @media ${mediaQuery.styledTablet} {
         padding: 8rem 1.6rem 2.4rem 1.6rem;
@@ -54,11 +40,11 @@ export const BessContainer = styled.div`
     }
 `
 
-export const CardContainer = styled.div`
+export const InfoCardContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    flex: 1400px 0 1;
-    gap: .8rem;
+    flex: 932px 0 1;
+    gap: 3.2rem;
     @media ${mediaQuery.styledTablet}{
         gap: 1.6rem;
     }
@@ -68,14 +54,15 @@ export const CardContainer = styled.div`
     }
 `
 
-export const RelatedContainer = styled.div`
-    padding: 8rem 4rem 12rem 4rem;
-    width: 100%;
+export const CardContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 11.95rem;
     @media ${mediaQuery.styledTablet} {
-        padding: 8rem 4rem;
+        gap: 8rem;
     }
     @media ${mediaQuery.styledMobile} {
-        padding: 7rem 2rem 8rem 2rem;
+        gap: 6.4rem;
     }
 `
 
@@ -84,15 +71,6 @@ export const FlexCenter = styled.div`
     justify-content: center;
 `
 
-export const RelatedCardContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
-    flex: 1600px 0 1;
-    gap: 2rem;
-    @media ${mediaQuery.styledMobile} {
-        grid-template-columns: 1fr;
-    }
-`
 
 
 

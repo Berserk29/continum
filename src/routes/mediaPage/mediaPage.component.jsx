@@ -4,7 +4,6 @@ import mediaQuery from "../../helper/mediaQuery";
 
 import Header from "../../component/header/header.component";
 import Table , {TableType} from "../../component/table/table.component";
-import TextHeading from "../../component/textHeading/textHeading.component";
 
 import { headingArray, headingMobile, PressArray} from "./mediaPage.data";
 
@@ -64,7 +63,6 @@ const MediaPage = ({header}) => {
         <div>
             <Header header={header}/>
             <PrContainer>
-                <TextHeading title={'Press Release'} textCenter={isMobile ? false : true} />
                 <MaxHeight style={{height: `${PageType.numberPage * heightPage}px`}}>
                     <GridContainer>
                         {isMobile ? headingMobile.map((el,i) => tableMap(el,i)) : headingArray.map((el,i) => tableMap(el,i))}

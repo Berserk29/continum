@@ -15,7 +15,7 @@ export const HeaderContainerOther = styled(HeaderContainerHome)`
     height: 53rem;
     text-align: center;
     @media ${mediaQuery.styledMobile} {
-        height: 40rem;
+        height: 35.8rem;
     }
 `
 

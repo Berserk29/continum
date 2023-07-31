@@ -7,13 +7,12 @@ export const NewsContainer = styled.div`
     @media ${mediaQuery.styledTablet} {
         flex-direction: column;
         justify-content: center;
-        gap: 3rem;
-        padding: 8rem 4rem 4rem 5rem;
-        height: 86rem;
+        gap: 4rem;
+        padding: 8rem;
+        height: auto;
     }
     @media ${mediaQuery.styledMobile} {
-        padding: 4rem 2rem;
-        height: 94rem;
+        padding: 6.4rem 2rem 8rem 2rem;
     }
 `
 
@@ -46,9 +45,10 @@ export const StoryContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 5.6rem;
     @media ${mediaQuery.styledTablet} {
         width: 100%;
-        margin-bottom: auto;
+        padding: 0;
     }
 `
 

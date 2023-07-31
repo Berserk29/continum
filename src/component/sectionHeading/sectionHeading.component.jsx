@@ -7,8 +7,9 @@ import Typo, {TypoType} from '../typo/typo.component'
 
 
 const SectionHeading = ({props}) => {
-    const {titleTop, titleBottom, titleType, text, textType, textMaxWidth, span , viewBtn, alignItems, isBecomeOne} = props;
+    const {titleTop, titleBottom, titleType, text, textType, textMaxWidth, span , viewBtn, alignItems, isBecomeOne, modifiedAlign, modifiedGap} = props;
     const isMobile = useMediaQuery(mediaQuery.useMobile)
+    const isTablet = useMediaQuery(mediaQuery.useTablet)
 
     const isBecomeOneLogic = () => {
         if(isMobile && titleBottom && isBecomeOne) return titleBottom
@@ -20,8 +21,14 @@ const SectionHeading = ({props}) => {
         return <Typo type={TypoType[titleType]}>{titleBottom}</Typo>
     }
 
+    const modifiedLogic = (modifiedProps, nonModifiedProps) => {
+        if(!modifiedProps) return nonModifiedProps;
+        if(isMobile) return modifiedProps[1];
+        if(isTablet) return modifiedProps[0];
+    }
+
     return(
-        <HeadingSection alignitems={alignItems}>
+        <HeadingSection alignitems={modifiedLogic(modifiedAlign, alignItems)} gap={modifiedLogic(modifiedGap, 6.4)}>
             {span && <Typo type={TypoType.Span1_O}>{span}</Typo>}
             <TextSection alignitems={alignItems}>
                 <HeadingContainer>

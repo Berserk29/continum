@@ -5,6 +5,8 @@ import { Fragment } from "react";
 import Header from "../../component/header/header.component";
 import TextHeading from "../../component/textHeading/textHeading.component";
 
+import { headingEsg01 } from "../../component/sectionHeading/sectionHeading.data";
+
 import { 
     EthicalContainer,
     Container,
@@ -16,6 +18,7 @@ import {
     BulletContainer,
     TableContainer,
 } from "./esgPage.style";
+import SectionHeading from "../../component/sectionHeading/sectionHeading.component";
 
 const EsgPage = ({header}) => {
     
@@ -23,30 +26,29 @@ const EsgPage = ({header}) => {
         <Fragment>
             <Header header={header}/>
             <SubstainContainer>
-                <div>
-                 <TextHeading title={'Ethical management'}/>
-                 <TextCss>Continum put ethical management based on integrity in all management activities as his top priority and seeks to ensure that all employees perform their duties transparently, fairly and rationally</TextCss>
-                </div>
+                <SectionHeading props={headingEsg01}/>
+
+
+                <FlexCenter>
+                <Container>
+                    <TextHeading title={'Report type'} textCenter={ false }/>
+                </Container>
+                </FlexCenter>
+                <FlexCenter>
+                <Container>
+                    <TextHeading title={'Operation of reporting'} textCenter={ false }/>
+                    <BulletContainer>
+                        <BulletLi>Priority is given to prompt and accurate handling of reports in violation of compliance management. The processing result will be notified by phone or e-mail as soon as possible.</BulletLi>
+                        <BulletLi>The informant's identity, reported matters, and confidentiality of the informant are thoroughly protected, and reporting is made in principle by real name.</BulletLi>
+                    </BulletContainer>
+                </Container>
+                </FlexCenter>
+                <FlexCenter>
+                <Container>
+                    <TextHeading title={'How to report'} textCenter={ false }/>
+                </Container>
+                </FlexCenter>
             </SubstainContainer>
-            <FlexCenter>
-            <Container>
-                <TextHeading title={'Report type'} textCenter={ false }/>
-            </Container>
-            </FlexCenter>
-            <FlexCenter>
-            <Container>
-                <TextHeading title={'Operation of reporting'} textCenter={ false }/>
-                <BulletContainer>
-                    <BulletLi>Priority is given to prompt and accurate handling of reports in violation of compliance management. The processing result will be notified by phone or e-mail as soon as possible.</BulletLi>
-                    <BulletLi>The informant's identity, reported matters, and confidentiality of the informant are thoroughly protected, and reporting is made in principle by real name.</BulletLi>
-                </BulletContainer>
-            </Container>
-            </FlexCenter>
-            <FlexCenter>
-            <Container>
-                <TextHeading title={'How to report'} textCenter={ false }/>
-            </Container>
-            </FlexCenter>
         </Fragment>
     )
 }

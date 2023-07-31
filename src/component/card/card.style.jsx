@@ -8,13 +8,14 @@ export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: ${props => props.imagefirst ? 'row' : 'row-reverse'};
-    gap: 8rem;
     width: 100%;
     align-items: center;
+    gap: 8rem;
     max-width: 93.2rem;
     height: 41rem;
-    /* max-width: 120.2rem; */
-    /* height: 50rem; */
+    /* max-width: 100rem;
+    height: 45rem;
+    gap: 10rem; */
     @media ${mediaQuery.styledTablet} {
         gap: 4rem;
         flex-direction: column;
