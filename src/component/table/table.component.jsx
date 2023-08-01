@@ -28,7 +28,7 @@ export const TableType = {
 const Table = ({content, type = TableType.white, fullBorder = false, icon = false, heading}) => {
     const border = function () {
         if(!fullBorder) return;
-        return {border: '1px solid var(--color-grey-light-2)'}
+        return {border: '1px solid var(--color-400)'}
     }
 
     const isIconArray = function (i) {

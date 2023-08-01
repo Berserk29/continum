@@ -29,7 +29,7 @@ export const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8rem;
-    background-color: var(--color-grey-light-3);
+    background-color: var(--color-200);
     padding: 8rem 13.4rem;
     width: 100%;
     @media ${mediaQuery.styledTablet} {

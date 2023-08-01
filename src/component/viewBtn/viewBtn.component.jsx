@@ -4,7 +4,7 @@ import { ArrowView, BtnView, ViewContainer, MovingArrowView, ArrowViewVisible, V
 
 import arrowBtnImg from '../../assets/icon/btn_arrow_default.png'
 
-const ViewBtn = ({link, displayOff = false, animation = false, time = false, color = 'var(--color-grey-light)', animate, variants}) => {
+const ViewBtn = ({link, displayOff = false, animation = false, time = false, color = 'var(--color-300)', animate, variants}) => {
     const navigate = useNavigate()
     const [hoverState, setHoverState] = useState(false)
     

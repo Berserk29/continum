@@ -1,78 +1,88 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
+
+// TESTING
+export const Testing = styled.div`
+    background-color: blue;
+    height: 36px;
+    width: 243px;
+    @media ${mediaQuery.styledTablet} {
+        width: 100%;
+    }
+`
+
 export const FooterContainer = styled.div`
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: var(--color-black);
-    gap: 8rem;
-    align-items: center;
-    @media ${mediaQuery.styledTablet} {
-        justify-content: space-between;
-        gap: 0;
-    }
+    background-color: var(--color-secondary);
 `
 
-export const FooterLinksContainer = styled.div`
+export const UpperPartContainer = styled.div`
     display: flex;
-    gap: 8rem;
-
+    justify-content: space-between;
+    padding: 8rem 4rem 8rem 4rem;
     @media ${mediaQuery.styledTablet} {
+        padding: 4rem 3.2rem 6.4rem 3.2rem;
         flex-direction: column;
-        align-items: center;
-        gap: 0;
+        gap: 4rem;
     }
-
+    @media ${mediaQuery.styledMobile} {
+        padding: 4rem 2rem 0rem 2rem;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
 `
 
 export const CategoryContainer = styled.div`
-    margin-top: 4rem;
-    @media ${mediaQuery.styledTablet}{
-        margin-top: 1.5rem;
+    display: flex;
+    gap: 4.8rem;
+    @media ${mediaQuery.styledTablet} {
+        gap: 0;
+        justify-content: space-between;
+    }
+    @media ${mediaQuery.styledMobile} {
+        gap: 2.4rem;
+        flex-direction: column;
     }
 `
 
 export const LowerPartContainer = styled.div`
-    width: 90%;
     display: flex;
     justify-content: space-between;
-    padding: 4rem 0;
+    padding: 3.2rem 4rem;
     border-top: 1px solid rgba(102, 102, 102, .7);
-    @media ${mediaQuery.styledTablet} {
+    @media ${mediaQuery.styledMobile} {
         border-top: none;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+        padding: 3.2rem 2rem 5.6rem 2rem;
+        flex-direction: column-reverse;
+        align-items: flex-start;
     }
 `
-
+// TODO WILL PROBABLY DELETE
 export const Text = styled.p`
-    color: var(--color-grey-light);
+    color: var(--color-200);
     font-size: 1.3rem;
     line-height: 1.6rem;
     opacity: .8;
 `
 
+// TODO WILL PROBABLY DELETE
 export const TextLine2 = styled(Text)`
     line-height: 2rem;
-    @media ${mediaQuery.styledTablet}{
-        text-align: center;
-    }
 `
 
 export const IconContainer = styled.div`
     display: flex;
-    justify-content: end;
-    margin-top: 1.5rem;
-    @media ${mediaQuery.styledTablet}{
-        justify-content: center;
+    gap: 1.2rem;
+    margin-left: 2rem;
+    @media ${mediaQuery.styledMobile}{
+        margin-left: 0;
     }
 `
 
 export const FooterIcon = styled.img`
-    cursor: pointer;
-    width: 2.3rem;
-    margin-left: 1rem;
+    width: 3.2rem;
 `

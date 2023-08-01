@@ -10,9 +10,9 @@ export const FooterContainer = styled.div`
 export const Heading = styled.h3`
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--color-white);
+    color: var(--color-050);
     margin-bottom: 8px;
-    @media ${mediaQuery.styledTablet} {
+    @media ${mediaQuery.styledMobile} {
         font-size: 1.4rem;
         cursor: pointer;
         :hover{
@@ -23,7 +23,7 @@ export const Heading = styled.h3`
 
 export const Link = styled.a`
     font-size: 1.4rem;
-    color: var(--color-grey);
+    color: var(--color-300);
     transition: color .2s;
     cursor: pointer;
         &:hover{

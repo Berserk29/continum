@@ -24,3 +24,7 @@ export const TableContainer = styled.div`
         grid-template-columns: min-content 1fr;
     }
 `
+
+export const TypoContainer = styled.div`
+    text-align: center;
+`

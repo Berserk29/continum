@@ -41,7 +41,7 @@ export const CirclePage = styled.div`
     height: 3.2rem;
     border-radius: 50%;
     background-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-050);
     font-size: 1.4rem;
 `
 

@@ -7,7 +7,7 @@ export const DropMenuContainer = styled.div`
     height: 42rem;
     width: 100%;
     z-index: 150;
-    background: linear-gradient(90deg, var(--color-white) 50%, var(--color-grey-light-3) 50%);
+    background: linear-gradient(90deg, var(--color-050) 50%, var(--color-200) 50%);
     @media ${mediaQuery.styledMobile} {
         height: 30rem;
     }
@@ -57,10 +57,10 @@ export const MenuLink = styled.li`
     font-weight: 500;
     font-size: 1.8rem;
     text-align: start;
-    color: var(--color-grey);
+    color: var(--color-300);
     transition: color .3s;
     &:hover {
-        color: var(--color-black);
+        color: var(--color-secondary);
         &::before{
             transform: scaleX(1);
         }

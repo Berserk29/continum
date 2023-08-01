@@ -7,7 +7,7 @@ import Typo, {TypoType} from '../typo/typo.component'
 
 
 const SectionHeading = ({props}) => {
-    const {titleTop, titleBottom, titleType, text, textType, textMaxWidth, span , viewBtn, alignItems, isBecomeOne, modifiedAlign, modifiedGap} = props;
+    const {titleTop, titleBottom, titleType, text, textType, textMaxWidth, span , viewBtn, alignItems, isBecomeOne, modifiedAlign, modifiedGap, headingColor, textColor, linkColor} = props;
     const isMobile = useMediaQuery(mediaQuery.useMobile)
     const isTablet = useMediaQuery(mediaQuery.useTablet)
 
@@ -18,7 +18,7 @@ const SectionHeading = ({props}) => {
     const titleBottomLogic = () => {
         if(!titleBottom) return;
         if(isMobile && isBecomeOne) return;
-        return <Typo type={TypoType[titleType]}>{titleBottom}</Typo>
+        return <Typo type={TypoType[titleType]} headingColor={headingColor}>{titleBottom}</Typo>
     }
 
     const modifiedLogic = (modifiedProps, nonModifiedProps) => {
@@ -29,15 +29,16 @@ const SectionHeading = ({props}) => {
 
     return(
         <HeadingSection alignitems={modifiedLogic(modifiedAlign, alignItems)} gap={modifiedLogic(modifiedGap, 6.4)}>
-            {span && <Typo type={TypoType.Span1_O}>{span}</Typo>}
+            {span && <Typo type={TypoType.SpanOrange}>{span}</Typo>}
             <TextSection alignitems={alignItems}>
                 <HeadingContainer>
-                    <Typo type={TypoType[titleType]}>{titleTop} {isBecomeOneLogic()}</Typo>
+                    <Typo type={TypoType[titleType]} headingColor={headingColor}>{titleTop} {isBecomeOneLogic()}</Typo>
                     {titleBottomLogic()}
                 </HeadingContainer>
-                {text && <TextContainer maxwidth={textMaxWidth}><Typo type={TypoType[textType]}>{text}</Typo></TextContainer>}
+                {text && <TextContainer maxwidth={textMaxWidth}><Typo type={TypoType[textType]} textColor={textColor} >{text}</Typo></TextContainer>}
             </TextSection>
-            {viewBtn && <ViewBtn link={viewBtn} />}
+            {/* TODO VIEWBTN WILL BE MODIFIED */}
+            {viewBtn && <ViewBtn link={viewBtn} linkColor={linkColor} />}
         </HeadingSection>
     )
 }

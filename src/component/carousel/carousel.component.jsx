@@ -77,7 +77,7 @@ const Carousel = () => {
                     time='1.7'
                 >{carouselArray[carouselNum].text}</CarouselText>
                 <ViewBtn
-                color="var(--color-white)"
+                color="var(--color-050)"
                 animation={animationOn ? comingBack : ''}
                 time='1.7' 
                 link={'about'}/>

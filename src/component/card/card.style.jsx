@@ -11,25 +11,25 @@ export const CardContainer = styled.div`
     width: 100%;
     align-items: center;
     gap: 8rem;
-    max-width: 93.2rem;
-    height: 41rem;
-    /* max-width: 100rem;
-    height: 45rem;
-    gap: 10rem; */
+    max-width: 144rem;
+    max-height: 62.6rem;
+
     @media ${mediaQuery.styledTablet} {
         gap: 4rem;
         flex-direction: column;
         height: auto;
+        max-height: none;
     }
     @media ${mediaQuery.styledMobile} {
-        gap: 3rem;
+        gap: 2.4rem;
         flex-direction: column;
         height: auto;
     }
 `
 
 export const AboutImage = styled(motion.img)`
-    height: 100%;
+    width: 50%;
+    height: auto;
     @media ${mediaQuery.styledTablet} {
         object-fit: cover;
         max-width: 100%;

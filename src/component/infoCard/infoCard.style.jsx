@@ -4,7 +4,7 @@ import mediaQuery from "../../helper/mediaQuery";
 export const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: var(--color-white);
+    background-color: var(--color-050);
     align-items: center;
     gap: 1.6rem;
     padding: 2.4rem 1rem;
@@ -16,7 +16,7 @@ export const ImageBusiness = styled.img`
 `
 
 export const HeadingCard = styled.h5`
-    color: var(--color-black);
+    color: var(--color-secondary);
     font-size: 1.8rem;
     text-align: center;
     height: 6rem;
@@ -33,12 +33,12 @@ export const BulletContainer = styled.ul`
     flex-direction: column;
     align-items: flex-start;
     gap: .7rem;
-    border-top: 1px solid var(--color-grey-light);
+    border-top: 1px solid var(--color-200);
     padding: 2.4rem 0 0 0;
 `
 
 export const BulletLi = styled.li`
-    color: var(--color-grey-dark);
+    color: var(--color-400);
     font-size: 1.4rem;
     margin-left: 1rem;
     line-height: 160%;

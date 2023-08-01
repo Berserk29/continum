@@ -10,7 +10,6 @@ const flexCss = css`
 
 export const HeadingSection = styled(motion.div)`
     ${flexCss};
-    /* gap: 6.4rem; */
     gap: ${props => props.gap || 6.4}rem;
     align-items:  ${props => props.alignitems || 'center'};
     text-align: ${props => props.alignitems || 'center'};
@@ -24,7 +23,6 @@ export const TextSection = styled.div`
 
 export const HeadingContainer = styled.div`
     ${flexCss};
-    gap: 1.6rem;
     @media ${mediaQuery.styledMobile} {
         gap: .6rem;
     }

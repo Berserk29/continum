@@ -8,12 +8,14 @@ import { categories, footerIcon } from "./footer.data";
 import {
     FooterContainer,
     FooterLinksContainer,
+    UpperPartContainer,
     LowerPartContainer,
     TextLine2,
     CategoryContainer,
     Text,
     IconContainer,
     FooterIcon,
+    Testing,
 } from "./footer.style";
 
   
@@ -24,21 +26,18 @@ const Footer = () => {
     <Fragment>
       <Outlet/>
       <FooterContainer>
-        <FooterLinksContainer>
-          {
-            categories.map((el) => 
-              <CategoryContainer key={el.id}>
-                <FooterLink  category={el}/>
-              </CategoryContainer>)
-          }
-        </FooterLinksContainer>
+        <UpperPartContainer>
+          <CategoryContainer>
+            {categories.map((el) => <FooterLink key={el.id} category={el}/>)}
+          </CategoryContainer>
+          <Testing />
+        </UpperPartContainer>
         <LowerPartContainer>
           <div>
             <TextLine2>500 Chem. De Polytechnique, Montréal, Qc &nbsp;&nbsp; | &nbsp;&nbsp; TEL(514)340-4711 &nbsp;&nbsp; | &nbsp;&nbsp; FAX(514)340-4712</TextLine2>
             <TextLine2>Copyright &copy; 2022 Continum Convergence. All Rights Reserved</TextLine2>
           </div>
           <div>
-            <Text>PRIVACY &nbsp;&nbsp; BUSINESS SITES &nbsp;&nbsp; FAMILY SITE</Text>
             <IconContainer>
               <FooterIcon  src={logoYoutube}/>
               <FooterIcon  src={logoInsta}/>

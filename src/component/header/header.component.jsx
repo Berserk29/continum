@@ -31,7 +31,7 @@ const {imageUrl, main} = header;
                 <HeaderContainerOther style={{backgroundImage: `url(${imageUrl})`}}>
                     <Navigation/>
                     <TitleHeaderOther>
-                        <Typo type={TypoType.Title2_W}>{main}</Typo>
+                        <Typo type={TypoType.Headline1Header}>{main}</Typo>
                     </TitleHeaderOther>
                 </HeaderContainerOther>
             }

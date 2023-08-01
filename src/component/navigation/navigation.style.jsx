@@ -24,7 +24,7 @@ export const NavigationContainer = styled.div`
     background-color: ${props => props.color};
 
     &:hover ${NavLinks}{
-        color: var(--color-black);
+        color: var(--color-secondary);
     }
     @media ${mediaQuery.styledMobile} {
         padding: 0 2rem;

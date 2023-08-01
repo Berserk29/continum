@@ -4,7 +4,7 @@ import { useAnimation } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
-import { variantLeft, variantScale, variantUp } from "../../helper/animationMotion";
+import { variantUp } from "../../helper/animationMotion";
 
 import { storyArray, newsBgImg } from "./newsSection.data";
 

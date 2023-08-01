@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import { DropMenuContainer, DropMenuUl, MenuLi, MenuLink, MenuContainer} from "./dropMenu.style";
-import { categories } from "./dropMenu.data";
+import { categories } from "../../routes/footer/footer.data";
 
 const DropMenu = () => {
   const [arrayNum, setArrayNum] = useState(false);

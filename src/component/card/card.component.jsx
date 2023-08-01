@@ -36,8 +36,8 @@ const Card = ({card}) => {
                 initial='hidden'
                 animate={control}
             >
-                <Typo type={TypoType.Title5_B}>{heading}</Typo>
-                <Typo type={TypoType.Text3_B}>{text}</Typo>
+                <Typo type={TypoType.Headline3}>{heading}</Typo>
+                <Typo type={TypoType.Text3}>{text}</Typo>
             </TextContainer>
         </CardContainer>
     )

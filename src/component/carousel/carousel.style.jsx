@@ -56,7 +56,7 @@ export const ItemContainer = styled.ul`
 
 export const CarouselItem = styled.li`
     font-size: 1.6rem;
-    color: var(--color-white);
+    color: var(--color-050);
     &:first-child{
         list-style: none;
     }
@@ -70,7 +70,7 @@ export const CarouselItem = styled.li`
 `
 
 export const HeadingCarousel = styled.h2`
-    color: var(--color-white);
+    color: var(--color-050);
     display: flex;
     flex-direction: column;
     gap: .8rem;
@@ -91,7 +91,7 @@ export const LowerHeading = styled(UpperHeading)`
 `
 
 export const CarouselText = styled.p`
-    color: var(--color-grey-light);
+    color: var(--color-300);
     font-size: 1.4rem;
     line-height: 160%;
     max-width: 500px;
@@ -108,7 +108,7 @@ export const animationComing = css`
 `
 
 export const CarouselBtn = styled.a`
-    color: var(--color-white);
+    color: var(--color-050);
     font-weight: 700;
     opacity: .6;
     font-size: 1.4rem;

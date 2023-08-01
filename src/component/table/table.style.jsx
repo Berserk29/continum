@@ -4,12 +4,12 @@ import mediaQuery from "../../helper/mediaQuery";
 export const WhiteContainer = styled.div`
     display: flex;
     align-items: center;
-    background-color: var(--color-white);
+    background-color: var(--color-050);
     padding: 1.9rem 1.6rem;
     font-size: 1.4rem;
     text-align: start;
-    border-top: 1px solid var(--color-grey-light-2);
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-top: 1px solid var(--color-200);
+    border-bottom: 1px solid var(--color-200);
     @media ${mediaQuery.styledMobile}{
         font-size: 1.75rem;
         padding: 2.125rem 1rem;
@@ -31,14 +31,14 @@ export const WhiteCenterContainer = styled(WhiteContainer)`
 `
 
 export const GreyHeadingContainer = styled(WhiteContainer)`
-    background-color: var(--color-grey-light-3);
+    background-color: var(--color-300);
     justify-content: center;
     text-align: center;
     font-weight: 700;
 `
 
 export const WhiteHeadingContainer = styled(GreyHeadingContainer)`
-    background-color: var(--color-white);
+    background-color: var(--color-050);
 `
 
 export const IconImg = styled.img`

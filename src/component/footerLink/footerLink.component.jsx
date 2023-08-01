@@ -5,19 +5,19 @@ import { useNavigate } from "react-router-dom";
 import { Heading, Link, FooterContainer } from "./footerLink.style";
 
 const FooterLink = ({category}) => {
-const isTablet = useMediaQuery(mediaQuery.useTablet);
+const isMobile = useMediaQuery(mediaQuery.useMobile);
 const navigate = useNavigate()
 const navigateHandler = () => navigate(category.path);
 
 
     return (
         <FooterContainer>
-            { isTablet ?
+            { isMobile ?
                 <Heading onClick={navigateHandler}>{category.title}</Heading>
                     : 
                 <Heading>{category.title}</Heading>
             }
-            { isTablet ? '' 
+            { isMobile ? '' 
                 : category.linkName.map((el,i) =>
                     <Link onClick={navigateHandler} key={i}>{el}</Link>
             )}

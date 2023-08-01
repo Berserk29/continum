@@ -8,33 +8,33 @@ export const footerIcon = {
 
 export const categories = [
     {
-      id: 1,
+      id: 0,
       title: 'Who we are',
-      path: 'about',
+      path: '/about',
       linkName: ['Company', 'History', 'Location']
     },
     {
-      id: 2,
+      id: 1,
       title: 'What we do',
-      path: 'business',
+      path: '/business',
       linkName: ['Sustainable tech', 'Product & service', 'Discover', 'Protect']
     },
     {
-      id: 3,
+      id: 2,
       title: 'Media',
-      path: 'media',
+      path: '/media',
       linkName: ['Newsroom', 'Library', 'Notice']
     },
     {
-      id: 4,
+      id: 3,
       title: 'Esg',
-      path: 'esg',
+      path: '/esg',
       linkName: ['Environmental', 'Social', 'Governance']
     },
     {
-      id: 5,
-      title: 'Contact Us',
-      path: 'contact',
-      linkName: ['Jobs']
+      id: 4,
+      title: 'Contact',
+      path: '/contact',
+      linkName: ['Contact Us', 'Location']
     },
   ]

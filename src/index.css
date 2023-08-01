@@ -1,14 +1,19 @@
 :root {
-  --color-primary: #ff741a;
-  --color-black: #101318;
-  --color-black-2: #222;
-  --color-white: rgb(255,255,255);
-  --color-grey: rgb(102, 102, 102);
-  --color-grey-dark: rgb(51,51,51);
-  --color-grey-light: rgb(170, 170, 170);
-  --color-grey-light-2: rgb(221, 221, 221);
-  --color-grey-light-3: rgb(246, 246, 246);
-  --color-drop-menu: rgb(62, 56, 77);
+  --color-primary: rgb(255, 116, 26);
+  --color-secondary: rgb(16, 19, 24);
+  --color-050: rgb(255, 255, 255);
+  --color-100: rgb(252, 252, 252);
+  --color-200: rgb(243, 243, 243);
+  --color-300: rgb(221, 221, 221);
+  --color-400: rgb(102, 102, 102);
+  --color-500: rgb(34, 34, 34);
+  --color-white-opa80: rgba(255,255,255,.8);
+  --color-white-opa60: rgba(255,255,255,.6);
+  --color-white-opa30: rgba(255,255,255,.3);
+  --color-black-opa80: rgba(34,34,34,.8);
+  --color-black-opa60: rgba(34,34,34,.6);
+
+
   --filter-primary: invert(47%) sepia(99%) saturate(1132%) hue-rotate(346deg) brightness(100%) contrast(104%);
   --filter-grey: invert(83%) sepia(2%) saturate(4%) hue-rotate(334deg) brightness(83%) contrast(89%);
 }
