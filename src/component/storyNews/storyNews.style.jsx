@@ -6,10 +6,13 @@ export const StoryContainerItems = styled(motion.div)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3.2rem 0;
+    padding: 3rem 0;
     border-top: 1.5px solid var(--color-primary);
     :last-child {
         border-bottom: 1.5px solid var(--color-primary);
+    }
+    @media ${mediaQuery.styledMobile} {
+        padding: 2.4rem 0;
     }
 `
 
@@ -26,5 +29,5 @@ export const ArrowBtn = styled.img`
     cursor: pointer;
     height: 4.6rem;
     width: 4.6rem;
-    margin-left: 6.4rem;
+    margin-left: 4rem;
 `

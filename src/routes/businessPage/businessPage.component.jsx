@@ -11,6 +11,8 @@ import { headingBu01, headingBu02, headingBu03, headingBu04 } from "../../compon
 
 import {
     StoryContainer,
+    Section,
+    SectionCard,
     InfoContainer,
     InfoCardContainer,
     BuisinessContainer,
@@ -29,10 +31,12 @@ const BusinessPage = ({header}) => {
             <BuisinessContainer>
                 <StoryContainer>
                     <SectionHeading props={headingBu01}/>
-                    <SectionHeading props={headingBu02}/>
-                    <div>
-                        {storyArray.map(el => <StoryNews link='/pr' props={el} key={el.id}/>)}
-                    </div>
+                    <Section>
+                        <SectionHeading props={headingBu02}/>
+                        <div>
+                            {storyArray.map(el => <StoryNews link='/pr' props={el} key={el.id}/>)}
+                        </div>
+                    </Section>
                 </StoryContainer>
                 <InfoContainer>
                     <SectionHeading props={headingBu03}/>
@@ -42,9 +46,11 @@ const BusinessPage = ({header}) => {
                         </InfoCardContainer>
                     </FlexCenter>
                 </InfoContainer>
-                <SectionHeading props={headingBu04}/>
                 <CardContainer>
-                    {cardArray.map(el => <Card card={el} key={el.id}/>)}
+                        <SectionHeading props={headingBu04}/>
+                        <SectionCard>
+                            {cardArray.map(el => <Card card={el} key={el.id}/>)}
+                        </SectionCard>
                 </CardContainer>
             </BuisinessContainer>
         </Fragment>

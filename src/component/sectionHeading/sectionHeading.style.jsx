@@ -18,8 +18,8 @@ export const HeadingSection = styled(motion.div)`
 export const TextSection = styled.div`
     ${flexCss};
     align-items: ${props => props.alignitems || 'center'};
-    gap: 3rem;
-    `
+    gap: 1.5rem;
+`
 
 export const HeadingContainer = styled.div`
     ${flexCss};

@@ -84,7 +84,7 @@ export const headingBu03 = {
 export const headingBu04 = {
     titleTop: 'New space era',
     titleType: TypoType.Headline3,
-    text: "Problems The era of new space is approaching",
+    text: "Problems the era of new space is approaching",
     textType: TypoType.Text2,
     alignItems: 'center',
 }

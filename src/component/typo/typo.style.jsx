@@ -8,6 +8,7 @@ const CssHeadline = css`
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 160%;
+    white-space: pre-line;
 `
 
 const CssNoto = css`
@@ -15,6 +16,7 @@ const CssNoto = css`
     font-weight: 400;
     letter-spacing: -0.02em;
     line-height: 160%;
+    white-space: pre-line;
 `
 
 const H1 = css`
@@ -228,7 +230,7 @@ export const Text2 = styled.p`
     }
     @media ${mediaQuery.styledMobile} {
         ${B8}
-        color: var(--color-white-opa80);
+        color: var(--color-black-opa80);
     }
 `
 

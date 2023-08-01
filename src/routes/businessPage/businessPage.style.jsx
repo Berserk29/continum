@@ -5,64 +5,87 @@ export const BuisinessContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 12rem 0;
-    gap: 8rem;
-    @media ${mediaQuery.styledMobile} {
-        padding: 6.4rem 0 12rem 0;
-    }
 `
 
 export const StoryContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 0 7.8rem;
-    margin-bottom: 2rem;
+    padding: 16rem 2rem 12rem 2rem;
     width: 100%;
-    max-width: 140rem;
-    gap: 8rem;
+    max-width: 148rem;
+    gap: 12rem;
+    @media ${mediaQuery.styledTablet} {
+        padding: 16rem 4rem 8rem 4rem;
+        gap: 8rem;
+    }
     @media ${mediaQuery.styledMobile} {
-        padding: 0 2rem
+        padding: 6.4rem 2rem;
+        gap: 6.4rem;
     }
 `
+export const Section = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10.2rem;
+    @media ${mediaQuery.styledTablet} {
+        gap: 4rem;
+    }
+`
+
 
 export const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: 12rem;
     background-color: var(--color-200);
-    padding: 8rem 13.4rem;
+    padding: 12rem 2rem;
     width: 100%;
     @media ${mediaQuery.styledTablet} {
-        padding: 8rem 1.6rem 2.4rem 1.6rem;
+        padding: 8rem 4rem;
+        gap: 4rem;
     }
     @media ${mediaQuery.styledMobile} {
-        padding: 5rem 2rem 3rem 2rem;
+        padding: 6.4rem 2rem;
     }
 `
 
 export const InfoCardContainer = styled.div`
     display: grid;
+    flex: 1440px 0 1;
+    gap: 6.4rem;
+    /* TODO minmax 30rem could change when the design break */
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    flex: 932px 0 1;
-    gap: 3.2rem;
+
     @media ${mediaQuery.styledTablet}{
-        gap: 1.6rem;
+        gap: 3.2rem;
     }
     @media ${mediaQuery.styledMobile}{
-        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-        gap: 3rem; 
+        grid-template-columns: 1fr;
+        gap: 4rem; 
     }
 `
 
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 11.95rem;
+    gap: 12rem;
+    padding: 16rem 2rem 20rem 2rem;
+    @media ${mediaQuery.styledTablet} {
+        gap: 4rem;
+        padding: 12rem 4rem 20rem 4rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        padding: 6.4rem 2rem 12rem 2rem;
+    }
+`
+
+export const SectionCard = styled(Section)`
+    gap: 12rem;
     @media ${mediaQuery.styledTablet} {
         gap: 8rem;
     }
     @media ${mediaQuery.styledMobile} {
-        gap: 6.4rem;
+        gap: 5.6rem;
     }
 `
 
