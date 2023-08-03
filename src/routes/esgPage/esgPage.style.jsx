@@ -3,18 +3,65 @@ import mediaQuery from "../../helper/mediaQuery"
 
 export const EsgContainer = styled.div`
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    padding: 12rem 8rem 12rem 8rem;
-    gap: 12rem;
+    padding: 16rem 2rem 20rem 2rem;
+    gap: 16rem;
     @media ${mediaQuery.styledTablet} {
-        padding: 8rem 1.6rem;
+        padding: 16rem 2rem 12rem 2rem;
     }
     @media ${mediaQuery.styledMobile} {
-        gap: 3rem;
-        padding: 5rem 2rem 3.5rem 2rem;
+        padding: 6.4rem 2rem 12rem 2rem;
+        gap: 6.4rem;
     }
 `
+
+export const Section = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8rem;
+    @media ${mediaQuery.styledTablet} {
+        gap: 5.6rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        gap: 4rem;
+    }
+`
+
+export const UpperCardContainer = styled.div`
+    display: grid;
+    gap: 6.4rem;
+    flex: 1440px 0 1;
+    grid-template-columns: repeat(3, 1fr);
+
+
+    @media ${mediaQuery.styledTablet} {
+        gap: 4.8rem;
+        flex: 630px 0 1;
+        grid-template-columns: 1fr;
+    }
+    @media ${mediaQuery.styledMobile} {
+        gap: 6.4rem;
+    }
+
+`
+
+export const LowerCardContainer = styled.div`
+    display: grid;
+    width: 100%;
+    flex: 1440px 0 1;
+    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr); 
+    
+    @media ${mediaQuery.styledTablet} {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+    }
+`
+
+
 
 export const TableContainer = styled.div`
     display: grid;

@@ -17,20 +17,22 @@ export const storyArray = [
     },
 ]
 
-// TODO THIS CARD WILL CHANGE
-
 export const infoCardArray = [
     {
         id: 1,
         imageUrl: iconBusiness1,
-        heading: "Breaking ice feature with a LNG carrier",
-        bulletPoint: [`Maintain proper temperature`, `Maintain proper humidity`],
+        heading: "Breaking ice feature \n with a LNG carrier",
+        color: 'var(--color-050)',
+        vertical: true,
+        text: "Continum Ocean is the first company in the world to combine the breaking ice feature with a LNG carrier to chart Arctic shipping routes, the world's largest gas field, and to usher in the era of Arctic navigation for humankind."
     },
     {
         id: 2,
         imageUrl: iconBusiness2,
-        heading: 'Prevention of causes of fire accidents',
-        bulletPoint: ['HVAC system monitoring', 'Enclosure leak and corrosion protection', 'Installation of fire detection systems'],
+        heading: 'Wind turbine \n installation vessels',
+        color: 'var(--color-050)',
+        vertical: true,
+        text: "We strive for the future of the earth to producing sustainable eco-friendly energy with offshore wind turbine installation vessels (WTIV) equipped with the smart ship solution autonomous navigation system."
     },
 ]
 

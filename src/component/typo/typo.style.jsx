@@ -69,6 +69,7 @@ const B4 = css`
 const B5 = css`
     ${CssNoto};
     font-size: 1.8rem;
+    font-weight: 700;
 `
 
 const B6 = css`

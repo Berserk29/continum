@@ -1,78 +1,72 @@
-// TODO REDOO ALL THE DATA!
+import cardImg1 from '../../assets/icon/Icon_enviromental.png'
+import cardImg2 from '../../assets/icon/Icon_social.png'
+import cardImg3 from '../../assets/icon/Icon_governance.png'
+import cardImg4 from '../../assets/icon/Icon_safety.png'
+import cardImg5 from '../../assets/icon/Icon_impact.png'
+import cardImg6 from '../../assets/icon/Icon_eco.png'
+import cardImg7 from '../../assets/icon/Icon_health.png'
 
-// import substainImg1 from '../../assets/sustainability/sustainability_icon_01.png'
-// import substainImg2 from '../../assets/sustainability/sustainability_icon_02.png'
-// import substainImg3 from '../../assets/sustainability/sustainability_icon_03.png'
-// import substainImg4 from '../../assets/sustainability/sustainability_icon_04.png'
-// import substainImg5 from '../../assets/sustainability/sustainability_icon_05.png'
-// import substainImg6 from '../../assets/sustainability/sustainability_icon_06.png'
+export const upperCardArr = [
+    {
+        id: 1,
+        imageUrl: cardImg1,
+        heading: 'Environmental',
+        vertical: true,
+        text: 'Achieve carbon neutrality by 2050. Develop eco-friendly technologies and solutions. Extend the line of eco-friendly products',
+        padding: ['5.6rem 3.6rem 2.8rem 3.6rem', '4rem 5rem', '4rem 2.4rem'],
+        middleGap: ['1.5rem', '2.4rem', '2.4rem'],
+    },
+    {
+        id: 2,
+        imageUrl: cardImg2,
+        heading: 'Social',
+        vertical: true,
+        text: 'Internalize safety culture enhance customer satisfaction and communication. Achieve mutual prosperity and shared growth with partners',
+        padding: ['5.6rem 3.6rem 2.8rem 3.6rem', '4rem 5rem', '4rem 2.4rem'],
+        middleGap: ['1.5rem', '2.4rem', '2.4rem'],
+    },
+    {
+        id: 3,
+        imageUrl: cardImg3,
+        heading: 'Governance',
+        vertical: true,
+        text: 'Achieve sound corporate governance. Enhance the independence and diversity of the BOD. Build a transparent corporate culture',
+        padding: ['5.6rem 3.6rem 2.8rem 3.6rem', '4rem 5rem', '4rem 2.4rem'],
+        middleGap: ['1.5rem', '2.4rem', '2.4rem'],
+    },
+]
 
-// export const ethicalArray = [
-//     {
-//         id: 1,
-//         imageUrl: substainImg1,
-//         heading: 'For customers',
-//         text: 'Customer satisfaction and trust from customers are top priority.',
-//     },
-//     {
-//         id: 2,
-//         imageUrl: substainImg2,
-//         heading: 'Responsibility to society',
-//         text: "Actively contribute to the nation's and society's sound development and environmental preservation.",
-//     },
-//     {
-//         id: 3,
-//         imageUrl: substainImg3,
-//         heading: 'Competitors and suppliers',
-//         text: 'Respect the principle of free competition and take the lead in developing a fair and sound industry.',
-//     },
-//     {
-//         id: 4,
-//         imageUrl: substainImg4,
-//         heading: 'Responsibility to employees',
-//         text: 'Respect the human dignity of all company members and strive to improve the quality of life.',
-//     },
-// ]
-
-// export const reportArray = [
-//     {
-//         id: 1,
-//         imageUrl: substainImg5,
-//         heading: 'Post',
-//         text: '100 Overlook Center, Princeton, NJ 08540 United States',
-//     },
-//     {
-//         id: 2,
-//         imageUrl: substainImg6,
-//         heading: 'E-mail',
-//         text: 'ethics.cvg@continum.com',
-//     },
-// ]
-
-// export const reportTypeArray = [
-//     {
-//         id: 1,
-//         heading: 'Receiving rewards from stakeholders',
-//         text: 'Money, recreation and entertainment, porvision of convenience, borrowing, debt repayment, guarantee, money loan, guarantee for the future',
-//     },
-//     {
-//         id: 2,
-//         heading: 'Unfair equity participation in business partners',
-//         text: 'Stock exchange and investment, public investment, and acquisition of common property',
-//     },
-//     {
-//         id: 3,
-//         heading: 'Lack of transparency in supplier selection',
-//         text: 'Unfair opportunity, unfair trade practices, supplier information leakage',
-//     },
-//     {
-//         id: 4,
-//         heading: 'Illegal/unjust use of company assets',
-//         text: 'Use of tangible/intangible assets for other purposes, embezzlement, and misappropriation of public money',
-//     },
-//     {
-//         id: 5,
-//         heading: 'Manipulation and falsification of documents',
-//         text: 'Accounting fraud, information manipulation',
-//     },
-// ]
+export const lowerCardArr = [
+    {
+        id: 1,
+        imageUrl: cardImg4,
+        heading: 'Environmental safety',
+        vertical: false,
+        // text: 'Achieve sound corporate governance. Enhance the independence and diversity of the BOD. Build a transparent corporate culture',
+        text: "Newly established the CEO’s safety and health environment",
+    },
+    {
+        id: 2,
+        imageUrl: cardImg5,
+        heading: 'Environmental impact',
+        vertical: false,
+        // text: 'Achieve sound corporate governance. Enhance the independence and diversity of the BOD. Build a transparent corporate culture',
+        text: "Reduced water usage by 15.6% compared to 2020",
+    },
+    {
+        id: 3,
+        imageUrl: cardImg6,
+        heading: 'Eco-friendly products',
+        vertical: false,
+        // text: 'Achieve sound corporate governance. Enhance the independence and diversity of the BOD. Build a transparent corporate culture',
+        text: "Environmental investment reached 759 million dollar",
+    },
+    {
+        id: 4,
+        imageUrl: cardImg7,
+        heading: 'Health management',
+        vertical: false,
+        // text: 'Achieve sound corporate governance. Enhance the independence and diversity of the BOD. Build a transparent corporate culture',
+        text: "Zero violations of health and safety regulations",
+    },
+]

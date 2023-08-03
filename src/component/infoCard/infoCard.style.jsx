@@ -1,50 +1,83 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
-export const ContentContainer = styled.div`
+export const VerticalContainer = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: var(--color-050);
+    background-color: ${props => props.color || 'var(--color-200)'};
     align-items: center;
-    gap: 1.6rem;
-    padding: 2.4rem 1rem;
-`
-
-export const ImageBusiness = styled.img`
-    height: 5.4rem;
-    width: 5.4rem;
-`
-
-export const HeadingCard = styled.h5`
-    color: var(--color-secondary);
-    font-size: 1.8rem;
     text-align: center;
-    height: 6rem;
-    max-width: 25rem;
-    @media ${mediaQuery.styledMobile}{
-        font-size: 2.25rem;
-        max-width: 31.25rem;
+    gap: ${props => props.gap?.[0] || '3rem'};
+    padding: ${props => props.padding?.[0] || '6.4rem'};
+    @media ${mediaQuery.styledTablet} {
+        gap: ${props => props.gap?.[1] || '2.4rem'};
+        padding: ${props => props.padding?.[1] || '4.8rem 4rem'};
+    }
+    @media ${mediaQuery.styledMobile} {
+        gap: ${props => props.gap?.[2] || '2.4rem'};
+        padding: ${props => props.padding?.[2] || '4rem 2rem'};
     }
 `
 
-export const BulletContainer = styled.ul`
-    width: 90%;
+export const CardImg = styled.img`
+    width: 8rem;
+`
+
+export const HeadingContainer= styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: .7rem;
-    border-top: 1px solid var(--color-200);
-    padding: 2.4rem 0 0 0;
-`
-
-export const BulletLi = styled.li`
-    color: var(--color-400);
-    font-size: 1.4rem;
-    margin-left: 1rem;
-    line-height: 160%;
-    font-weight: 400;
-    @media ${mediaQuery.styledMobile}{
-        font-size: 1.75rem;
+    align-items: center;
+    gap: 2rem;
+    @media ${mediaQuery.styledTablet} {
+        gap: .8rem;
     }
 `
 
+export const TextContainer = styled.div`
+    padding-top: ${props => props.padding?.[0] || '3rem'};
+    border-top: 1px solid var(--color-black-opa20);
+    @media ${mediaQuery.styledTablet} {
+        padding-top: ${props => props.padding?.[1] || '2.4rem'};
+    }
+    @media ${mediaQuery.styledMobile} {
+        padding-top: ${props => props.padding?.[2] || '2.4rem'};
+    }
+`
+
+// Horizontal container
+
+export const HorizontalContainer = styled.div`
+    display: flex;
+    gap: 3.2rem;
+    padding: 4.4rem 5.3rem 4.4rem 3.2rem;
+    align-items: center;
+    background-color: ${props => props.color || 'var(--color-200)'};
+    @media ${mediaQuery.styledTablet} {
+        padding: 3.8rem 3.2rem;
+        gap: 2.4rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        gap: 1.6rem;
+        padding:  2rem 1.6rem;
+    }
+`
+
+export const TextSection = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    text-align: start;
+    @media ${mediaQuery.styledTablet} {
+        gap: 0;
+    }
+    @media ${mediaQuery.styledMobile} {
+        gap: .5rem;
+    }
+`
+
+export const CardImgHorizon = styled.img`
+    width: 8rem;
+    @media ${mediaQuery.styledMobile} {
+        width: 6.4rem;
+    }
+`

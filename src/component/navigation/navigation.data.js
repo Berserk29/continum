@@ -4,7 +4,7 @@ import hamBlack from '../../assets/icon/menu_b.png'
 import hamWhite from '../../assets/icon/menu_w.png'
 import globeWhite from '../../assets/icon/Icon_language_w.png'
 import globeBlack from '../../assets/icon/Icon_language_b.png'
-import closeBtn from '../../assets/icon/close_b.png'
+import closeBtn from '../../assets/icon/x-close-1.png'
 
 export const navIcon = {
     continumBlack: continumBlack,

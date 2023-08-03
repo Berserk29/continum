@@ -12,6 +12,7 @@
   --color-white-opa30: rgba(255,255,255,.3);
   --color-black-opa80: rgba(34,34,34,.8);
   --color-black-opa60: rgba(34,34,34,.6);
+  --color-black-opa20: rgba(34,34,34,.2);
 
 
   --filter-primary: invert(47%) sepia(99%) saturate(1132%) hue-rotate(346deg) brightness(100%) contrast(104%);

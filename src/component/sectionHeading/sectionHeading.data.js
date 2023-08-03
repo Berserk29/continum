@@ -100,3 +100,25 @@ export const headingEsg01 = {
     alignItems: 'center',
     isBecomeOne: true,
 }
+
+export const headingEsg02 = {
+    titleTop: 'Status of the convened ESG committee',
+    titleType: TypoType.Headline4,
+    alignItems: 'center',
+}
+
+export const headingEsg03 = {
+    titleTop: 'ESG Performance',
+    titleType: TypoType.Headline4,
+    text: "We make a variety of efforts in every area for sustainable management",
+    textType: TypoType.Text2,
+    alignItems: 'center',
+}
+
+export const headingEsg04 = {
+    titleTop: 'Report download',
+    titleType: TypoType.Headline4,
+    text: "Continum will reinforce its ESG to fulfill its role as a responsible member of society \n and continue to make a variety of efforts in environmental, social, and corporate governance aspects.",
+    textType: TypoType.Text2,
+    alignItems: 'center',
+}

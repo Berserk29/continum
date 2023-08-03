@@ -53,7 +53,6 @@ export const InfoCardContainer = styled.div`
     display: grid;
     flex: 1440px 0 1;
     gap: 6.4rem;
-    /* TODO minmax 30rem could change when the design break */
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 
     @media ${mediaQuery.styledTablet}{
