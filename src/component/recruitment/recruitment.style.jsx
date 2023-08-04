@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const RecruitmentContainer = styled.div`
+    position: relative;
     background-image: ${props => props.image};
     background-size: cover;
     background-position: center;

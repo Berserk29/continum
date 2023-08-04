@@ -23,6 +23,7 @@ export const ImgContainer = styled.div`
     background-size: cover;
     background-position: center;
     width: 35%;
+    position: relative;
     display: flex;
     justify-content: center;
     @media ${mediaQuery.styledTablet} {

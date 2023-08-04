@@ -36,7 +36,7 @@ export const SectionImg = styled.div`
 
 export const CarouselContainer = styled.div`
     position: absolute;
-    top: 24%;
+    top: 22%;
     margin-left: 14.4rem;
     display: flex;
     flex-direction: column;

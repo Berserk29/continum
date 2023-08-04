@@ -4,8 +4,9 @@ import { useInView } from "react-intersection-observer";
 import Typo ,{ TypoType } from "../typo/typo.component";
 import ViewBtn from "../viewBtn/viewBtn.component";
 
+import { markerObject2 } from "../marker/marker.data";
 import { comingRight, comingBack, comingUp } from "../../animation/animation.style";
-import { carouselArray } from "./carousel.data";
+import { carouselArray} from "./carousel.data";
 
 import { 
     Section,
@@ -18,6 +19,7 @@ import {
     SectionImg,
     AniContainer,
 } from "./carousel.style";
+import Marker from "../marker/marker.component";
 
 const Carousel = () => {
     const [carouselNum, setCarouselNum] = useState(0);
@@ -53,7 +55,7 @@ const Carousel = () => {
         )
 
     // onAnimationEnd={()=> setAnimationOn(false)} At the end of the animation -> animation false !!
-
+    
 
     return (
         <Section ref={ref}>
@@ -84,6 +86,7 @@ const Carousel = () => {
                 time='1.7' 
                 link={'about'}/>
             </CarouselContainer>
+            <Marker  props={markerObject2}/>
         </Section>
     )
 }

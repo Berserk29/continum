@@ -11,6 +11,8 @@ import {
 import Navigation from "../navigation/navigation.component";
 import SectionHeading from '../sectionHeading/sectionHeading.component'
 import Typo, { TypoType } from "../typo/typo.component";
+import {markerObject1} from '../marker/marker.data'
+import Marker from '../marker/marker.component'
 
 import { headingHome01 } from "../sectionHeading/sectionHeading.data";
 
@@ -25,6 +27,7 @@ const {imageUrl, main} = header;
                         <TitleHeaderHome>
                             <SectionHeading props={headingHome01}/>
                         </TitleHeaderHome>
+                        <Marker props={markerObject1}/>
                         <Mouse /> 
                 </HeaderContainerHome>
                     :
