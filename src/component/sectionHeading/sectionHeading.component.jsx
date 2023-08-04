@@ -37,7 +37,6 @@ const SectionHeading = ({props}) => {
                 </HeadingContainer>
                 {text && <TextContainer maxwidth={textMaxWidth}><Typo type={TypoType[textType]} textColor={textColor} >{text}</Typo></TextContainer>}
             </TextSection>
-            {/* TODO VIEWBTN WILL BE MODIFIED */}
             {viewBtn && <ViewBtn link={viewBtn} linkColor={linkColor} />}
         </HeadingSection>
     )

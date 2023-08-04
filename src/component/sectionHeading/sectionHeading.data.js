@@ -23,6 +23,7 @@ export const headingHome03 = {
     titleBottom: 'of Continum',
     titleType: TypoType.Headline2,
     headingColor: 'var(--color-secondary)',
+    linkColor: 'var(--color-black-opa80)',
     viewBtn: '/media',
     alignItems: 'start',
     modifiedGap: [3.2 , 4],
@@ -37,6 +38,7 @@ export const headingHome04 = {
     textType: TypoType.Text1,
     textMaxWidth: '48rem',
     viewBtn: '/esg',
+    linkColor: 'var(--color-white-opa60)',
     alignItems: 'center',
     isBecomeOne: true,
 }

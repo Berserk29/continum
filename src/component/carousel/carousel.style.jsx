@@ -1,12 +1,17 @@
-import styled, {css} from "styled-components";
-import { comingBack, AnimationChoice } from "../../animation/animation.style";
+import styled from "styled-components";
+import { AnimationChoice } from "../../animation/animation.style";
 import mediaQuery from "../../helper/mediaQuery";
 
 export const Section = styled.div`
     position: relative;
-    height: 76rem;
+    height: 100vh;
+    min-height: 76rem;
     width: 100%;
     background-color: black;
+`
+
+export const AniContainer = styled.div`
+    ${AnimationChoice}
 `
 
 export const SectionImg = styled.div`
@@ -31,32 +36,36 @@ export const SectionImg = styled.div`
 
 export const CarouselContainer = styled.div`
     position: absolute;
-    top: 26%;
-    margin-left: 13.4rem;
+    top: 24%;
+    margin-left: 14.4rem;
     display: flex;
     flex-direction: column;
+    gap: 6.46rem;
     justify-content: center;
     @media ${mediaQuery.styledTablet} {
         margin-left: 0;
-        padding-left: 8rem;
+        padding: 0 8rem;
+        gap: 5rem;
     }
     @media ${mediaQuery.styledMobile} {
-        padding: 0 3rem;
+        padding: 0 2rem;
         top: 23%;
     }
 `
 
 export const ItemContainer = styled.ul`
     display: flex;
-    gap: 1.8rem;
-    margin-bottom: 3.2rem;
+    gap: 1.6rem;
     justify-content: start;
     list-style-position: inside;
+    @media ${mediaQuery.styledMobile} {
+        gap: 1rem;
+    }
 `
 
 export const CarouselItem = styled.li`
+    color: var(--color-white-opa60);
     font-size: 1.6rem;
-    color: var(--color-050);
     &:first-child{
         list-style: none;
     }
@@ -69,59 +78,28 @@ export const CarouselItem = styled.li`
     }
 `
 
-export const HeadingCarousel = styled.h2`
-    color: var(--color-050);
-    display: flex;
-    flex-direction: column;
-    gap: .8rem;
-    margin-bottom: 2.4rem;
-`
-
-export const UpperHeading = styled.span`
-    font-weight: 700;
-    font-size: 4rem;
-    letter-spacing: -2%;
+export const CarouselText = styled.div`
+    margin: 2.4rem 0 1.425rem 0;
+    max-width: 580px;
     ${AnimationChoice}
-    @media ${mediaQuery.styledMobile} {
-        font-size: 3.25rem 
-    }
-`
-
-export const LowerHeading = styled(UpperHeading)`
-`
-
-export const CarouselText = styled.p`
-    color: var(--color-300);
-    font-size: 1.4rem;
-    line-height: 160%;
-    max-width: 500px;
-    margin-bottom: 6.4rem;
-    ${AnimationChoice}
-    @media ${mediaQuery.styledTablet} {
-        font-size: 1.4rem;
-        line-height: 2rem;
-    }
-`
-
-export const animationComing = css`
-    animation: ${comingBack} 1.7s;
 `
 
 export const CarouselBtn = styled.a`
-    color: var(--color-050);
+    font-family: 'Noto Sans';
+    color: var(--color-white-opa60);
     font-weight: 700;
-    opacity: .6;
-    font-size: 1.4rem;
-    transition: color .2s , opacity .2s;
+    font-size: 1.8rem;
+    transition: color .2s;
     cursor: pointer;
     &:hover{
-        opacity: 1;
         color: var(--color-primary);
+    }
+    @media ${mediaQuery.styledTablet} {
+        font-size: 1.6rem;
     }
 `
 
 export const CarouselBtnActive = styled(CarouselBtn)`
-    opacity: 1;
-    font-weight: 700;
     color: var(--color-primary);
+    cursor: default;
 `

@@ -6,10 +6,9 @@ import { useAnimation } from "framer-motion";
 
 import { RecruitmentContainer } from "./recruitment.style";
 
-import recruitImg from '../../assets/image/main_05.jpg' 
-
 import SectionHeading from "../sectionHeading/sectionHeading.component";
 
+import recruitImg from '../../assets/image/main_05.jpg' 
 import { headingHome04 } from "../sectionHeading/sectionHeading.data";
 
 const Recruitment = () => {
@@ -22,9 +21,7 @@ const Recruitment = () => {
 
     return (
         <RecruitmentContainer ref={ref} image={`url(${recruitImg})`}>
-
             <SectionHeading  props={headingHome04}/> 
-
         </RecruitmentContainer>
     )
 }

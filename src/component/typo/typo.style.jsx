@@ -182,6 +182,7 @@ export const Headline6 = styled.h4`
 export const SpanOrange = styled.span`
     ${B5}
     color: var(--color-primary);
+    margin-left: 1.4rem;
     @media ${mediaQuery.styledTablet} {
         ${B7}
     }
@@ -197,7 +198,6 @@ export const SpanGrey = styled.span`
     }
     @media ${mediaQuery.styledTablet} {
         ${B7}
-        color: var(--color-white-opa40);
     }
 `
 

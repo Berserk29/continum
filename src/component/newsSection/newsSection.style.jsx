@@ -3,13 +3,15 @@ import mediaQuery from "../../helper/mediaQuery";
 
 export const NewsContainer = styled.div`
     display: flex;
-    height: 76rem;
+    height: 100vh;
+    min-height: 76rem;
     @media ${mediaQuery.styledTablet} {
         flex-direction: column;
         justify-content: center;
         gap: 4rem;
         padding: 8rem;
         height: auto;
+        min-height: none;
     }
     @media ${mediaQuery.styledMobile} {
         padding: 6.4rem 2rem 8rem 2rem;
