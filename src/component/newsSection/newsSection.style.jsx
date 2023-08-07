@@ -4,7 +4,7 @@ import mediaQuery from "../../helper/mediaQuery";
 export const NewsContainer = styled.div`
     display: flex;
     height: 100vh;
-    min-height: 76rem;
+    min-height: 80rem;
     @media ${mediaQuery.styledTablet} {
         flex-direction: column;
         justify-content: center;
@@ -27,6 +27,7 @@ export const ImgContainer = styled.div`
     display: flex;
     justify-content: center;
     @media ${mediaQuery.styledTablet} {
+        padding-top: 0;
         width: 100%;
         justify-content: start;
     }
@@ -37,7 +38,9 @@ export const ImgContainerItems = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 3.2rem;
+    margin-bottom: 10rem;
     @media ${mediaQuery.styledTablet} {
+        margin-bottom: 0;
         gap: 2rem;
         justify-content: start;
     }

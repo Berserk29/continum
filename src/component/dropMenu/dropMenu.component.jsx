@@ -1,13 +1,19 @@
-import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
 
-import { DropMenuContainer, DropMenuUl, MenuLi, MenuLink, MenuContainer} from "./dropMenu.style";
+import { DropMenuContainer, DropMenuUl, MenuLink, SectionLine, FlexContainer, Arrow} from "./dropMenu.style";
 import { categories } from "../../routes/footer/footer.data";
+
+import Typo, {TypoType} from '../typo/typo.component'
+import arrow from '../../assets/icon/arrow-narrow-right.png'
 
 const DropMenu = () => {
   const [arrayNum, setArrayNum] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const isTablet = useMediaQuery(mediaQuery.useTablet)
 
   const clickHandler = (id) => setArrayNum(id);
 
@@ -16,27 +22,31 @@ const DropMenu = () => {
     else navigate(categories[arrayNum].path)
   };
 
+  const linkColorLogic = (id) => arrayNum === id ? 'var(--color-primary)' : isTablet ? 'var(--color-secondary)' : 'var(--color-050)';
+
     return (
         <DropMenuContainer>
-            <DropMenuUl>
-            {categories.map((el) =>
-              <MenuContainer key={el.id}>
-                <MenuLi
-                  className={arrayNum === el.id ? 'active' : ''} 
-                  onClick={() => clickHandler(el.id)}
-                >{el.title}</MenuLi>
-              </MenuContainer> 
-            )}
+            <DropMenuUl gap={['2.5rem', '4rem']}>
+              {categories.map((el) =>
+                <FlexContainer>
+                  <li key={el.id}  onClick={() => clickHandler(el.id)}>
+                    <Typo type={TypoType.DropLink} linkColor={linkColorLogic(el.id)}>{el.title}</Typo>
+                  </li>
+                    {arrayNum === el.id && !isTablet && <Arrow src={arrow} alt="arrow-icon" />}
+                </FlexContainer>
+              )}
             </DropMenuUl>
-            <DropMenuUl>
+            <DropMenuUl gap={['3.5rem', '3rem']}>
                 { arrayNum === false ? '' : 
                   categories[arrayNum].linkName.map((el,i) => 
-                  <MenuLink 
-                    onClick={linkHandler} 
-                    key={i}
-                    >{el}</MenuLink>
+                    <MenuLink onClick={linkHandler} key={i}>{el}</MenuLink>
                 )}
             </DropMenuUl>
+          {  !isTablet &&         
+            <DropMenuUl padding='4rem 0'>
+              <SectionLine />
+            </DropMenuUl>
+          }
         </DropMenuContainer>
     )
 }

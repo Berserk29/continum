@@ -7,57 +7,59 @@ export const DropMenuContainer = styled.div`
     height: 42rem;
     width: 100%;
     z-index: 150;
-    background: linear-gradient(90deg, var(--color-050) 50%, var(--color-200) 50%);
-    @media ${mediaQuery.styledMobile} {
-        height: 30rem;
+    background: linear-gradient(90deg, var(--color-secondary) 33%, var(--color-050) 33%);
+    @media ${mediaQuery.styledTablet} {
+        background: linear-gradient(90deg, var(--color-050) 50%, var(--color-200) 50%);
+        height: 42rem;
     }
 `
 
 export const DropMenuUl = styled.ul`
     height: 100%;
-    width: 50%;
+    width: 33.33%;
     display: flex;
-    padding: 3rem 3rem;
-    flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
+    flex-direction: column;
     list-style: none;
-`
-
-export const MenuLi = styled.li`
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 2rem;
-    transition: color .25s;
-    text-align: start;
-    &:hover {
-        color: var(--color-primary);
-        font-weight: 700;
-    }
-    &.active {
-        color: var(--color-primary);
-        font-weight: 700;
+    padding: ${props => props.padding || '4rem'};
+    gap: ${props => props.gap?.[0] || '2rem'};
+    @media ${mediaQuery.styledTablet} {
+        width: 50%;
     }
     @media ${mediaQuery.styledMobile} {
-        font-size: 1.8rem;
+        padding: 2.8rem 1.6rem;
+    gap: ${props => props.gap?.[1]};
     }
 `
 
-export const MenuContainer = styled.div`
+export const SectionLine = styled.div`
+    width: 100%;
+    height: 100%;
+    border-left: 1.2px solid var(--color-300);
+`
+
+export const FlexContainer = styled.div`
+    display: flex;
     width: 100%;
     justify-content: space-between;
-    display: flex;
     align-items: center;
 `
 
+export const Arrow = styled.img`
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-right: 2.2rem;
+`
 
 export const MenuLink = styled.li`
+    font-family: 'Noto Sans';
     position: relative;
+    width: auto;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.8rem;
     text-align: start;
-    color: var(--color-300);
+    color: var(--color-black-opa80);
     transition: color .3s;
     &:hover {
         color: var(--color-secondary);
@@ -78,5 +80,8 @@ export const MenuLink = styled.li`
         transform-origin: 0 0;
         transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
         transform: scaleX(0);
+    }
+    @media ${mediaQuery.styledMobile} {
+        font-size: 1.4rem;
     }
 `

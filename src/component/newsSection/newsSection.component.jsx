@@ -4,10 +4,6 @@ import { useAnimation } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
-import { variantUp } from "../../helper/animationMotion";
-
-import { storyArray, newsBgImg } from "./newsSection.data";
-
 import { 
     ImgContainer,
     ImgContainerItems,
@@ -19,13 +15,15 @@ import SectionHeading from "../sectionHeading/sectionHeading.component";
 import StoryNews from "../storyNews/storyNews.component";
 import Marker from "../marker/marker.component"
 
+import { variantUp } from "../../helper/animationMotion";
+import { storyArray, newsBgImg } from "./newsSection.data";
 import { headingHome03 } from "../sectionHeading/sectionHeading.data";
-import {markerObject3} from "../marker/marker.data"
+import { markerObject3 } from "../marker/marker.data"
 
 const NewsSection = () => {
     const isTablet = useMediaQuery(mediaQuery.useTablet)
     const control = useAnimation();
-    const { ref, inView} = useInView({ threshold: 0.5, });
+    const { ref, inView } = useInView({ threshold: 0.5, });
 
     useEffect(() => {
         if(inView) control.start('visible')

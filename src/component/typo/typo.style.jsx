@@ -182,7 +182,6 @@ export const Headline6 = styled.h4`
 export const SpanOrange = styled.span`
     ${B5}
     color: var(--color-primary);
-    margin-left: 1.4rem;
     @media ${mediaQuery.styledTablet} {
         ${B7}
     }
@@ -208,6 +207,18 @@ export const Link = styled.span`
     transition: color .2s;
     :hover{
         color: var(--color-primary);
+    }
+`
+export const DropLink = styled.span`
+    ${B1}
+    color: ${props => props.color || 'var(--color-050)'};
+    cursor: pointer;
+    transition: color .2s;
+    :hover{
+        color: var(--color-primary);
+    }
+    @media ${mediaQuery.styledMobile} {
+        ${B7}
     }
 `
 

@@ -18,6 +18,7 @@ SpanGrey,
 FooterHeading,
 FooterLink,
 Link,
+DropLink,
 } from "./typo.style";
 
 export const TypoType = {
@@ -40,6 +41,7 @@ export const TypoType = {
     FooterHeading: 'FooterHeading',
     FooterLink: 'FooterLink',
     Link: 'Link',
+    DropLink: 'DropLink',
 }
 
 const Typo = ({children, type, textColor, headingColor, linkColor}) => {
@@ -64,6 +66,7 @@ const Typo = ({children, type, textColor, headingColor, linkColor}) => {
         if(type === 'FooterHeading') return <FooterHeading color={headingColor}>{children}</FooterHeading>
         if(type === 'FooterLink') return <FooterLink color={linkColor}>{children}</FooterLink>
         if(type === 'Link') return <Link color={linkColor}>{children}</Link>
+        if(type === 'DropLink') return <DropLink color={linkColor}>{children}</DropLink>
     }
 
     return (

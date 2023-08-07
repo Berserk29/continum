@@ -84,7 +84,7 @@ const Carousel = () => {
                 linkColor="var(--color-white-opa80)"
                 animation={animationOn && comingBack}
                 time='1.7' 
-                link={'about'}/>
+                link={'business'}/>
             </CarouselContainer>
             <Marker  props={markerObject2}/>
         </Section>

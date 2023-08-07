@@ -1,40 +1,21 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
-
-export const NavLinks = styled(NavLink)`
-    color: ${props => props.color};
-    font-weight: 600;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color .25s;
-    text-transform: capitalize;
-`
 
 export const NavigationContainer = styled.div`
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8.4rem;
     width: 100%;
     z-index: 100;
     transition: background-color .25s;
-    padding: 0 4rem;
+    padding: 3.2rem 5vw;
     background-color: ${props => props.color};
-
-    &:hover ${NavLinks}{
-        color: var(--color-secondary);
+    @media ${mediaQuery.styledTablet} {
+        padding: 2.4rem 4rem;
     }
     @media ${mediaQuery.styledMobile} {
-        padding: 0 2rem;
-        height: 7rem;
-    }
-`
-
-export const NavLi = styled.li`
-    &:hover ${NavLinks} {
-        color: var(--color-primary);
+        padding: 2.1rem 2rem;
     }
 `
 
@@ -42,21 +23,36 @@ export const NavLinksContainer = styled.ul`
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 4.8rem;
+    gap: 4rem;
 `
 
 export const NavLogo = styled.img`
-    width: 13.75rem;
+    width: 15.6rem;
     cursor: pointer;
+    @media ${mediaQuery.styledTablet} {
+        width: 13.6rem;
+    }
 `
 
 export const NavIconsContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
+    width: 15.6rem;
+    gap: 3.7rem;
+    @media ${mediaQuery.styledMobile} {
+        width: auto;
+        gap: 2.2rem;
+    }
 `
 
-export const NavHam = styled.img`
-    width: 3.6rem;
+export const NavIcon = styled.img`
+    width: 2.4rem;
     cursor: pointer; 
+    @media ${mediaQuery.styledTablet} {
+        width: 2.2rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        width: 2rem;
+    }
 `
