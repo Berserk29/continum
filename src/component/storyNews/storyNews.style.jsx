@@ -30,4 +30,8 @@ export const ArrowBtn = styled.img`
     height: 4.6rem;
     width: 4.6rem;
     margin-left: 4rem;
+    transition: filter .3s;
+    :hover{
+        filter: var(--filter-grey);
+    }
 `

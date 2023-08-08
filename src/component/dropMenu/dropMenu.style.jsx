@@ -4,13 +4,16 @@ import mediaQuery from "../../helper/mediaQuery";
 export const DropMenuContainer = styled.div`
     display: flex;
     position: absolute;
-    height: 42rem;
+    height: 43rem;
     width: 100%;
     z-index: 150;
     background: linear-gradient(90deg, var(--color-secondary) 33%, var(--color-050) 33%);
     @media ${mediaQuery.styledTablet} {
         background: linear-gradient(90deg, var(--color-050) 50%, var(--color-200) 50%);
-        height: 42rem;
+        height: 45rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        height: 50rem;
     }
 `
 

@@ -15,10 +15,16 @@ export const PrContainer = styled.div`
     }
 `
 
+export const FlexCenter = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
 export const GridContainer = styled.div`
     display: grid;
     justify-content: center;
-    grid-template-columns: 8rem 90rem max-content max-content;
+    flex: 1440px 0 1;
+    grid-template-columns: 8rem 1fr max-content max-content;
     @media ${mediaQuery.styledTablet} {
         grid-template-columns: 8rem 1fr max-content max-content;
     }
@@ -63,5 +69,5 @@ export const ArrowHiddenIcon = styled.img`
 
 export const MaxHeight = styled.div`
     width: 100%;
-    /* Some JSX style will be implement */
+    height: ${props => props.height}px;
 `

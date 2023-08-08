@@ -1,10 +1,13 @@
 import { Fragment } from "react";
 
+import video from '../../assets/video/home_video.mp4'
+
 import { 
     HeaderContainerHome,
     HeaderContainerOther,
     TitleHeaderOther,
     TitleHeaderHome,
+    VideoCss,
     Mouse,
 } from "./header.style";
 
@@ -19,11 +22,16 @@ import { headingHome01 } from "../sectionHeading/sectionHeading.data";
 const Header = ({header}) => {
 const {imageUrl, main} = header;
 
+// TODO HAVING THE FIRST FRAME OF THE VIDEO AS THE POSTER IN VIDEOCSS
+
     return(
         <Fragment>
             {   !main ?
-                <HeaderContainerHome style={{backgroundImage: `url(${imageUrl})`}}>
+                <HeaderContainerHome >
                         <Navigation/>
+                        <VideoCss autoPlay muted loop poster="">
+                            <source src={video} type="video/mp4"/>
+                        </VideoCss>
                         <TitleHeaderHome>
                             <SectionHeading props={headingHome01}/>
                         </TitleHeaderHome>

@@ -10,7 +10,6 @@ import {
 
 import Typo, {TypoType} from "../typo/typo.component";
 
-// TODO BRING THE HOVER ICON
 import arrowBtn from '../../assets/icon/btn_arrow_default.png'
 
 const StoryNews = ({link, props, animate, variants}) => {

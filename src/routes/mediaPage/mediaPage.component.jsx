@@ -15,6 +15,7 @@ import {
     MaxHeight,
     ArrowIcon,
     ArrowHiddenIcon,
+    FlexCenter
 } from "./mediaPage.style";
 
 import arrowLeft from '../../assets/icon/arrow_left.png';
@@ -28,8 +29,8 @@ const MediaPage = ({header}) => {
     if(!isMobile) setPage(1)
   }, [isMobile]);
 
-  const heightPage = isMobile ? 160 : 75 ;
-  const PageType = { numberPage: isMobile ? 3 : 6 } ;
+  const heightPage = isMobile ? 160 : 65 ;
+  const PageType = { numberPage: isMobile ? 3 : 10 } ;
 
   const maxNumberPage = () => Math.ceil(PressArray.length / PageType.numberPage);
   const pageMin = (page) => (page - 1) * PageType.numberPage;
@@ -63,11 +64,13 @@ const MediaPage = ({header}) => {
         <div>
             <Header header={header}/>
             <PrContainer>
-                <MaxHeight style={{height: `${PageType.numberPage * heightPage}px`}}>
+                <MaxHeight height={PageType.numberPage * heightPage}>
+                  <FlexCenter>
                     <GridContainer>
                         {isMobile ? headingMobile.map((el,i) => tableMap(el,i)) : headingArray.map((el,i) => tableMap(el,i))}
                         { PressArray.slice(pageMin(page),pageMax(page)).map(el => contentMap(el))}
                     </GridContainer>
+                  </FlexCenter>
                 </MaxHeight>
                 <ButtonContainer>
                     { page <= 1 ? <ArrowHiddenIcon src={arrowLeft}/> : <ArrowIcon src={arrowLeft} onClick={handlerPageDown} /> }

@@ -34,7 +34,7 @@ const BusinessPage = ({header}) => {
                     <Section>
                         <SectionHeading props={headingBu02}/>
                         <div>
-                            {storyArray.map(el => <StoryNews link='/pr' props={el} key={el.id}/>)}
+                            {storyArray.map(el => <StoryNews link='/esg' props={el} key={el.id}/>)}
                         </div>
                     </Section>
                 </StoryContainer>

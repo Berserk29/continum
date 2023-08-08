@@ -4,11 +4,22 @@ import mediaQuery from "../../helper/mediaQuery";
 
 // Home for homepage and Other for other page
 
+export const VideoCss = styled.video`
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+`
+
 export const HeaderContainerHome = styled.div`
     height: 100vh;
     width: 100%;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 `
 
 export const HeaderContainerOther = styled(HeaderContainerHome)`
