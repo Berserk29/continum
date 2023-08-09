@@ -12,23 +12,23 @@ import { headingArray, headingArrayTablet, contactArray } from "./contactPage.da
 const ContactPage = ({header}) => {
     const isTablet = useMediaQuery(mediaQuery.useTablet);
 
-    const tableMap = (el, i) => <Table content={el} key={i} type={TableType.greyHeading} fullBorder={true}/> ;
+    const tableMap = (el, i) => <Table key={i} type={TableType.greyHeading}>{el}</Table> ;
 
     const contentMap = (el) => {
         if(isTablet) {
             return (
             <Fragment key={el.id}>
-                <Table content={el.areas} fullBorder={true} type={TableType.greyHeading}/>
-                <Table heading={['Businesses','Manager', 'Contact']} content={[el.details, [el.manager], el.contact]} fullBorder={false} type={TableType.subClass}/> 
+                <Table type={TableType.text} bg='var(--color-200)'>{el.areas}</Table>
+                <Table heading={['Businesses','Manager', 'Contact']} type={TableType.subClass}>{[el.details, [el.manager], el.contact]}</Table> 
             </Fragment>
             )
         }
         return (
         <Fragment key={el.id}>
-            <Table content={el.areas} fullBorder={true} type={TableType.whiteHeading}/>
-            <Table content={el.details} fullBorder={true} type={TableType.listContainer}/>
-            <Table content={el.manager} fullBorder={true} type={TableType.whiteCenter}/>
-            <Table content={el.contact} fullBorder={true} type={TableType.listContainer} icon={el.imageUrl}/>
+            <Table type={TableType.text} bg={'var(--color-200)'}>{el.areas}</Table>
+            <Table type={TableType.text} >{el.details}</Table>
+            <Table type={TableType.text} >{el.manager}</Table>
+            <Table type={TableType.listContainer}>{el.contact}</Table>
         </Fragment>
         )
     };

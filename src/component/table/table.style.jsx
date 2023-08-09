@@ -1,88 +1,53 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
-export const WhiteContainer = styled.div`
+export const Container = styled.div`
     display: flex;
+    width: 100%;
     align-items: center;
-    background-color: var(--color-050);
-    padding: 1.9rem 1.6rem;
-    font-size: 1.4rem;
-    text-align: start;
-    border-top: 1px solid var(--color-200);
-    border-bottom: 1px solid var(--color-200);
+    justify-content: ${props => props.justify || 'flex-start'};
+    background-color: ${props => props.bg || 'var(--color-050)'};
+    border-bottom: 1.2px solid var(--color-black-opa20);
+    padding: 3.15rem 2.1rem;
+    @media ${mediaQuery.styledTablet}{
+        padding: 2.8rem 1.7rem;
+    }
     @media ${mediaQuery.styledMobile}{
-        font-size: 1.75rem;
-        padding: 2.125rem 1rem;
+        padding: 2.35rem .8rem;
     }
 `
 
-export const SubjectContainer = styled(WhiteContainer)`
-    overflow: hidden;
-`
-
-export const ListContainer = styled(WhiteContainer)`
-    align-items: flex-start;
+export const GreyHeadingContainer = styled(Container)`
+    background-color: var(--color-200);
+    border-top: 1.2px solid var(--color-black-opa20);
+    padding: 2.8rem 1.8rem;
     justify-content: center;
-    flex-direction: column;
+    @media ${mediaQuery.styledTablet}{
+        padding: 2.5rem 1.55rem;
+    }
+    @media ${mediaQuery.styledMobile}{
+        padding: 2.05rem .8rem;
+    }
 `
 
-export const WhiteCenterContainer = styled(WhiteContainer)`
-    justify-content: center;
+export const ListContainer = styled(Container)`
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: .8rem
 `
-
-export const GreyHeadingContainer = styled(WhiteContainer)`
-    background-color: var(--color-300);
-    justify-content: center;
-    text-align: center;
-    font-weight: 700;
-`
-
-export const WhiteHeadingContainer = styled(GreyHeadingContainer)`
-    background-color: var(--color-050);
-`
-
-export const IconImg = styled.img`
-    width: 1.2rem;
-    height: 1.2rem;
-    margin: 0 .9rem;
-`
-
-export const WithDot = styled.li`
-    line-height: 1.6rem;
-    list-style: inside;
-`
-
+    
 export const WithoutDot = styled.li`
-    line-height: 1.8rem;
     list-style: none;
 `
 
 export const SubClassContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    gap: 1.5rem;
 `
 
-export const SubContainer = styled(SubClassContainer)`
+export const SubContainer = styled.div`
+    display: flex;
+    flex-direction: column;
     gap: .6rem;
 `
-
-export const SubClassHeading = styled.h5`
-    font-weight: 700;
-    line-height: 140%;
-    letter-spacing: -3%;
-    font-size: 1.4rem;
-    @media ${mediaQuery.styledMobile}{
-    font-size: 1.75rem;
-    }
-`
-
-export const SubClassLi = styled(WithoutDot)`
-    font-size: 1.2rem;
-    line-height: 140%;
-    letter-spacing: -3%;
-    @media ${mediaQuery.styledMobile}{
-    font-size: 1.5rem;
-    }
-`
-

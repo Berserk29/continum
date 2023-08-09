@@ -4,14 +4,14 @@ import mediaQuery from "../../helper/mediaQuery";
 export const PrContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 10.4rem 4rem 10rem 4rem;
-    gap: 6rem;
+    padding: 16rem 4rem 20rem 4rem;
+    gap: 8rem;
     @media ${mediaQuery.styledTablet}{
-        padding: 8rem 1.6rem;
+        padding: 8rem 2rem 16rem 2rem;
     }
     @media ${mediaQuery.styledMobile}{
-        padding: 5rem 2rem;
-        gap: 3rem;
+        padding: 6.4rem 2rem 12rem 2rem;
+        gap: 6rem;
     }
 `
 
@@ -35,7 +35,8 @@ export const GridContainer = styled.div`
 
 export const ButtonContainer = styled.div`
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: ${props => props.gap || 1.5}rem;
     align-self: center;
 `
 
@@ -43,31 +44,44 @@ export const CirclePage = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: ${props => props.size || 2.8}rem;
+    height: ${props => props.size || 2.8}rem;
+    cursor: ${props => props.cursor || 'default'};
     border-radius: 50%;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-050);
+    font-family: 'Noto Sans';
+    font-weight: 700;
     font-size: 1.4rem;
 `
 
-export const ArrowIcon = styled.img`
-    width: 3.2rem;
-    height: 3.2rem;
-    transition: filter .3s;
+export const NumberPage = styled(CirclePage)`
+    background-color: transparent;
+    color: var(--color-400);
+`
 
-    &:hover{
-        filter: var(--filter-primary) ;
+export const ArrowIcon = styled.img`
+    width: 2.4rem;
+    height: 2.4rem;
+    filter: var(--filter-400);
+    transition: filter .2s;
+    cursor: pointer;
+    margin-left: ${props => props.marginleft || 0}rem;
+    margin-right: ${props => props.marginright || 0}rem;
+    :hover{
+        filter: var(--filter-grey) ;
     }
 `
 
-export const ArrowHiddenIcon = styled.img`
-    width: 3.2rem;
-    height: 3.2rem;
-    opacity: 0;
+export const PlusIcon = styled.img`
+    width: 1.5rem;
+    height: 1.5rem;
 `
 
 export const MaxHeight = styled.div`
     width: 100%;
     height: ${props => props.height}px;
+    @media ${mediaQuery.styledTablet} {
+        height: auto;
+    }
 `

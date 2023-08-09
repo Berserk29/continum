@@ -2,8 +2,8 @@ import logoYoutube from '../../assets/icon/Icon_youtube.png'
 import logoInsta from '../../assets/icon/Icon_instagram.png'
 
 export const footerIcon = {
-  logoYoutube: logoYoutube,
-  logoInsta: logoInsta,
+  logoYoutube,
+  logoInsta
 }
 
 export const categories = [

@@ -12,9 +12,10 @@ Text3,
 Text4,
 Text5,
 TextTable,
+HeadingTable,
 TextHome,
 SpanOrange,
-SpanGrey,
+Span,
 FooterHeading,
 FooterLink,
 Link,
@@ -36,8 +37,9 @@ export const TypoType = {
     Text5: 'Text5',
     TextHome: 'TextHome',
     TextTable: 'TextTable',
+    HeadingTable: 'HeadingTable',
     SpanOrange: 'SpanOrange',
-    SpanGrey: 'SpanGrey',
+    Span: 'Span',
     FooterHeading: 'FooterHeading',
     FooterLink: 'FooterLink',
     Link: 'Link',
@@ -61,8 +63,9 @@ const Typo = ({children, type, textColor, headingColor, linkColor}) => {
         if(type === 'Text5') return <Text5 color={textColor}>{children}</Text5>
         if(type === 'TextHome') return <TextHome color={textColor}>{children}</TextHome>
         if(type === 'TextTable') return <TextTable color={textColor}>{children}</TextTable>
+        if(type === 'HeadingTable') return <HeadingTable>{children}</HeadingTable>
         if(type === 'SpanOrange') return <SpanOrange>{children}</SpanOrange>
-        if(type === 'SpanGrey') return <SpanGrey>{children}</SpanGrey>
+        if(type === 'Span') return <Span>{children}</Span>
         if(type === 'FooterHeading') return <FooterHeading color={headingColor}>{children}</FooterHeading>
         if(type === 'FooterLink') return <FooterLink color={linkColor}>{children}</FooterLink>
         if(type === 'Link') return <Link color={linkColor}>{children}</Link>

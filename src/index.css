@@ -14,9 +14,9 @@
   --color-black-opa60: rgba(34,34,34,.6);
   --color-black-opa20: rgba(34,34,34,.2);
 
-
   --filter-primary: invert(47%) sepia(99%) saturate(1132%) hue-rotate(346deg) brightness(100%) contrast(104%);
   --filter-grey: invert(83%) sepia(2%) saturate(4%) hue-rotate(334deg) brightness(83%) contrast(89%);
+  --filter-400: invert(40%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(95%) contrast(82%);
 }
 
 *,

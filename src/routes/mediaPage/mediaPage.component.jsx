@@ -1,11 +1,12 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
 import Header from "../../component/header/header.component";
 import Table , {TableType} from "../../component/table/table.component";
+import Typo, { TypoType } from "../../component/typo/typo.component";
 
-import { headingArray, headingMobile, PressArray} from "./mediaPage.data";
+import { headingArray, headingMobile, mediaArr, mediaIconArr} from "./mediaPage.data";
 
 import {
     ButtonContainer,
@@ -14,48 +15,50 @@ import {
     CirclePage,
     MaxHeight,
     ArrowIcon,
-    ArrowHiddenIcon,
-    FlexCenter
+    PlusIcon,
+    FlexCenter,
+    NumberPage,
 } from "./mediaPage.style";
-
-import arrowLeft from '../../assets/icon/arrow_left.png';
-import arrowRight from '../../assets/icon/arrow_right.png';
 
 const MediaPage = ({header}) => {
   const [page, setPage] = useState(1);
+  const [numPageArr, setNumPageArr] = useState([]);
+  const {arrowLeft, arrowRight, plusIcon} = mediaIconArr;
+  const isTablet = useMediaQuery(mediaQuery.useTablet);
   const isMobile = useMediaQuery(mediaQuery.useMobile);
+  const containerRef = useRef();
 
   useEffect(() => {
-    if(!isMobile) setPage(1)
-  }, [isMobile]);
+    setPage(1)
+  }, [isTablet, isMobile]);
 
-  const heightPage = isMobile ? 160 : 65 ;
-  const PageType = { numberPage: isMobile ? 3 : 10 } ;
+  const PageType = { numberPage: isMobile ? 5 : 10 } ;
 
-  const maxNumberPage = () => Math.ceil(PressArray.length / PageType.numberPage);
+  const maxNumberPage =  Math.ceil(mediaArr.length / PageType.numberPage);
   const pageMin = (page) => (page - 1) * PageType.numberPage;
   const pageMax = (page) => page * PageType.numberPage;
-  const handlerPageUp = () => { if(page < maxNumberPage()) setPage( page + 1) };
+  const handlerPageUp = () => { if(page < maxNumberPage) setPage( page + 1) };
   const handlerPageDown = () => { if(page > 1) setPage( page - 1) };
   const smallerDate = (el) => el.slice(2);
-  const tableMap = (el,i) => <Table content={el} key={i} type={TableType.greyHeading}/>;
 
-  const contentMap = (el) => {
-    if(isMobile) {
-      return (
-        <Fragment key={el.id}>
-            <Table content={el.id} type={TableType.whiteHeading}/>
-            <Table content={el.subject} type={TableType.subject}/>
-            <Table heading={['Writer','Date']} content={[[el.writer], [smallerDate(el.date)]]} fullBorder={false} type={TableType.subClass}/> 
-        </Fragment>
-      )
+  // INFO Create an array having the number of page --> exemple [1,2,3]
+  useEffect(() => {
+    const numPage = []
+    for (let i = 1; i <= maxNumberPage; i ++) {
+      numPage.push(i)
     }
+    setNumPageArr(numPage)
+  }, [maxNumberPage])
+
+  const tableMap = (el,i) => <Table key={i} type={TableType.greyHeading}>{el}</Table>;
+  
+  const contentMap = (el) => {
     return (
       <Fragment key={el.id}>
-          <Table content={el.id} type={TableType.whiteHeading}/>
-          <Table content={el.subject} type={TableType.subject}/>
-          <Table content={el.date} type={TableType.whiteCenter}/>
-          <Table content={el.writer} type={TableType.whiteCenter}/>
+          <Table type={TableType.text} justify='center' textColor='var(--color-black-opa60)'>{el.id}</Table>
+          <Table type={TableType.text} >{el.subject}</Table>
+          <Table type={TableType.text} textColor='var(--color-black-opa60)'>{ isMobile ? smallerDate(el.date) : el.date}</Table>
+          { !isMobile && <Table type={TableType.text}>{el.writer}</Table>}
       </Fragment>
     )
   };
@@ -64,18 +67,31 @@ const MediaPage = ({header}) => {
         <div>
             <Header header={header}/>
             <PrContainer>
-                <MaxHeight height={PageType.numberPage * heightPage}>
+                <MaxHeight height={containerRef?.current?.offsetHeight}>
                   <FlexCenter>
-                    <GridContainer>
-                        {isMobile ? headingMobile.map((el,i) => tableMap(el,i)) : headingArray.map((el,i) => tableMap(el,i))}
-                        { PressArray.slice(pageMin(page),pageMax(page)).map(el => contentMap(el))}
+                    <GridContainer ref={containerRef}>
+                        {/* HEADING */}
+                        { isMobile ? headingMobile.map((el,i) => tableMap(el,i)) : headingArray.map((el,i) => tableMap(el,i))}
+                        {/* CONTENT */}
+                        {mediaArr.slice( isTablet ? PageType : pageMin(page) , pageMax(page)).map(el => contentMap(el))}
                     </GridContainer>
                   </FlexCenter>
                 </MaxHeight>
-                <ButtonContainer>
-                    { page <= 1 ? <ArrowHiddenIcon src={arrowLeft}/> : <ArrowIcon src={arrowLeft} onClick={handlerPageDown} /> }
-                    <CirclePage>{page}</CirclePage>
-                    { page === maxNumberPage() ? <ArrowHiddenIcon src={arrowRight}/> : <ArrowIcon src={arrowRight} onClick={handlerPageUp} />}                    
+                {/* PAGE BUTTON OR LOAD BUTTON */}
+                <ButtonContainer gap={isMobile ? 4 : isTablet && 6}>
+                  { !isTablet &&
+                    <Fragment>
+                      <ArrowIcon src={arrowLeft} onClick={handlerPageDown} marginright={1}/>
+                      {numPageArr.map((el) => page === el ? <CirclePage key={el}>{el}</CirclePage> : <NumberPage key={el}>{el}</NumberPage>)}
+                      <ArrowIcon src={arrowRight} onClick={handlerPageUp} marginleft={1}/>                    
+                    </Fragment>
+                  }    
+                  { isTablet && page !== maxNumberPage &&
+                    <Fragment>
+                      <Typo type={TypoType.Span}>Load more</Typo>
+                      <CirclePage onClick={handlerPageUp} size={3.2} cursor={'pointer'}><PlusIcon src={plusIcon}/></CirclePage>
+                    </Fragment>
+                  } 
                 </ButtonContainer>
             </PrContainer>
         </div>

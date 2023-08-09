@@ -28,8 +28,8 @@ const DropMenu = () => {
         <DropMenuContainer>
             <DropMenuUl gap={['2.5rem', '4rem']}>
               {categories.map((el) =>
-                <FlexContainer>
-                  <li key={el.id}  onClick={() => clickHandler(el.id)}>
+                <FlexContainer key={el.id}>
+                  <li  onClick={() => clickHandler(el.id)}>
                     <Typo type={TypoType.DropLink} linkColor={linkColorLogic(el.id)}>{el.title}</Typo>
                   </li>
                     {arrayNum === el.id && !isTablet && <Arrow src={arrow} alt="arrow-icon" />}
@@ -37,7 +37,7 @@ const DropMenu = () => {
               )}
             </DropMenuUl>
             <DropMenuUl gap={['3.5rem', '3rem']}>
-                { arrayNum === false ? '' : 
+                { arrayNum !== false && 
                   categories[arrayNum].linkName.map((el,i) => 
                     <MenuLink onClick={linkHandler} key={i}>{el}</MenuLink>
                 )}

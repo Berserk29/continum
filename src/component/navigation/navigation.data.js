@@ -7,13 +7,13 @@ import globeBlack from '../../assets/icon/Icon_language_b.png'
 import closeBtn from '../../assets/icon/x-close-1.png'
 
 export const navIcon = {
-    continumBlack: continumBlack,
-    continumWhite: continumWhite,
-    hamBlack: hamBlack,
-    hamWhite: hamWhite,
-    globeWhite: globeWhite,
-    globeBlack: globeBlack,
-    closeBtn: closeBtn,
+    continumBlack,
+    continumWhite,
+    hamBlack,
+    hamWhite,
+    globeWhite,
+    globeBlack,
+    closeBtn,
 }
 
 export const navLinkArray = [

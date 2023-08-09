@@ -16,9 +16,10 @@ export const TableContainer = styled.div`
     width: 100%;
     display: grid;
     justify-content: center;
-    grid-template-columns: 20.4rem 35.8rem 18.4rem 37.4rem;
+    /* grid-template-columns: 20.4rem 35.8rem 18.4rem 37.4rem; */
+    grid-template-columns: max-content 1fr max-content max-content;
     @media ${mediaQuery.styledTablet} {
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: max-content 1fr;
     }
     @media ${mediaQuery.styledMobile} {
         grid-template-columns: min-content 1fr;

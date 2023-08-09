@@ -187,17 +187,9 @@ export const SpanOrange = styled.span`
     }
 `
 
-export const SpanGrey = styled.span`
-    ${B5}
-    color: var(--color-white-opa60);
-    cursor: pointer;
-    transition: color .2s;
-    :hover {
-        color: var(--color-primary);
-    }
-    @media ${mediaQuery.styledTablet} {
-        ${B7}
-    }
+export const Span = styled.span`
+    ${B6}
+    color: var(--color-secondary);
 `
 
 export const Link = styled.span`
@@ -283,7 +275,15 @@ export const TextTable = styled.p`
         ${B9}
     }
     @media ${mediaQuery.styledMobile} {
-        color: ${props => props.color || 'var(--color-black-opa60)'}
+        color: ${props => props.color}
+    }
+`
+
+export const HeadingTable = styled.p`
+    ${B5}
+    color: var(--color-500);
+    @media ${mediaQuery.styledTablet} {
+        ${B7}
     }
 `
 
@@ -298,8 +298,6 @@ export const TextHome = styled.p`
         ${B8}
     }
 `
-
-
 
 export const FooterHeading = styled.span`
     ${B6}
