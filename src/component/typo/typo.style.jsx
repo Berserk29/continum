@@ -148,6 +148,16 @@ export const Headline3 = styled.h3`
         ${B1}
     }
 `
+export const Headline7 = styled.h3`
+    ${H2};
+    color: ${props => props.color || 'var(--color-secondary)'};
+    @media ${mediaQuery.styledTablet} {
+        ${H4}
+    }
+    @media ${mediaQuery.styledMobile} {
+        ${B1}
+    }
+`
 
 export const Headline4 = styled.h3`
     ${H3}
@@ -265,6 +275,15 @@ export const Text5 = styled.p`
     color: ${props => props.color || 'var(--color-050)'};
     @media ${mediaQuery.styledTablet} {
         ${B11}
+    }
+`
+export const Text6 = styled.p`
+    ${B6}
+    text-transform: capitalize;
+    color: ${props => props.color || 'var(--color-secondary)'};
+    @media ${mediaQuery.styledTablet} {
+        ${B8}
+        line-height: 160%;
     }
 `
 

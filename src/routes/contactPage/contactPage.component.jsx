@@ -6,7 +6,7 @@ import Header from "../../component/header/header.component";
 import Table, { TableType } from "../../component/table/table.component";
 import Typo, {TypoType} from "../../component/typo/typo.component";
 
-import { ContactContainer, TableContainer, TypoContainer } from "./contactPage.style";
+import { ContactContainer, FlexCenter, TableContainer, TypoContainer } from "./contactPage.style";
 import { headingArray, headingArrayTablet, contactArray } from "./contactPage.data";
 
 const ContactPage = ({header}) => {
@@ -37,11 +37,13 @@ const ContactPage = ({header}) => {
         <div>
             <Header header={header}/>
             <ContactContainer>
-                <TypoContainer><Typo type={TypoType.Title3_B}>Contact Us</Typo></TypoContainer>
-                <TableContainer>
-                    {isTablet ? headingArrayTablet.map((el,i) => tableMap(el,i) ) : headingArray.map((el,i) => tableMap(el, i))}
-                    { contactArray.map(el => contentMap(el)) }
-                </TableContainer>
+                <TypoContainer><Typo type={TypoType.Headline7} headingColor={'var(--color-secondary)'}>Contact Us</Typo></TypoContainer>
+                <FlexCenter>
+                    <TableContainer>
+                        {isTablet ? headingArrayTablet.map((el,i) => tableMap(el,i) ) : headingArray.map((el,i) => tableMap(el, i))}
+                        { contactArray.map(el => contentMap(el)) }
+                    </TableContainer>
+                </FlexCenter>
             </ContactContainer>
         </div>
     );

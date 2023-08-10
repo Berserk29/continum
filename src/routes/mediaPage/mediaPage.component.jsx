@@ -23,6 +23,7 @@ import {
 const MediaPage = ({header}) => {
   const [page, setPage] = useState(1);
   const [numPageArr, setNumPageArr] = useState([]);
+  const [maxHeight , setMaxHeight] = useState(1015)
   const {arrowLeft, arrowRight, plusIcon} = mediaIconArr;
   const isTablet = useMediaQuery(mediaQuery.useTablet);
   const isMobile = useMediaQuery(mediaQuery.useMobile);
@@ -31,6 +32,11 @@ const MediaPage = ({header}) => {
   useEffect(() => {
     setPage(1)
   }, [isTablet, isMobile]);
+
+  useEffect(() => {
+    const height = containerRef?.current?.offsetHeight
+    setMaxHeight(height)
+  },[])
 
   const PageType = { numberPage: isMobile ? 5 : 10 } ;
 
@@ -67,7 +73,7 @@ const MediaPage = ({header}) => {
         <div>
             <Header header={header}/>
             <PrContainer>
-                <MaxHeight height={containerRef?.current?.offsetHeight}>
+                <MaxHeight height={maxHeight}>
                   <FlexCenter>
                     <GridContainer ref={containerRef}>
                         {/* HEADING */}

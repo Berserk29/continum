@@ -17,7 +17,7 @@ export const TableType = {
     text: 'text'
 }
 
-const Table = ({children, type , heading, justify, bg, textColor}) => {
+const Table = ({children, type , heading, justify, bg, textColor, columns}) => {
 
     const subClass = () => {
       return (
@@ -38,7 +38,7 @@ const Table = ({children, type , heading, justify, bg, textColor}) => {
         if(type === 'greyHeading') return <GreyHeadingContainer><Typo type={TypoType.HeadingTable}>{children}</Typo></GreyHeadingContainer>;
         if(type === 'text') return <Container justify={justify} bg={bg}><Typo type={TypoType.TextTable} textColor={textColor}>{typeof children !== "object" ? children : children.join(' / ')}</Typo></Container>
         if(type === 'subClass') return <Container >{subClass()}</Container>
-        if(type === 'listContainer') return <ListContainer >{children.map((el,i) => <Typo key={i} type={TypoType.TextTable}>{el}</Typo>)}</ListContainer>
+        if(type === 'listContainer') return <ListContainer justify={justify} columns={columns}>{children.map((el,i) => <Typo key={i} textColor={textColor}type={TypoType.TextTable}>{el}</Typo>)}</ListContainer>
     }
 
     return (

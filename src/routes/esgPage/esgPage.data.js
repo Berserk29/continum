@@ -42,7 +42,6 @@ export const lowerCardArr = [
         imageUrl: cardImg4,
         heading: 'Environmental safety',
         vertical: false,
-        // text: 'Achieve sound corporate governance. Enhance the independence and diversity of the BOD. Build a transparent corporate culture',
         text: "Newly established the CEO’s safety and health environment",
     },
     {
@@ -50,7 +49,6 @@ export const lowerCardArr = [
         imageUrl: cardImg5,
         heading: 'Environmental impact',
         vertical: false,
-        // text: 'Achieve sound corporate governance. Enhance the independence and diversity of the BOD. Build a transparent corporate culture',
         text: "Reduced water usage by 15.6% compared to 2020",
     },
     {
@@ -58,7 +56,6 @@ export const lowerCardArr = [
         imageUrl: cardImg6,
         heading: 'Eco-friendly products',
         vertical: false,
-        // text: 'Achieve sound corporate governance. Enhance the independence and diversity of the BOD. Build a transparent corporate culture',
         text: "Environmental investment reached 759 million dollar",
     },
     {
@@ -66,7 +63,67 @@ export const lowerCardArr = [
         imageUrl: cardImg7,
         heading: 'Health management',
         vertical: false,
-        // text: 'Achieve sound corporate governance. Enhance the independence and diversity of the BOD. Build a transparent corporate culture',
         text: "Zero violations of health and safety regulations",
+    },
+]
+
+export const headingArr = ['Date', 'Agenda', 'Attendance rate']
+export const headingMobileArr = ['Agenda', 'Date / Rate']
+
+export const esgTableArr = [
+    {
+        id: 1,
+        date: '2023-05-15',
+        agenda: 'Appointment of the Chairperson of the ESG Committee',
+        rate: '100%'
+    },
+    {
+        id: 2,
+        date: '2023-03-15',
+        agenda: 'Appointment of the Chairperson of the ESG Committee',
+        rate: '100%'
+    },
+    {
+        id: 3,
+        date: '2023-01-15',
+        agenda: 'Appointment of the Chairperson of the ESG Committee',
+        rate: '95%'
+    },
+    {
+        id: 4,
+        date: '2022-11-15',
+        agenda: 'Appointment of the Chairperson of the ESG Committee',
+        rate: '86%'
+    },
+    {
+        id: 5,
+        date: '2022-09-15',
+        agenda: 'Appointment of the Chairperson of the ESG Committee',
+        rate: '82%'
+    },
+    {
+        id: 6,
+        date: '2022-07-15',
+        agenda: 'Appointment of the Chairperson of the ESG Committee',
+        rate: '88%'
+    },
+]
+
+export const reportArr = [
+    {
+        id: 1,
+        text: '2023 sustainability report'
+    },
+    {
+        id: 2,
+        text: '2022 sustainability report'
+    },
+    {
+        id: 3,
+        text: '2021 sustainability report'
+    },
+    {
+        id: 4,
+        text: '2020 sustainability report'
     },
 ]

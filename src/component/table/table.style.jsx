@@ -32,8 +32,9 @@ export const GreyHeadingContainer = styled(Container)`
 
 export const ListContainer = styled(Container)`
     display: grid;
-    grid-template-columns: max-content max-content;
-    column-gap: .8rem
+    grid-template-columns: repeat(${props => props.columns || 2}, max-content);
+    column-gap: .8rem;
+    justify-items: ${props => props.justify || 'flex-start'};
 `
     
 export const WithoutDot = styled.li`

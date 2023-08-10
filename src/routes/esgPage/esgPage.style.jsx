@@ -5,7 +5,6 @@ export const EsgContainer = styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: center;
     padding: 16rem 2rem 20rem 2rem;
     gap: 16rem;
     @media ${mediaQuery.styledTablet} {
@@ -36,7 +35,6 @@ export const UpperCardContainer = styled.div`
     flex: 1440px 0 1;
     grid-template-columns: repeat(3, 1fr);
 
-
     @media ${mediaQuery.styledTablet} {
         gap: 4.8rem;
         flex: 630px 0 1;
@@ -53,19 +51,38 @@ export const LowerCardContainer = styled.div`
     width: 100%;
     flex: 1440px 0 1;
     gap: 4rem;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(47rem, 1fr)); 
     
     @media ${mediaQuery.styledTablet} {
+        grid-template-columns: repeat(auto-fit, minmax(40.5rem, 1fr)); 
+        gap: 2.4rem;
+    }
+    @media ${mediaQuery.styledMobile} {
         grid-template-columns: 1fr;
         gap: 2.4rem;
     }
 `
 
-
-
 export const TableContainer = styled.div`
     display: grid;
+    flex: 1440px 0 1;
     grid-template-columns: max-content 1fr max-content;
+    @media ${mediaQuery.styledMobile} {
+        grid-template-columns: 1fr max-content;
+    }
+`
+
+export const ReportGrid = styled.div`
+    display: grid;
+    flex: 1440px 0 1;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6.4rem;
+    @media ${mediaQuery.styledTablet} {
+        column-gap: 2.4rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        grid-template-columns: 1fr;
+    }
 `
 
 export const FlexCenter = styled.div`

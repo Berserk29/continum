@@ -91,7 +91,7 @@ export const headingBu04 = {
     alignItems: 'center',
 }
 
-//////// ESGPAGE HEADING
+//////// ESG PAGE HEADING
 
 export const headingEsg01 = {
     titleTop: 'We will create a sustainable future',
