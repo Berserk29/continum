@@ -2,12 +2,13 @@ import { Fragment } from "react";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
-import {upperCardArr, lowerCardArr, headingArr, headingMobileArr ,esgTableArr, reportArr} from "./esgPage.data";
-
 import Header from "../../component/header/header.component";
 import SectionHeading from "../../component/sectionHeading/sectionHeading.component";
 import InfoCard from "../../component/infoCard/infoCard.component";
+import Table, { TableType } from "../../component/table/table.component";
+import ReportDownload from "../../component/reportDownload/reportDownload.component";
 
+import {upperCardArr, lowerCardArr, headingArr, headingMobileArr ,esgTableArr, reportArr} from "./esgPage.data";
 import { headingEsg01, headingEsg02, headingEsg03, headingEsg04 } from "../../component/sectionHeading/sectionHeading.data";
 
 import { 
@@ -19,10 +20,8 @@ import {
     LowerCardContainer,
     ReportGrid
 } from "./esgPage.style";
-import Table, { TableType } from "../../component/table/table.component";
-import ReportDownload from "../../component/reportDownload/reportDownload.component";
 
-const EsgPage = ({header}) => {
+const EsgPage = ({props}) => {
     const isMobile = useMediaQuery(mediaQuery.useMobile)
 
     const isTopNum = isMobile ? 1 : 2;
@@ -41,7 +40,7 @@ const EsgPage = ({header}) => {
 
     return (
         <Fragment>
-            <Header header={header}/>
+            <Header props={props}/>
             <EsgContainer>
                 {/* SECTION 1 CARD*/}
                 <Section>
@@ -78,7 +77,6 @@ const EsgPage = ({header}) => {
                         {reportArr.map((el) => <ReportDownload key={el.id} isTop={el.id <= isTopNum ? true : false} props={el}/> )}
                     </ReportGrid>
                 </FlexCenter>
-
             </EsgContainer>
         </Fragment>
     )

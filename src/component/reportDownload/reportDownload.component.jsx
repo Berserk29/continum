@@ -5,7 +5,7 @@ import { Container, IconCss } from "./reportDownload.style";
 
 const ReportDownload = ({props, isTop}) => {
     const {text} = props
-    
+
     return (
         <Container isTop={isTop}>
             <Typo type={TypoType.Text6}>{text}</Typo>

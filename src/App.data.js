@@ -7,27 +7,37 @@ import contactImage from '../src/assets/image/subpage_cover_05.jpg'
 
 export const headerArray = [
     {
-        // TODO CHANGE WHEN I GOT THE VIDEO
+        // TODO PUT THE VIDEO 1 FRAME (Poster)
         imageUrl: businessImage,
     },
     {
         imageUrl: aboutImage,
-        main: 'Who we are',
+        heading: 'Who we are',
+        linkName: ['Company', 'History', 'Location'],
+        placeHolder: 'Company',
     },
     {
         imageUrl: businessImage,
-        main: 'What we do',
+        heading: 'What we do',
+        linkName: ['Sustainable tech', 'Product & service', 'Discover', 'Protect'],
+        placeHolder: 'Sustainable tech',
     },
     {
         imageUrl: mediaImage,
-        main: 'Media'
+        heading: 'Media',
+        linkName: ['Newsroom', 'Library', 'Notice'],
+        placeHolder: 'Newsroom',
     },
     {
         imageUrl: esgImage,
-        main: 'Esg'
+        heading: 'Esg',
+        linkName: ['Environmental', 'Social', 'Governance'],
+        placeHolder: 'Environmental',
     },
     {
         imageUrl: contactImage,
-        main: 'Contact'
+        heading: 'Contact',
+        linkName: ['Contact Us', 'Location'],
+        placeHolder: 'Contact Us',
     },
 ]

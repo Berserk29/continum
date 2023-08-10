@@ -15,12 +15,12 @@ function App() {
   return (
     <Routes>
             <Route path="/" element={<Footer/>}>
-                <Route index element={<HomePage header={headerArray[0]}/>} />
-                <Route path="about" element={<AboutPage header={headerArray[1]}/>} />
-                <Route path="business" element={<BusinessPage header={headerArray[2]}/>} />
-                <Route path="media" element={<MediaPage header={headerArray[3]}/>} />
-                <Route path="esg" element={<EsgPage header={headerArray[4]}/>} />
-                <Route path="contact" element={<ContactPage header={headerArray[5]}/>} />
+                <Route index element={<HomePage props={headerArray[0]}/>} />
+                <Route path="about" element={<AboutPage props={headerArray[1]}/>} />
+                <Route path="business" element={<BusinessPage props={headerArray[2]}/>} />
+                <Route path="media" element={<MediaPage props={headerArray[3]}/>} />
+                <Route path="esg" element={<EsgPage props={headerArray[4]}/>} />
+                <Route path="contact" element={<ContactPage props={headerArray[5]}/>} />
             </Route>
     </Routes>
   );

@@ -18,15 +18,16 @@ import {markerObject1} from '../marker/marker.data'
 import Marker from '../marker/marker.component'
 
 import { headingHome01 } from "../sectionHeading/sectionHeading.data";
+import HeaderMarker from "../headerMarker/headerMarker.component";
 
-const Header = ({header}) => {
-const {imageUrl, main} = header;
+const Header = ({props}) => {
+const {imageUrl, heading} = props;
 
 // TODO HAVING THE FIRST FRAME OF THE VIDEO AS THE POSTER IN VIDEOCSS
 
     return(
         <Fragment>
-            {   !main ?
+            {   !heading ?
                 <HeaderContainerHome >
                         <Navigation/>
                         <VideoCss autoPlay muted loop poster="">
@@ -42,8 +43,12 @@ const {imageUrl, main} = header;
                 <HeaderContainerOther style={{backgroundImage: `url(${imageUrl})`}}>
                     <Navigation/>
                     <TitleHeaderOther>
-                        <Typo type={TypoType.Headline1Header}>{main}</Typo>
+                        <Typo type={TypoType.Headline1Header}>{heading}</Typo>
                     </TitleHeaderOther>
+                    {/* TODO THE HEADERMARKER */}
+                    
+                    <HeaderMarker props={props}/>
+
                 </HeaderContainerOther>
             }
         </Fragment>

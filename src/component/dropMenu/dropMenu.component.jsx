@@ -10,7 +10,7 @@ import Typo, {TypoType} from '../typo/typo.component'
 import arrow from '../../assets/icon/arrow-narrow-right.png'
 
 const DropMenu = () => {
-  const [arrayNum, setArrayNum] = useState(false);
+  const [arrayNum, setArrayNum] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
   const isTablet = useMediaQuery(mediaQuery.useTablet)

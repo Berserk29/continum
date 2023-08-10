@@ -72,7 +72,7 @@ const Typo = ({children, type, textColor, headingColor, linkColor}) => {
         if(type === 'HeadingTable') return <HeadingTable>{children}</HeadingTable>
         if(type === 'SpanOrange') return <SpanOrange>{children}</SpanOrange>
         if(type === 'Span') return <Span>{children}</Span>
-        if(type === 'FooterHeading') return <FooterHeading color={headingColor}>{children}</FooterHeading>
+        if(type === 'FooterHeading') return <FooterHeading color={textColor}>{children}</FooterHeading>
         if(type === 'FooterLink') return <FooterLink color={linkColor}>{children}</FooterLink>
         if(type === 'Link') return <Link color={linkColor}>{children}</Link>
         if(type === 'DropLink') return <DropLink color={linkColor}>{children}</DropLink>

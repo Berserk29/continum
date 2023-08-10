@@ -4,10 +4,10 @@ import NewsSection from "../../component/newsSection/newsSection.component";
 import Recruitment from "../../component/recruitment/recruitment.component";
 
 
-const HomePage = ({header}) => {
+const HomePage = ({props}) => {
     return (
         <div>
-            <Header header={header}/>
+            <Header props={props}/>
             <Carousel/>
             <NewsSection/>
             <Recruitment/>

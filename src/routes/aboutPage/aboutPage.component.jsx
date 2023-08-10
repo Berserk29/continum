@@ -7,10 +7,10 @@ import { cardArray } from "./aboutPage.data";
 import SectionHeading from "../../component/sectionHeading/sectionHeading.component";
 import { headingAbout01 } from "../../component/sectionHeading/sectionHeading.data";
 
-const AboutPage = ({header}) => {
+const AboutPage = ({props}) => {
     return (
         <Fragment>
-            <Header header={header}/>
+            <Header props={props}/>
             <AboutContainer>
                 <SectionHeading props={headingAbout01}/>
                 <CardContainer>

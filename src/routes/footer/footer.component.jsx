@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import FooterLink from "../../component/footerLink/footerLink.component";
 
-import { categories, footerIcon } from "./footer.data";
+import { categories, footerIcon, selecterObject } from "./footer.data";
 
 import {
     FooterContainer,
@@ -17,6 +17,9 @@ import {
     FooterIcon,
     Testing,
 } from "./footer.style";
+import Selecter from "../../component/selecter/selecter.component";
+
+
 
   
 const Footer = () => {
@@ -30,7 +33,10 @@ const Footer = () => {
           <CategoryContainer>
             {categories.map((el) => <FooterLink key={el.id} category={el}/>)}
           </CategoryContainer>
-          <Testing />
+
+          {/* <Testing /> */}
+          <Selecter props={selecterObject}/>
+
         </UpperPartContainer>
         <LowerPartContainer>
           <div>

@@ -320,7 +320,7 @@ export const TextHome = styled.p`
 
 export const FooterHeading = styled.span`
     ${B6}
-    color: var(--color-050);
+    color: ${props => props.color || 'var(--color-050)'};
     @media ${mediaQuery.styledTablet} {
         ${B11}
     }

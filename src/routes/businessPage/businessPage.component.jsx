@@ -23,11 +23,11 @@ import {
 
 // TODO REDOO ALL THE PAGE!!!!
 
-const BusinessPage = ({header}) => {
+const BusinessPage = ({props}) => {
 
     return (
         <Fragment>
-            <Header header={header}/>
+            <Header props={props}/>
             <BuisinessContainer>
                 <StoryContainer>
                     <SectionHeading props={headingBu01}/>

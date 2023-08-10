@@ -6,6 +6,16 @@ export const footerIcon = {
   logoInsta
 }
 
+export const selecterObject = {
+  linkName: ['Continum Corporation', 'Continum Systems', 'Continum Vision'],
+  width: ['27rem', '100%'],
+  typoType: 'FooterHeading',
+  placeHolder: 'See all affiliates',
+  isFooter: true,
+  textColor: 'var(--color-050)'
+}
+
+
 export const categories = [
     {
       id: 0,

@@ -9,7 +9,7 @@ import Typo, {TypoType} from "../../component/typo/typo.component";
 import { ContactContainer, FlexCenter, TableContainer, TypoContainer } from "./contactPage.style";
 import { headingArray, headingArrayTablet, contactArray } from "./contactPage.data";
 
-const ContactPage = ({header}) => {
+const ContactPage = ({props}) => {
     const isTablet = useMediaQuery(mediaQuery.useTablet);
 
     const tableMap = (el, i) => <Table key={i} type={TableType.greyHeading}>{el}</Table> ;
@@ -35,7 +35,7 @@ const ContactPage = ({header}) => {
 
     return (
         <div>
-            <Header header={header}/>
+            <Header props={props}/>
             <ContactContainer>
                 <TypoContainer><Typo type={TypoType.Headline7} headingColor={'var(--color-secondary)'}>Contact Us</Typo></TypoContainer>
                 <FlexCenter>

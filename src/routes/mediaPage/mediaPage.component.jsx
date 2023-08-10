@@ -20,7 +20,7 @@ import {
     NumberPage,
 } from "./mediaPage.style";
 
-const MediaPage = ({header}) => {
+const MediaPage = ({props}) => {
   const [page, setPage] = useState(1);
   const [numPageArr, setNumPageArr] = useState([]);
   const [maxHeight , setMaxHeight] = useState(1015)
@@ -71,7 +71,7 @@ const MediaPage = ({header}) => {
 
     return (
         <div>
-            <Header header={header}/>
+            <Header props={props}/>
             <PrContainer>
                 <MaxHeight height={maxHeight}>
                   <FlexCenter>
