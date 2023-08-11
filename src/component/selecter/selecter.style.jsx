@@ -4,13 +4,13 @@ import mediaQuery from "../../helper/mediaQuery";
 // TODO ANIMATION BUG WHEN USING FOR THE FIRST TW0 TIME, OTHER COMPONENT ON THE PAGE SHAKE..... 
 
 const slideInAnimation = keyframes`
-  from { transform: translateY(-100%);}
-  to { transform: translateY(0);}
+  from { transform: translateY(-100%) ;}
+  to { transform: translateY(0) ;}
 `;
 
 const slideOutAnimation = keyframes`
-    from { transform: translateY(0%);}
-    to { transform: translateY(-100%);} 
+    from { transform: translateY(0%) ;}
+    to { transform: translateY(-100%) ;} 
 `
 
 
@@ -46,20 +46,26 @@ export const LowerSection = styled.div`
     height: auto;
     overflow: hidden;
     border-top: 2px solid var(--color-050);
+    z-index: 2;
 `
 
 export const DropSection = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: .6rem;
     cursor: pointer;
     width: 100%;
     background-color: ${ props => props.isFooter ? 'var(--color-secondary)' : 'var(--color-050)'};
     border: ${ props => props.isFooter ? '2px solid var(--color-050)': 'none'};
     border-top: none;
-    padding: 2.5rem 1.6rem;
+    padding: 0 1.6rem;
+    text-align: start;
     animation: ${({ isOpen }) => isOpen ? slideInAnimation : slideOutAnimation} .5s ease-in-out forwards;
     /* INFO MAKE SURE THE DROPSECTION IS HIDDEN WHEN REFRESH THE PAGE */
     opacity: ${props => props.clickOne ? 1 : 0};
-    text-align: start;
 `
+
+export const DropContainer = styled.div`
+    border-bottom: ${props => props.isFirst ? `1.2px solid ${props.color}` : 'none'};
+    padding: 1.2rem 0;
+` 

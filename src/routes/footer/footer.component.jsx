@@ -1,6 +1,3 @@
-import { Fragment } from "react";
-import { Outlet } from "react-router-dom";
-
 import FooterLink from "../../component/footerLink/footerLink.component";
 
 import { categories, footerIcon, selecterObject } from "./footer.data";
@@ -15,28 +12,20 @@ import {
     Text,
     IconContainer,
     FooterIcon,
-    Testing,
 } from "./footer.style";
 import Selecter from "../../component/selecter/selecter.component";
 
 
-
-  
 const Footer = () => {
   const { logoYoutube, logoInsta } = footerIcon
 
   return (
-    <Fragment>
-      <Outlet/>
       <FooterContainer>
         <UpperPartContainer>
           <CategoryContainer>
             {categories.map((el) => <FooterLink key={el.id} category={el}/>)}
           </CategoryContainer>
-
-          {/* <Testing /> */}
           <Selecter props={selecterObject}/>
-
         </UpperPartContainer>
         <LowerPartContainer>
           <div>
@@ -51,7 +40,6 @@ const Footer = () => {
           </div>
         </LowerPartContainer>
       </FooterContainer>
-    </Fragment>
   )
 }
 

@@ -30,7 +30,7 @@ const DropMenu = () => {
               {categories.map((el) =>
                 <FlexContainer key={el.id}>
                   <li  onClick={() => clickHandler(el.id)}>
-                    <Typo type={TypoType.DropLink} linkColor={linkColorLogic(el.id)}>{el.title}</Typo>
+                    <Typo type={TypoType.LinkDrop} linkColor={linkColorLogic(el.id)}>{el.title}</Typo>
                   </li>
                     {arrayNum === el.id && !isTablet && <Arrow src={arrow} alt="arrow-icon" />}
                 </FlexContainer>

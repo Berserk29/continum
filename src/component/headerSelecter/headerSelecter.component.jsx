@@ -2,9 +2,9 @@ import Selecter from "../selecter/selecter.component";
 import Typo, { TypoType } from "../typo/typo.component";
 import houseIcon from '../../assets/icon/icon_home_w.png'
 
-import { Container } from "./headerMarker.style";
+import { Container } from "./headerSelecter.style";
 
-const HeaderMarker = ({props}) => {
+const HeaderSelecter = ({props}) => {
     const {heading} = props;
     return (
         <Container>
@@ -15,4 +15,4 @@ const HeaderMarker = ({props}) => {
     )
 }
 
-export default HeaderMarker;
+export default HeaderSelecter;

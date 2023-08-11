@@ -9,6 +9,7 @@ const CssHeadline = css`
     letter-spacing: -0.02em;
     line-height: 160%;
     white-space: pre-line;
+    /* TESTING */
 `
 
 const CssNoto = css`
@@ -81,13 +82,11 @@ const B7 = css`
     ${CssNoto};
     font-size: 1.6rem;
     font-weight: 700;
-    line-height: 100%;
 `
 
 const B8 = css`
     ${CssNoto};
     font-size: 1.6rem;
-    line-height: 200%;
 `
 
 const B9 = css`
@@ -98,7 +97,6 @@ const B9 = css`
 const B10 = css`
     ${CssNoto};
     font-size: 1.5rem;
-    line-height: 200%;
 `
 
 const B11 = css`
@@ -107,7 +105,7 @@ const B11 = css`
 `
 
 
-// STYLED COMPONENT
+// INFO HEADLINE COMPONENT
 export const Headline1Home = styled.h1`
     ${H1}
     color: ${props => props.color || 'var(--color-050)'};
@@ -148,16 +146,6 @@ export const Headline3 = styled.h3`
         ${B1}
     }
 `
-export const Headline7 = styled.h3`
-    ${H2};
-    color: ${props => props.color || 'var(--color-secondary)'};
-    @media ${mediaQuery.styledTablet} {
-        ${H4}
-    }
-    @media ${mediaQuery.styledMobile} {
-        ${B1}
-    }
-`
 
 export const Headline4 = styled.h3`
     ${H3}
@@ -189,6 +177,35 @@ export const Headline6 = styled.h4`
     }
 `
 
+export const Headline7 = styled.h3`
+        ${H2};
+        color: ${props => props.color || 'var(--color-secondary)'};
+        @media ${mediaQuery.styledTablet} {
+            ${H4}
+        }
+        @media ${mediaQuery.styledMobile} {
+            ${B1}
+        }
+`
+
+export const HeadlineTable = styled.p`
+    ${B5}
+    color: var(--color-500);
+    @media ${mediaQuery.styledTablet} {
+        ${B7}
+    }
+`
+
+export const HeadlineFooter = styled.span`
+    ${B6}
+    color: ${props => props.color || 'var(--color-050)'};
+    @media ${mediaQuery.styledTablet} {
+    ${B11}
+    }
+`
+
+//  INFO SPAN COMPONENT
+ 
 export const SpanOrange = styled.span`
     ${B5}
     color: var(--color-primary);
@@ -202,27 +219,7 @@ export const Span = styled.span`
     color: var(--color-secondary);
 `
 
-export const Link = styled.span`
-    ${B7}
-    color: ${props => props.color || 'var(--color-050)'};
-    cursor: pointer;
-    transition: color .2s;
-    :hover{
-        color: var(--color-primary);
-    }
-`
-export const DropLink = styled.span`
-    ${B1}
-    color: ${props => props.color || 'var(--color-050)'};
-    cursor: pointer;
-    transition: color .2s;
-    :hover{
-        color: var(--color-primary);
-    }
-    @media ${mediaQuery.styledMobile} {
-        ${B7}
-    }
-`
+// INFO TEXT COMPONENT
 
 export const Text1 = styled.p`
     ${B6}
@@ -283,7 +280,6 @@ export const Text6 = styled.p`
     color: ${props => props.color || 'var(--color-secondary)'};
     @media ${mediaQuery.styledTablet} {
         ${B8}
-        line-height: 160%;
     }
 `
 
@@ -298,13 +294,6 @@ export const TextTable = styled.p`
     }
 `
 
-export const HeadingTable = styled.p`
-    ${B5}
-    color: var(--color-500);
-    @media ${mediaQuery.styledTablet} {
-        ${B7}
-    }
-`
 
 export const TextHome = styled.p`
     ${B2}
@@ -318,15 +307,9 @@ export const TextHome = styled.p`
     }
 `
 
-export const FooterHeading = styled.span`
-    ${B6}
-    color: ${props => props.color || 'var(--color-050)'};
-    @media ${mediaQuery.styledTablet} {
-        ${B11}
-    }
-`
+// INFO LINK COMPONENT
 
-export const FooterLink = styled.li`
+export const LinkFooter = styled.li`
     ${B8}
     color: var(--color-white-opa30);
     transition: color .2s;
@@ -336,5 +319,28 @@ export const FooterLink = styled.li`
     }
     @media ${mediaQuery.styledTablet} {
         ${B11}
+    }
+`
+
+export const Link = styled.span`
+    ${B7}
+    color: ${props => props.color || 'var(--color-050)'};
+    cursor: pointer;
+    transition: color .2s;
+    :hover{
+        color: var(--color-primary);
+    }
+`
+
+export const LinkDrop = styled.span`
+    ${B1}
+    color: ${props => props.color || 'var(--color-050)'};
+    cursor: pointer;
+    transition: color .2s;
+    :hover{
+        color: var(--color-primary);
+    }
+    @media ${mediaQuery.styledMobile} {
+        ${B7}
     }
 `

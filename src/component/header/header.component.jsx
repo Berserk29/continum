@@ -18,7 +18,7 @@ import {markerObject1} from '../marker/marker.data'
 import Marker from '../marker/marker.component'
 
 import { headingHome01 } from "../sectionHeading/sectionHeading.data";
-import HeaderMarker from "../headerMarker/headerMarker.component";
+import HeaderSelecter from "../headerSelecter/headerSelecter.component";
 
 const Header = ({props}) => {
 const {imageUrl, heading} = props;
@@ -46,8 +46,8 @@ const {imageUrl, heading} = props;
                         <Typo type={TypoType.Headline1Header}>{heading}</Typo>
                     </TitleHeaderOther>
                     {/* TODO THE HEADERMARKER */}
-                    
-                    <HeaderMarker props={props}/>
+
+                    {/* <HeaderSelecter props={props}/> */}
 
                 </HeaderContainerOther>
             }

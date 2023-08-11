@@ -55,7 +55,7 @@ export const Mouse = styled.div`
     }
 `
 
-export const TitleHeaderOther = styled.h2`
+export const TitleHeaderOther = styled.div`
     margin-top: 14rem;
     @media ${mediaQuery.styledMobile} {
         padding: 0 1rem;
@@ -63,7 +63,7 @@ export const TitleHeaderOther = styled.h2`
     }
 `
 
-export const TitleHeaderHome = styled.h1`
+export const TitleHeaderHome = styled.div`
     margin-top: 35vh;
     animation-name: ${backToLife}; 
     animation-duration: 3s;

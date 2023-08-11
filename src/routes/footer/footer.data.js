@@ -1,3 +1,4 @@
+import {TypoType} from '../../component/typo/typo.component' 
 import logoYoutube from '../../assets/icon/Icon_youtube.png'
 import logoInsta from '../../assets/icon/Icon_instagram.png'
 
@@ -9,7 +10,7 @@ export const footerIcon = {
 export const selecterObject = {
   linkName: ['Continum Corporation', 'Continum Systems', 'Continum Vision'],
   width: ['27rem', '100%'],
-  typoType: 'FooterHeading',
+  typoType: TypoType.HeadlineFooter,
   placeHolder: 'See all affiliates',
   isFooter: true,
   textColor: 'var(--color-050)'

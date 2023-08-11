@@ -2,9 +2,9 @@ import { Fragment, useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
-import Header from "../../component/header/header.component";
 import Table , {TableType} from "../../component/table/table.component";
 import Typo, { TypoType } from "../../component/typo/typo.component";
+import Boilerplate from "../../component/boilerplate/boilerplate.component";
 
 import { headingArray, headingMobile, mediaArr, mediaIconArr} from "./mediaPage.data";
 
@@ -70,8 +70,7 @@ const MediaPage = ({props}) => {
   };
 
     return (
-        <div>
-            <Header props={props}/>
+      <Boilerplate props={props}>
             <PrContainer>
                 <MaxHeight height={maxHeight}>
                   <FlexCenter>
@@ -100,7 +99,7 @@ const MediaPage = ({props}) => {
                   } 
                 </ButtonContainer>
             </PrContainer>
-        </div>
+      </Boilerplate>
     );
 }
 

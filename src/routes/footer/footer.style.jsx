@@ -2,16 +2,6 @@ import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
 
-// TESTING
-export const Testing = styled.div`
-    background-color: blue;
-    height: 36px;
-    width: 243px;
-    @media ${mediaQuery.styledTablet} {
-        width: 100%;
-    }
-`
-
 export const FooterContainer = styled.div`
     width: 100%;
     height: auto;

@@ -1,10 +1,8 @@
-import { Fragment } from "react";
-
-import Header from "../../component/header/header.component";
 import StoryNews from "../../component/storyNews/storyNews.component";
 import InfoCard from "../../component/infoCard/infoCard.component";
 import SectionHeading from "../../component/sectionHeading/sectionHeading.component";
 import Card from "../../component/card/card.component";
+import Boilerplate from "../../component/boilerplate/boilerplate.component";
 
 import { storyArray, infoCardArray, cardArray} from "./businessPage.data";
 import { headingBu01, headingBu02, headingBu03, headingBu04 } from "../../component/sectionHeading/sectionHeading.data";
@@ -20,14 +18,10 @@ import {
     CardContainer,
 } from "./businessPage.style";
 
-
-// TODO REDOO ALL THE PAGE!!!!
-
 const BusinessPage = ({props}) => {
-
+    
     return (
-        <Fragment>
-            <Header props={props}/>
+        <Boilerplate props={props}>
             <BuisinessContainer>
                 <StoryContainer>
                     <SectionHeading props={headingBu01}/>
@@ -53,7 +47,7 @@ const BusinessPage = ({props}) => {
                         </SectionCard>
                 </CardContainer>
             </BuisinessContainer>
-        </Fragment>
+        </Boilerplate>
     )
 }
 

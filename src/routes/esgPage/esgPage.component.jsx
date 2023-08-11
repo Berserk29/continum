@@ -2,11 +2,11 @@ import { Fragment } from "react";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
-import Header from "../../component/header/header.component";
 import SectionHeading from "../../component/sectionHeading/sectionHeading.component";
 import InfoCard from "../../component/infoCard/infoCard.component";
 import Table, { TableType } from "../../component/table/table.component";
 import ReportDownload from "../../component/reportDownload/reportDownload.component";
+import Boilerplate from "../../component/boilerplate/boilerplate.component";
 
 import {upperCardArr, lowerCardArr, headingArr, headingMobileArr ,esgTableArr, reportArr} from "./esgPage.data";
 import { headingEsg01, headingEsg02, headingEsg03, headingEsg04 } from "../../component/sectionHeading/sectionHeading.data";
@@ -39,8 +39,7 @@ const EsgPage = ({props}) => {
     }
 
     return (
-        <Fragment>
-            <Header props={props}/>
+        <Boilerplate props={props}>
             <EsgContainer>
                 {/* SECTION 1 CARD*/}
                 <Section>
@@ -78,7 +77,7 @@ const EsgPage = ({props}) => {
                     </ReportGrid>
                 </FlexCenter>
             </EsgContainer>
-        </Fragment>
+        </Boilerplate>
     )
 }
 
