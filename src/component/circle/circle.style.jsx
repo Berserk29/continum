@@ -5,6 +5,6 @@ export const CircleCss = styled.div`
     height: 7px;
     border-radius: 50%;
     transition: all .8s;
-    border: ${props => props.active ? '1.2px solid var(--color-primary)' : `1.2px solid ${props.color}`};
-    background-color: ${props => props.active && 'var(--color-primary)'};
+    border: ${props => props.active ? `1.2px solid ${props.activeColor}` : `1.2px solid ${props.color}`};
+    background-color: ${props => props.active && props.activeColor};
 `

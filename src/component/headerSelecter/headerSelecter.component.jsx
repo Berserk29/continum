@@ -1,15 +1,19 @@
 import Selecter from "../selecter/selecter.component";
 import Typo, { TypoType } from "../typo/typo.component";
 import houseIcon from '../../assets/icon/icon_home_w.png'
+import Circle from "../circle/circle.component";
 
-import { Container } from "./headerSelecter.style";
+import { Container, IconCss } from "./headerSelecter.style";
 
 const HeaderSelecter = ({props}) => {
     const {heading} = props;
+
     return (
         <Container>
-            <img src={houseIcon} alt="icon" />
+            <IconCss src={houseIcon} alt="icon" />
+            <Circle activate={true} color='var(--color-050)' activeColor="var(--color-050)"/>
             <Typo type={TypoType.Text5}>{heading}</Typo>
+            <Circle activate={true} color='var(--color-050)' activeColor="var(--color-050)"/>
             <Selecter props={props}/>
         </Container>
     )

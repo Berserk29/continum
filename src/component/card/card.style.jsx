@@ -9,6 +9,7 @@ export const CardContainer = styled.div`
     justify-content: center;
     flex-direction: ${props => props.imagefirst ? 'row' : 'row-reverse'};
     width: 100%;
+    height: auto;
     align-items: center;
     gap: 8rem;
     max-width: 144rem;
@@ -17,13 +18,11 @@ export const CardContainer = styled.div`
     @media ${mediaQuery.styledTablet} {
         gap: 4rem;
         flex-direction: column;
-        height: auto;
         max-height: none;
     }
     @media ${mediaQuery.styledMobile} {
         gap: 2.4rem;
         flex-direction: column;
-        height: auto;
     }
 `
 
@@ -42,6 +41,7 @@ export const TextContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;
     width: 45%;
+    height: auto;
     gap: 2.4rem;
     @media ${mediaQuery.styledTablet} {
         text-align: center;

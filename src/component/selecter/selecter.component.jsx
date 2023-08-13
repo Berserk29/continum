@@ -12,6 +12,7 @@ const Selecter = ({props}) => {
     const [dropMenuOpen, setDropMenuOpen] = useState(false);
     const [clickOne, setClickOne] = useState(false)
 
+
     // INFO TAKE THE SELECTERCHOICE IF IT'S IN THE ARRAY AND PUT IT AT THE BEGGINING
     const modifiedArr = linkName.filter(el => [selecterChoice].includes(el)).concat(linkName.filter(el => ![selecterChoice].includes(el))) 
 
@@ -36,11 +37,10 @@ const Selecter = ({props}) => {
             </UpperSection>
             <LowerSection>
                 <DropSection isOpen={dropMenuOpen} clickOne={clickOne} isFooter={isFooter}>
-                    {selecterChoice}
                     {modifiedArr?.map((el,i) => {
                         return (
                             <DropContainer onClick={() => clickHandler(el)} key={i} isFirst={i === 0} color={isFooter ? 'var(--color-050)' : 'var(--color-secondary)'}>
-                                <Typo type={TypoType.HeadlineFooter} textColor={textColor}>{el}</Typo>
+                                <Typo type={TypoType.HeadlineFooter} headingColor={textColor}>{el}</Typo>
                             </DropContainer>
                         )
                     })}

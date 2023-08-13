@@ -81,6 +81,7 @@ export const CarouselItem = styled.li`
 export const CarouselText = styled.div`
     margin: 2.4rem 0 1.425rem 0;
     max-width: 580px;
+    height: auto;
     ${AnimationChoice}
 `
 

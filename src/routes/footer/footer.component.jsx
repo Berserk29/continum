@@ -4,12 +4,12 @@ import { categories, footerIcon, selecterObject } from "./footer.data";
 
 import {
     FooterContainer,
-    FooterLinksContainer,
+    // FooterLinksContainer,
     UpperPartContainer,
     LowerPartContainer,
     TextLine2,
     CategoryContainer,
-    Text,
+    // Text,
     IconContainer,
     FooterIcon,
 } from "./footer.style";
