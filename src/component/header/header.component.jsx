@@ -16,9 +16,9 @@ import SectionHeading from '../sectionHeading/sectionHeading.component'
 import Typo, { TypoType } from "../typo/typo.component";
 import {markerObject1} from '../marker/marker.data'
 import Marker from '../marker/marker.component'
+import HeaderSelecter from "../headerSelecter/headerSelecter.component";
 
 import { headingHome01 } from "../sectionHeading/sectionHeading.data";
-// import HeaderSelecter from "../headerSelecter/headerSelecter.component";
 
 const Header = ({props}) => {
 const {imageUrl, heading} = props;
@@ -47,7 +47,7 @@ const {imageUrl, heading} = props;
                     </TitleHeaderOther>
 
                     {/* TODO THE HEADERMARKER */}
-                    {/* <HeaderSelecter props={props}/> */}
+                    <HeaderSelecter props={props}/>
 
                 </HeaderContainerOther>
             }

@@ -6,7 +6,7 @@ import mediaQuery from "../../helper/mediaQuery";
 const slideInAnimation = keyframes`
   from { transform: translateY(-100%) ;}
   to { transform: translateY(0) ;}
-`;
+`
 
 const slideOutAnimation = keyframes`
     from { transform: translateY(0%) ;}
@@ -44,7 +44,7 @@ export const LowerSection = styled.div`
     top: 4.5rem;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
     border-top: 2px solid var(--color-050);
     z-index: 2;
