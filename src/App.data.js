@@ -4,11 +4,13 @@ import businessImage from '../src/assets/image/subpage_cover_02.jpg'
 import mediaImage from '../src/assets/image/subpage_cover_03.jpg'
 import esgImage from '../src/assets/image/subpage_cover_04.jpg'
 import contactImage from '../src/assets/image/subpage_cover_05.jpg'
+import poster from '../src/assets/image/poster.jpg'
+
+// TODO CHANGE THE POSTER BY AN JPG IMAGE
 
 export const headerArray = [
     {
-        // TODO PUT THE VIDEO 1 FRAME (Poster)
-        imageUrl: businessImage,
+        imageUrl: poster,
     },
     {
         imageUrl: aboutImage,

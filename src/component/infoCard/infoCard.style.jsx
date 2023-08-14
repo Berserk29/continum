@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import mediaQuery from "../../helper/mediaQuery";
 
-export const VerticalContainer = styled.div`
+export const VerticalContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;
     background-color: ${props => props.color || 'var(--color-200)'};
@@ -46,7 +47,7 @@ export const TextContainer = styled.div`
 
 // Horizontal container
 
-export const HorizontalContainer = styled.div`
+export const HorizontalContainer = styled(motion.div)`
     display: flex;
     gap: 3.2rem;
     padding: 4.4rem 5.3rem 4.4rem 3.2rem;

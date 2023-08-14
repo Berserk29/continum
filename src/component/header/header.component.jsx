@@ -25,14 +25,12 @@ const Header = ({props}) => {
     const {imageUrl, heading} = props;
     const isMobile = useMediaQuery(mediaQuery.useMobile)
 
-// TODO HAVING THE FIRST FRAME OF THE VIDEO AS THE POSTER IN VIDEOCSS
-
     return(
         <Fragment>
             {   !heading ?
                 <HeaderContainerHome >
                         <Navigation/>
-                        <VideoCss autoPlay muted loop poster="">
+                        <VideoCss autoPlay muted loop poster={imageUrl}>
                             <source src={video} type="video/mp4"/>
                         </VideoCss>
                         <TitleHeaderHome>

@@ -3,36 +3,40 @@ import { backToLife, upAndDown } from "../../animation/animation.style";
 import mediaQuery from "../../helper/mediaQuery";
 
 // Home for homepage and Other for other page
-
-export const VideoCss = styled.video`
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-`
-
 export const HeaderContainerHome = styled.div`
+    position: relative;
     height: 100vh;
     width: 100%;
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    min-height: 60rem;
 `
 
-export const HeaderContainerOther = styled(HeaderContainerHome)`
-    height: 53rem;
-    text-align: center;
-    @media ${mediaQuery.styledMobile} {
-        height: 35.8rem;
-    }
+export const VideoCss = styled.video`
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    min-height: 60rem;
+`
+
+export const TitleHeaderHome = styled.div`
+    position: absolute;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: ${backToLife}; 
+    animation-duration: 3s;
 `
 
 export const Mouse = styled.div`
     position: absolute;
-    bottom: 4rem;
+    bottom: 5rem;
     left: 50%;
     transform: translate(-50%);
     width: 2rem;
@@ -55,18 +59,24 @@ export const Mouse = styled.div`
     }
 `
 
+export const HeaderContainerOther = styled.div`
+    position: relative;
+    width: 100%;
+    height: 53rem;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    @media ${mediaQuery.styledMobile} {
+        height: 35.8rem;
+    }
+`
+
 export const TitleHeaderOther = styled.div`
     margin-top: 14rem;
     @media ${mediaQuery.styledMobile} {
         padding: 0 1rem;
-        margin-top: 13rem;
+        margin-top: 10rem;
     }
-`
-
-export const TitleHeaderHome = styled.div`
-    margin-top: 35vh;
-    animation-name: ${backToLife}; 
-    animation-duration: 3s;
 `
 
 

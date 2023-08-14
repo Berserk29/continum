@@ -51,7 +51,6 @@ export const headingAbout01 = {
     titleType: TypoType.Headline4,
     alignItems: 'center',
     isBecomeOne: true,
-    modifiedAlign: ['center','start'],
 }
 
 //////// BUSINESSPAGE HEADING
@@ -62,7 +61,6 @@ export const headingBu01 = {
     titleType: TypoType.Headline4,
     alignItems: 'center',
     isBecomeOne: true,
-    modifiedAlign: ['center','start'],
 }
 
 // \n is use with Css white-space: pre-line;  -> <br/>
@@ -74,11 +72,10 @@ export const headingBu02 = {
     alignItems: 'center',
 }
 
-// TODO CHANGING THE TEXT BECAUSE SAME WITH THE ONE UPPER
 export const headingBu03 = {
     titleTop: 'Exploration for maritime',
     titleType: TypoType.Headline3,
-    text: "We lead all aspects of Canada's satellite industry, \n from satellites, telecommunications and the supply of satellite services.",
+    text: "Continum continues to pave the way for the development of maritime technology.",
     textType: TypoType.Text2,
     alignItems: 'center',
 }

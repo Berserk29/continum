@@ -12,46 +12,45 @@ import {
   NavIconsContainer,
   NavigationContainer,
   NavLinksContainer,
-  NavLogo,
+  NavLogo1,
+  NavLogo2,
+  NavLogoContainer,
 } from "./navigation.style";
 
 
 const Navigation = () => {
   const [hoverState, setHoverState] = useState(false);
   const [dropMenuOn, setDropMenuOn] = useState(false);
-  const {continumWhite, continumBlack, hamWhite, hamBlack, globeWhite, globeBlack, closeBtn} = navIcon;
+  const {logo1, logo2, hamWhite, globeWhite, closeBtn} = navIcon;
   const navigate = useNavigate();
-
-  const navigateHandler = (link) => navigate(link);
   const isTablet = useMediaQuery(mediaQuery.useTablet);
 
+  const navigateHandler = (link) => navigate(link);
   const hoverHandlerOn = () => setHoverState(true);
   const hoverHandlerOff = () => setHoverState(false);
+  const hoverLogic = (option1, option2) => hoverState || dropMenuOn  ? option1 : option2 ;
+  const navHamLogic = (option1, option2) => dropMenuOn ? option1 : option2
 
   const clickHandler = () => {
     if(!dropMenuOn) setDropMenuOn(true)
     else setDropMenuOn(false)
   };
   
-  const hoverLogic = (option1, option2) => hoverState || dropMenuOn  ? option1 : option2 ;
-
-  const navHamLogic = (option1, option2, option3) => {
-    if(dropMenuOn) return option3
-    return hoverLogic(option1, option2)
-  };
-
     return (
       <Fragment>
             <NavigationContainer onMouseEnter={hoverHandlerOn} onMouseLeave={hoverHandlerOff} color={hoverLogic('var(--color-050)','transparent')}>
-              <NavLogo src={hoverLogic(continumBlack, continumWhite)} alt={"logo"} onClick={() => navigateHandler('/')}/>
+              <NavLogoContainer onClick={() => navigateHandler('/')}>
+                <NavLogo1 src={logo1} alt="Continum-logo" />
+                <NavLogo2 isHover={hoverLogic(true, false)} src={logo2} alt="Continum-logo" />
+              </NavLogoContainer>
               { !isTablet &&
                 <NavLinksContainer>
                   {navLinkArray.map(el => <li key={el.id} onClick={() => navigateHandler(el.path)}><Typo type={TypoType.Link} linkColor={hoverLogic('var(--color-secondary)','var(--color-050)')}>{el.heading}</Typo></li>)}
                 </NavLinksContainer>
               }
               <NavIconsContainer>
-                {!dropMenuOn && <NavIcon src={hoverLogic(globeBlack,globeWhite)} alt={'language-icon'} />}
-                <NavIcon src={navHamLogic(hamBlack, hamWhite, closeBtn)} alt={'hamburger-icon'} onClick={clickHandler}/>
+                {!dropMenuOn && <NavIcon src={globeWhite}  isHover={hoverLogic(true, false)}  alt={'language-icon'} />}
+                <NavIcon src={navHamLogic(closeBtn, hamWhite)} isHover={hoverLogic(true, false)} alt={'hamburger-icon'} onClick={clickHandler}/>
               </NavIconsContainer>
             </NavigationContainer>
         {dropMenuOn && <DropMenu/> }

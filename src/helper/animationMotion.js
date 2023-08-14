@@ -22,13 +22,13 @@ export const slowVariantUp = {
 }
 
 export const slowVariantScale = {
-    visible: {opacity: 1, scale: 1, transition: {duration: .8, delay: 1.2}},
+    visible: {opacity: 1, scale: 1, transition: {duration: .8}},
     hidden: {opacity: 0, scale: 0}
 }
 
 // I USED
 
 export const variantUp = {
-    visible: {opacity: 1, y: 0, transition: {duration: 1.2}},
-    hidden: {opacity: 0, y: "200px"}
+    visible: {opacity: 1, y: 0, transition: {duration: .8}},
+    hidden: {opacity: 0, y: "100px"}
 }

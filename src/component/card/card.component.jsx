@@ -1,5 +1,5 @@
 import { useAnimation } from "framer-motion";
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
@@ -19,7 +19,7 @@ const Card = ({card}) => {
 
     const isTablet = useMediaQuery(mediaQuery.useTablet)
 
-    const thresholdNum = isTablet ? 0.1 : 0.4;
+    const thresholdNum = isTablet ? 0.1 : 0.6;
     const control = useAnimation()
     const [ref, inView] = useInView({ threshold: thresholdNum })
 
@@ -29,9 +29,10 @@ const Card = ({card}) => {
 
 
     return (
-        <CardContainer ref={ref} imagefirst={imageFirst}>
-            <AboutImage src={imageUrl} variants={variantUp} initial='hidden' animate={control}/>
+        <CardContainer imagefirst={imageFirst}>
+            <AboutImage src={imageUrl}/>
             <TextContainer                             
+                ref={ref}
                 variants={variantUp}
                 initial='hidden'
                 animate={control}

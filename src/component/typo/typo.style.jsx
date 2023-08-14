@@ -43,6 +43,11 @@ const H5 = css`
     font-size: 2.8rem;
 `
 
+const H6 = css`
+    ${CssHeadline};
+    font-size: 2.6rem;
+`
+
 const B1 = css`
     ${CssNoto};
     font-size: 2.6rem;
@@ -110,7 +115,7 @@ export const Headline1Home = styled.h1`
         ${H4}
     }
     @media ${mediaQuery.styledMobile} {
-       ${B1}
+       ${H6}
     }
 `
 
@@ -289,9 +294,8 @@ export const TextTable = styled.p`
     }
 `
 
-
 export const TextHome = styled.p`
-    ${B2}
+    ${B3}
     color: ${props => props.color || 'var(--color-white-opa60)'};
     @media ${mediaQuery.styledTablet} {
         ${B4}
@@ -314,7 +318,7 @@ export const TextFooter = styled.p`
 export const LinkFooter = styled.a`
     ${B8}
     color: ${props => props.color || 'var(--color-white-opa30)'};
-    transition: color .2s;
+    transition: color .3s;
     cursor: pointer;
     :hover {
         color: var(--color-primary);

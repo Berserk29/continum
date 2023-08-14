@@ -15,6 +15,7 @@ export const upperCardArr = [
         text: 'Achieve carbon neutrality by 2050. Develop eco-friendly technologies and solutions. Extend the line of eco-friendly products',
         padding: ['5.6rem 3.6rem 2.8rem 3.6rem', '4rem 5rem', '4rem 2.4rem'],
         middleGap: ['1.5rem', '2.4rem', '2.4rem'],
+        delay: 0,
     },
     {
         id: 2,
@@ -24,6 +25,7 @@ export const upperCardArr = [
         text: 'Internalize safety culture enhance customer satisfaction and communication. Achieve mutual prosperity and shared growth with partners',
         padding: ['5.6rem 3.6rem 2.8rem 3.6rem', '4rem 5rem', '4rem 2.4rem'],
         middleGap: ['1.5rem', '2.4rem', '2.4rem'],
+        delay: .3,
     },
     {
         id: 3,
@@ -33,6 +35,7 @@ export const upperCardArr = [
         text: 'Achieve sound corporate governance. Enhance the independence and diversity of the BOD. Build a transparent corporate culture',
         padding: ['5.6rem 3.6rem 2.8rem 3.6rem', '4rem 5rem', '4rem 2.4rem'],
         middleGap: ['1.5rem', '2.4rem', '2.4rem'],
+        delay: .6,
     },
 ]
 
@@ -43,6 +46,7 @@ export const lowerCardArr = [
         heading: 'Environmental safety',
         vertical: false,
         text: "Newly established the CEO’s safety and health environment",
+        delay: 0,
     },
     {
         id: 2,
@@ -50,6 +54,7 @@ export const lowerCardArr = [
         heading: 'Environmental impact',
         vertical: false,
         text: "Reduced water usage by 15.6% compared to 2020",
+        delay: 0.2,
     },
     {
         id: 3,
@@ -57,6 +62,7 @@ export const lowerCardArr = [
         heading: 'Eco-friendly products',
         vertical: false,
         text: "Environmental investment reached 759 million dollar",
+        delay: 0.6,
     },
     {
         id: 4,
@@ -64,6 +70,7 @@ export const lowerCardArr = [
         heading: 'Health management',
         vertical: false,
         text: "Zero violations of health and safety regulations",
+        delay: 0.8,
     },
 ]
 

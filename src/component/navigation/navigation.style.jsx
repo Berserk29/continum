@@ -8,7 +8,7 @@ export const NavigationContainer = styled.div`
     align-items: center;
     width: 100%;
     z-index: 100;
-    transition: background-color .25s;
+    transition: background-color .6s;
     padding: 3.2rem 5vw;
     background-color: ${props => props.color};
     @media ${mediaQuery.styledTablet} {
@@ -26,11 +26,28 @@ export const NavLinksContainer = styled.ul`
     gap: 4rem;
 `
 
-export const NavLogo = styled.img`
-    width: 15.6rem;
+export const NavLogoContainer = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     cursor: pointer;
-    @media ${mediaQuery.styledTablet} {
-        width: 13.6rem;
+`
+
+export const NavLogo1 = styled.img`
+    width: 100%;
+    height: 3.35rem;
+    @media ${mediaQuery.styledTablet}{
+        height: 2.92rem;
+    }
+`
+
+export const NavLogo2 = styled.img`
+    width: 11.83rem;
+    height: 100%;
+    transition: filter .3s;
+    filter: ${props => props.isHover ? 'var(--filter-black)' : 'none' };
+    @media ${mediaQuery.styledTablet}{
+        width: 10.15rem;
     }
 `
 
@@ -48,7 +65,9 @@ export const NavIconsContainer = styled.div`
 
 export const NavIcon = styled.img`
     width: 2.4rem;
-    cursor: pointer; 
+    cursor: pointer;
+    transition: filter .3s;
+    filter: ${props => props.isHover ? 'var(--filter-black)' : 'none' };
     @media ${mediaQuery.styledTablet} {
         width: 2.2rem;
     }

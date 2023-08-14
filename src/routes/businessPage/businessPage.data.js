@@ -1,3 +1,4 @@
+import { delay } from 'framer-motion';
 import iconBusiness1 from '../../assets/icon/Icon_ice.png';
 import iconBusiness2 from '../../assets/icon/Icon_wind.png';
 import cardImg1 from '../../assets/image/subpage_contents_04.jpg'
@@ -24,7 +25,8 @@ export const infoCardArray = [
         heading: "Breaking ice feature \n with a LNG carrier",
         color: 'var(--color-050)',
         vertical: true,
-        text: "Continum Ocean is the first company in the world to combine the breaking ice feature with a LNG carrier to chart Arctic shipping routes, the world's largest gas field, and to usher in the era of Arctic navigation for humankind."
+        text: "Continum Ocean is the first company in the world to combine the breaking ice feature with a LNG carrier to chart Arctic shipping routes, the world's largest gas field, and to usher in the era of Arctic navigation for humankind.",
+        delay: 0,
     },
     {
         id: 2,
@@ -32,7 +34,8 @@ export const infoCardArray = [
         heading: 'Wind turbine \n installation vessels',
         color: 'var(--color-050)',
         vertical: true,
-        text: "We strive for the future of the earth to producing sustainable eco-friendly energy with offshore wind turbine installation vessels (WTIV) equipped with the smart ship solution autonomous navigation system."
+        text: "We strive for the future of the earth to producing sustainable eco-friendly energy with offshore wind turbine installation vessels (WTIV) equipped with the smart ship solution autonomous navigation system.",
+        delay: 0.5,
     },
 ]
 

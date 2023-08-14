@@ -3,14 +3,14 @@ import mediaQuery from "../../helper/mediaQuery";
 
 export const Container = styled.div`
     position: absolute;
-    top: 44rem;
+    bottom: 5rem;
     left: 10rem;
     display: flex;
     gap: 1.6rem;
     align-items: center;
     @media ${mediaQuery.styledTablet} {
         left: 4rem;
-        top: 46rem;
+        bottom: 4rem;
     }
 `
 
