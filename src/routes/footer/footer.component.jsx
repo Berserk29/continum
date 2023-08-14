@@ -1,45 +1,41 @@
 import FooterLink from "../../component/footerLink/footerLink.component";
+import Selecter from "../../component/selecter/selecter.component";
+import Typo, {TypoType} from "../../component/typo/typo.component";
 
 import { categories, footerIcon, selecterObject } from "./footer.data";
 
 import {
     FooterContainer,
-    // FooterLinksContainer,
     UpperPartContainer,
     LowerPartContainer,
-    TextLine2,
     CategoryContainer,
-    // Text,
     IconContainer,
     FooterIcon,
+    FlexCss
 } from "./footer.style";
-import Selecter from "../../component/selecter/selecter.component";
-
 
 const Footer = () => {
   const { logoYoutube, logoInsta } = footerIcon
 
   return (
-      <FooterContainer>
-        <UpperPartContainer>
-          <CategoryContainer>
-            {categories.map((el) => <FooterLink key={el.id} category={el}/>)}
-          </CategoryContainer>
-          <Selecter props={selecterObject}/>
-        </UpperPartContainer>
-        <LowerPartContainer>
-          <div>
-            <TextLine2>500 Chem. De Polytechnique, Montréal, Qc &nbsp;&nbsp; | &nbsp;&nbsp; TEL(514)340-4711 &nbsp;&nbsp; | &nbsp;&nbsp; FAX(514)340-4712</TextLine2>
-            <TextLine2>Copyright &copy; 2022 Continum Convergence. All Rights Reserved</TextLine2>
-          </div>
-          <div>
-            <IconContainer>
-              <FooterIcon  src={logoYoutube}/>
-              <FooterIcon  src={logoInsta}/>
-            </IconContainer>
-          </div>
-        </LowerPartContainer>
-      </FooterContainer>
+    <FooterContainer>
+      <UpperPartContainer>
+        <CategoryContainer>
+          {categories.map((el) => <FooterLink key={el.id} props={el}/>)}
+        </CategoryContainer>
+        <Selecter props={selecterObject}/>
+      </UpperPartContainer>
+      <LowerPartContainer>
+        <FlexCss>
+          <Typo type={TypoType.TextFooter}>1025 Rue Saint-Jacques, Montréal, QC, H3C 1G8 &nbsp;|&nbsp; TEL (514)340-4711</Typo>
+          <Typo type={TypoType.TextFooter}>Copyright &copy; 2023 Continum Convergence. All Rights Reserved</Typo>
+        </FlexCss>
+        <IconContainer>
+          <FooterIcon  src={logoYoutube}/>
+          <FooterIcon  src={logoInsta}/>
+        </IconContainer>
+      </LowerPartContainer>
+    </FooterContainer>
   )
 }
 

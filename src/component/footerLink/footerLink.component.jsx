@@ -1,27 +1,37 @@
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-import { Heading, Link, FooterContainer } from "./footerLink.style";
+import { FlexContainer } from "./footerLink.style";
 
-const FooterLink = ({category}) => {
-const isMobile = useMediaQuery(mediaQuery.useMobile);
-const navigate = useNavigate()
-const navigateHandler = () => navigate(category.path);
+import Typo, { TypoType } from "../typo/typo.component";
 
+const FooterLink = ({props}) => {
+    const {path, title, linkName} = props;
+    const isMobile = useMediaQuery(mediaQuery.useMobile);
+    const navigate = useNavigate();
+    const location = useLocation();
+    
+    const navigateHandler = () => {
+        if(location.pathname === path) return window.scrollTo(0,0);
+        navigate(path);
+    };
 
     return (
-        <FooterContainer>
+        <FlexContainer>
             { isMobile ?
-                <Heading onClick={navigateHandler}>{category.title}</Heading>
-                    : 
-                <Heading>{category.title}</Heading>
+                <div onClick={navigateHandler}>
+                    <Typo type={TypoType.LinkFooter} linkColor='var(--color-white-opa40)'>{title}</Typo>
+                </div>
+                :
+                <Typo type={TypoType.HeadlineFooter}>{title}</Typo>
             }
-            { isMobile ? '' 
-                : category.linkName.map((el,i) =>
-                    <Link onClick={navigateHandler} key={i}>{el}</Link>
-            )}
-        </FooterContainer>
+            { !isMobile && 
+                <FlexContainer gap={[1.9, 1.6]}>
+                    {linkName.map((el,i) => <div onClick={navigateHandler} key={i}><Typo type={TypoType.LinkFooter}>{el}</Typo></div>)} 
+                </FlexContainer>
+            }
+        </FlexContainer>
     )
 }
 

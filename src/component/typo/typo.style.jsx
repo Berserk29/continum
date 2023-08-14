@@ -2,14 +2,12 @@ import styled, {css}  from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
 // CSS
-
 const CssHeadline = css`
     font-family: 'Gmarket Sans';
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 160%;
     white-space: pre-line;
-    /* TESTING */
 `
 
 const CssNoto = css`
@@ -103,7 +101,6 @@ const B11 = css`
     ${CssNoto};
     font-size: 1.4rem;
 `
-
 
 // INFO HEADLINE COMPONENT
 export const Headline1Home = styled.h1`
@@ -205,7 +202,6 @@ export const HeadlineFooter = styled.span`
 `
 
 //  INFO SPAN COMPONENT
- 
 export const SpanOrange = styled.span`
     ${B5}
     color: var(--color-primary);
@@ -220,7 +216,6 @@ export const Span = styled.span`
 `
 
 // INFO TEXT COMPONENT
-
 export const Text1 = styled.p`
     ${B6}
     color: ${props => props.color || 'var(--color-050)'};
@@ -307,11 +302,18 @@ export const TextHome = styled.p`
     }
 `
 
-// INFO LINK COMPONENT
-
-export const LinkFooter = styled.li`
+export const TextFooter = styled.p`
     ${B8}
-    color: var(--color-white-opa30);
+    color: ${props => props.color || 'var(--color-white-opa30)'};
+    @media ${mediaQuery.styledTablet} {
+        ${B11}
+    }
+`
+
+// INFO LINK COMPONENT
+export const LinkFooter = styled.a`
+    ${B8}
+    color: ${props => props.color || 'var(--color-white-opa30)'};
     transition: color .2s;
     cursor: pointer;
     :hover {

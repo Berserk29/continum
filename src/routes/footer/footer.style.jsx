@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
-
 export const FooterContainer = styled.div`
     width: 100%;
     height: auto;
@@ -12,8 +11,10 @@ export const FooterContainer = styled.div`
 
 export const UpperPartContainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 8rem 4rem 8rem 4rem;
+    padding: 9.6rem 8.8rem 8.4rem 8.8rem;
+    
     @media ${mediaQuery.styledTablet} {
         padding: 4rem 3.2rem 6.4rem 3.2rem;
         flex-direction: column;
@@ -28,8 +29,12 @@ export const UpperPartContainer = styled.div`
 
 export const CategoryContainer = styled.div`
     display: flex;
-    gap: 4.8rem;
+    gap: 8rem;
+    margin-right: 2rem;
+    margin-bottom: 6rem;
     @media ${mediaQuery.styledTablet} {
+        margin-right: 0;
+        margin-bottom: 0;
         gap: 0;
         justify-content: space-between;
     }
@@ -42,37 +47,46 @@ export const CategoryContainer = styled.div`
 export const LowerPartContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 3.2rem 4rem;
-    border-top: 1px solid rgba(102, 102, 102, .7);
+    border-top: 1.2px solid var(--color-white-opa60);
+    padding: 4.4rem 8.8rem;
+    @media ${mediaQuery.styledTablet} {
+        border-top: 1px solid var(--color-white-opa40);
+        padding: 2.8rem 3.2rem;
+    }
     @media ${mediaQuery.styledMobile} {
         border-top: none;
-        padding: 3.2rem 2rem 5.6rem 2rem;
+        padding: 3.2rem 2rem 4rem 2rem;
         flex-direction: column-reverse;
         align-items: flex-start;
+        gap: 1.6rem;
     }
-`
-// TODO WILL PROBABLY DELETE
-export const Text = styled.p`
-    color: var(--color-200);
-    font-size: 1.3rem;
-    line-height: 1.6rem;
-    opacity: .8;
-`
-
-// TODO WILL PROBABLY DELETE
-export const TextLine2 = styled(Text)`
-    line-height: 2rem;
 `
 
 export const IconContainer = styled.div`
     display: flex;
-    gap: 1.2rem;
-    margin-left: 2rem;
-    @media ${mediaQuery.styledMobile}{
-        margin-left: 0;
+    gap: 1.45rem;
+    @media ${mediaQuery.styledTablet} {
+        gap: 1.2rem;
     }
 `
 
 export const FooterIcon = styled.img`
-    width: 3.2rem;
+    width: 3.85rem;
+    height: 3.85rem;
+    @media ${mediaQuery.styledTablet} {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+`
+
+export const FlexCss = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+    @media ${mediaQuery.styledTablet} {
+        gap: 1.55rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        gap: .5rem;
+    }
 `

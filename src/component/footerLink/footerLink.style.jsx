@@ -1,32 +1,14 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
-export const FooterContainer = styled.div`
+export const FlexContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
-`
-
-export const Heading = styled.h3`
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--color-050);
-    margin-bottom: 8px;
-    @media ${mediaQuery.styledMobile} {
-        font-size: 1.4rem;
-        cursor: pointer;
-        :hover{
-            color: var(--color-primary);
-        }
+    gap: ${props => props.gap?.[0] || 2.75}rem;
+    @media ${mediaQuery.styledTablet} {
+        gap: ${props => props.gap?.[1] || 2.35}rem;
     }
-`
-
-export const Link = styled.a`
-    font-size: 1.4rem;
-    color: var(--color-300);
-    transition: color .2s;
-    cursor: pointer;
-        &:hover{
-            color: var(--color-primary);
-        }
+    @media ${mediaQuery.styledMobile} {
+        gap: 1.6rem;
+    }
 `

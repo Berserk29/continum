@@ -1,8 +1,6 @@
 import styled, {keyframes} from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
-// TODO ANIMATION BUG WHEN USING FOR THE FIRST TW0 TIME, OTHER COMPONENT ON THE PAGE SHAKE..... 
-
 const slideInAnimation = keyframes`
   from { transform: translateY(-100%) ;}
   to { transform: translateY(0) ;}
@@ -12,7 +10,6 @@ const slideOutAnimation = keyframes`
     from { transform: translateY(0%) ;}
     to { transform: translateY(-100%) ;} 
 `
-
 
 export const Container = styled.div`
     display: flex;
@@ -36,10 +33,13 @@ export const UpperSection = styled.div`
 export const IconCss = styled.img`
     width: 2.4rem;
     height: 100%;
+    @media ${mediaQuery.styledTablet} {
+        width: 2rem;
+    }
 `
 
+/* INFO POSITION ABSOLUTE --> NOT PUSHING THE PADDING OF OTHER COMPONENT */
 export const LowerSection = styled.div`
-    /* INFO POSITION ABSOLUTE --> NOT PUSHING THE PADDING OF OTHER COMPONENT */
     position: absolute;
     top: 4.5rem;
     left: 0;
@@ -48,8 +48,13 @@ export const LowerSection = styled.div`
     overflow: hidden;
     border-top: 2px solid var(--color-050);
     z-index: 2;
+    @media ${mediaQuery.styledTablet} {
+        border-top: ${props => props.isFooter ? '1.5px solid var(--color-white-opa40)' : '2px solid var(--color-050)'};
+        top: 4.2rem;
+    }
 `
 
+/* INFO OPACITY TO MAKE SURE THE DROPSECTION IS HIDDEN WHEN REFRESHING THE PAGE */
 export const DropSection = styled.div`
     display: flex;
     flex-direction: column;
@@ -63,11 +68,17 @@ export const DropSection = styled.div`
     padding: 0 1.6rem;
     text-align: start;
     animation: ${({ isOpen }) => isOpen ? slideInAnimation : slideOutAnimation} .5s ease-in-out forwards;
-    /* INFO MAKE SURE THE DROPSECTION IS HIDDEN WHEN REFRESH THE PAGE */
     opacity: ${props => props.clickOne ? 1 : 0};
+    @media ${mediaQuery.styledTablet} {
+        border: ${ props => props.isFooter ? '1.5px solid var(--color-white-opa40)': 'none'};
+        border-top: none;
+    }
 `
 
 export const DropContainer = styled.div`
     border-bottom: ${props => props.isFirst ? `1.2px solid ${props.color}` : 'none'};
     padding: 1.2rem 0;
+    @media ${mediaQuery.styledTablet} {
+        border-bottom: ${props => props.isFirst ? `1px solid ${props.color}` : 'none'};
+    }
 ` 

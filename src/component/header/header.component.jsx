@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-
-import video from '../../assets/video/home_video.mp4'
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
 
 import { 
     HeaderContainerHome,
@@ -14,14 +14,16 @@ import {
 import Navigation from "../navigation/navigation.component";
 import SectionHeading from '../sectionHeading/sectionHeading.component'
 import Typo, { TypoType } from "../typo/typo.component";
-import {markerObject1} from '../marker/marker.data'
 import Marker from '../marker/marker.component'
 import HeaderSelecter from "../headerSelecter/headerSelecter.component";
 
+import video from '../../assets/video/home_video.mp4'
+import { markerObject1 } from '../marker/marker.data'
 import { headingHome01 } from "../sectionHeading/sectionHeading.data";
 
 const Header = ({props}) => {
-const {imageUrl, heading} = props;
+    const {imageUrl, heading} = props;
+    const isMobile = useMediaQuery(mediaQuery.useMobile)
 
 // TODO HAVING THE FIRST FRAME OF THE VIDEO AS THE POSTER IN VIDEOCSS
 
@@ -45,10 +47,7 @@ const {imageUrl, heading} = props;
                     <TitleHeaderOther>
                         <Typo type={TypoType.Headline1Header}>{heading}</Typo>
                     </TitleHeaderOther>
-
-                    {/* TODO THE HEADERMARKER */}
-                    <HeaderSelecter props={props}/>
-
+                    {!isMobile && <HeaderSelecter props={props}/>}
                 </HeaderContainerOther>
             }
         </Fragment>

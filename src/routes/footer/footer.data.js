@@ -9,7 +9,7 @@ export const footerIcon = {
 
 export const selecterObject = {
   linkName: ['Continum Corporation', 'Continum Systems', 'Continum Vision'],
-  width: ['27rem', '100%'],
+  width: ['30.4rem', '100%'],
   typoType: TypoType.HeadlineFooter,
   placeHolder: 'See all affiliates',
   isFooter: true,

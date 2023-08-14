@@ -18,6 +18,7 @@ export const TypoType = {
     Text5: 'Text5',
     Text6: 'Text6',
     TextHome: 'TextHome',
+    TextFooter: 'TextFooter',
     TextTable: 'TextTable',
     SpanOrange: 'SpanOrange',
     Span: 'Span',
