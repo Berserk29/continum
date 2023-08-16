@@ -11,9 +11,8 @@ import { headingArray, headingArrayTablet, contactArray } from "./contactPage.da
 
 const ContactPage = ({props}) => {
     const isTablet = useMediaQuery(mediaQuery.useTablet);
-
     const tableMap = (el, i) => <Table key={i} type={TableType.greyHeading}>{el}</Table> ;
-
+    
     const contentMap = (el) => {
         return (
             <Fragment key={el.id}>

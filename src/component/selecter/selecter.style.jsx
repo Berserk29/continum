@@ -1,15 +1,6 @@
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
-
-const slideInAnimation = keyframes`
-  from { transform: translateY(-100%) ;}
-  to { transform: translateY(0) ;}
-`
-
-const slideOutAnimation = keyframes`
-    from { transform: translateY(0%) ;}
-    to { transform: translateY(-100%) ;} 
-`
+import { slideInAnimation, slideOutAnimation } from "../../animation/keyframes.style";
 
 export const Container = styled.div`
     display: flex;

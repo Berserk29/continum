@@ -1,9 +1,7 @@
-import { delay } from 'framer-motion';
 import iconBusiness1 from '../../assets/icon/Icon_ice.png';
 import iconBusiness2 from '../../assets/icon/Icon_wind.png';
 import cardImg1 from '../../assets/image/subpage_contents_04.jpg'
 import cardImg2 from '../../assets/image/subpage_contents_05.jpg'
-
 
 export const storyArray = [
     {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AnimationChoice } from "../../animation/animation.style";
+import { AnimationChoice } from "../../animation/keyframes.style";
 import mediaQuery from "../../helper/mediaQuery";
 
 export const Section = styled.div`

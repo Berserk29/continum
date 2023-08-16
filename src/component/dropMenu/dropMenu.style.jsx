@@ -1,5 +1,19 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
+import { slideInAnimation, slideOutAnimation } from "../../animation/keyframes.style";
+
+export const OverflowContainer = styled.div`
+    position: absolute;
+    height: 43rem;
+    width: 100%;
+    overflow: hidden;
+    @media ${mediaQuery.styledTablet} {
+        height: 45rem;
+    }
+    @media ${mediaQuery.styledMobile} {
+        height: 50rem;
+    }
+`
 
 export const DropMenuContainer = styled.div`
     display: flex;
@@ -8,6 +22,8 @@ export const DropMenuContainer = styled.div`
     width: 100%;
     z-index: 150;
     background: linear-gradient(90deg, var(--color-secondary) 33%, var(--color-050) 33%);
+    animation: ${({ isOpen }) => isOpen ? slideInAnimation : slideOutAnimation} .7s ease-in-out forwards;
+    opacity: ${props => props.clickOne ? 1 : 0};
     @media ${mediaQuery.styledTablet} {
         background: linear-gradient(90deg, var(--color-050) 50%, var(--color-200) 50%);
         height: 45rem;

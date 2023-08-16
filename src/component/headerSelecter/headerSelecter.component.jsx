@@ -1,12 +1,12 @@
 import Selecter from "../selecter/selecter.component";
 import Typo, { TypoType } from "../typo/typo.component";
-import houseIcon from '../../assets/icon/icon_home_w.png'
 import Circle from "../circle/circle.component";
+import houseIcon from '../../assets/icon/icon_home_w.png'
 
 import { Container, IconCss } from "./headerSelecter.style";
 
 const HeaderSelecter = ({props}) => {
-    const {heading} = props;
+    const { heading } = props;
 
     return (
         <Container>

@@ -63,13 +63,13 @@ export const NumberPage = styled(CirclePage)`
 export const ArrowIcon = styled.img`
     width: 2.4rem;
     height: 2.4rem;
-    filter: var(--filter-400);
-    transition: filter .2s;
     cursor: pointer;
+    transition: filter .3s;
+    filter: var(--filter-400);
     margin-left: ${props => props.marginleft || 0}rem;
     margin-right: ${props => props.marginright || 0}rem;
     :hover{
-        filter: var(--filter-grey) ;
+        filter: var(--filter-black) ;
     }
 `
 

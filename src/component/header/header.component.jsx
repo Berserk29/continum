@@ -40,7 +40,7 @@ const Header = ({props}) => {
                         <Mouse /> 
                 </HeaderContainerHome>
                     :
-                <HeaderContainerOther style={{backgroundImage: `url(${imageUrl})`}}>
+                <HeaderContainerOther imageUrl={imageUrl}>
                     <Navigation/>
                     <TitleHeaderOther>
                         <Typo type={TypoType.Headline1Header}>{heading}</Typo>

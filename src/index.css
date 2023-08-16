@@ -2,7 +2,6 @@
   --color-primary: rgb(255, 116, 26);
   --color-secondary: rgb(16, 19, 24);
   --color-050: rgb(255, 255, 255);
-  --color-100: rgb(252, 252, 252);
   --color-200: rgb(243, 243, 243);
   --color-300: rgb(221, 221, 221);
   --color-400: rgb(102, 102, 102);
@@ -15,7 +14,6 @@
   --color-black-opa60: rgba(34,34,34,.6);
   --color-black-opa20: rgba(34,34,34,.2);
 
-  --filter-primary: invert(47%) sepia(99%) saturate(1132%) hue-rotate(346deg) brightness(100%) contrast(104%);
   --filter-grey: invert(83%) sepia(2%) saturate(4%) hue-rotate(334deg) brightness(83%) contrast(89%);
   --filter-black: brightness(0%);
   --filter-400: invert(40%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(95%) contrast(82%);
@@ -40,7 +38,7 @@ body {
 
 code {
   font-family: 'Roboto', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 
 a {
@@ -51,10 +49,3 @@ a {
 html {
   font-size: 62.5%;
 }
-
-/* font-size -> 8px */
-/* @media (max-width: 600px) {
-  html {
-    font-size: 50%;
-  }
-} */

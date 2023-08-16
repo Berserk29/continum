@@ -2,21 +2,26 @@ import { useState } from "react"
 import { useMediaQuery } from "react-responsive"
 import mediaQuery from "../../helper/mediaQuery"
 
-import { Container, UpperSection, IconCss, DropSection, LowerSection, DropContainer } from "./selecter.style"
+import { 
+    Container,
+    UpperSection,
+    IconCss,
+    DropSection, 
+    LowerSection, 
+    DropContainer 
+} from "./selecter.style"
 
 import Typo, {TypoType} from "../../component/typo/typo.component"
 
-import plusIcon from '../../assets/icon/Icon_plus.png'
-import minusIcon from '../../assets/icon/minus.png'
-import arrowDown from '../../assets/icon/Icon_dropdown.png'
+import { selecterIcon } from "./selecter.data"
 
 const Selecter = ({props}) => {
     const {linkName, typoType = 'Text5', placeHolder , isFooter, width , textColor = 'var(--color-secondary)'} = props;
     const [selecterChoice, setSelecterChoice] = useState(placeHolder);
     const [dropMenuOpen, setDropMenuOpen] = useState(false);
     const [clickOne, setClickOne] = useState(false)
+    const {arrowDown, minusIcon, plusIcon} = selecterIcon;
     const isTablet = useMediaQuery(mediaQuery.useTablet)
-
 
     // INFO TAKE THE SELECTERCHOICE IF IT'S IN THE ARRAY AND PUT IT AT THE BEGGINING
     const modifiedArr = linkName.filter(el => [selecterChoice].includes(el)).concat(linkName.filter(el => ![selecterChoice].includes(el))) 

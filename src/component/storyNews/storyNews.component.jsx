@@ -9,13 +9,12 @@ import {
 } from "./storyNews.style";
 
 import Typo, {TypoType} from "../typo/typo.component";
-
 import arrowBtn from '../../assets/icon/btn_arrow_default.png'
 
 const StoryNews = ({link, props, animate, variants}) => {
+    const { heading, text } = props;
     const navigate = useNavigate();
     const isMobile = useMediaQuery(mediaQuery.useMobile);
-    const {heading, text } = props;
 
     const viewHandler = () => navigate(link)
 

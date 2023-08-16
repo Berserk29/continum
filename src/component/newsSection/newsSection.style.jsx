@@ -19,7 +19,7 @@ export const NewsContainer = styled.div`
 `
 
 export const ImgContainer = styled.div`
-    background-image: ${props => props.image};
+    background-image: url(${props => props.image});
     background-size: cover;
     background-position: center;
     width: 35%;

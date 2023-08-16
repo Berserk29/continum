@@ -16,7 +16,6 @@ export const selecterObject = {
   textColor: 'var(--color-050)'
 }
 
-
 export const categories = [
     {
       id: 0,
@@ -48,4 +47,4 @@ export const categories = [
       path: '/contact',
       linkName: ['Contact Us', 'Location']
     },
-  ]
+]

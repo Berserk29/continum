@@ -3,13 +3,22 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
-import { DropMenuContainer, DropMenuUl, MenuLink, SectionLine, FlexContainer, Arrow} from "./dropMenu.style";
+import { 
+  DropMenuContainer,
+  DropMenuUl,
+  MenuLink,
+  SectionLine,
+  FlexContainer,
+  Arrow,
+  OverflowContainer
+} from "./dropMenu.style";
+
 import { categories } from "../../routes/footer/footer.data";
 
 import Typo, {TypoType} from '../typo/typo.component'
 import arrow from '../../assets/icon/arrow-narrow-right.png'
 
-const DropMenu = () => {
+const DropMenu = ({isOpen, clickOne}) => {
   const [arrayNum, setArrayNum] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
@@ -25,7 +34,8 @@ const DropMenu = () => {
   const linkColorLogic = (id) => arrayNum === id ? 'var(--color-primary)' : isTablet ? 'var(--color-secondary)' : 'var(--color-050)';
 
     return (
-        <DropMenuContainer>
+      <OverflowContainer>
+        <DropMenuContainer isOpen={isOpen} clickOne={clickOne}>
             <DropMenuUl gap={['2.5rem', '4rem']}>
               {categories.map((el) =>
                 <FlexContainer key={el.id}>
@@ -48,6 +58,7 @@ const DropMenu = () => {
             </DropMenuUl>
           }
         </DropMenuContainer>
+      </OverflowContainer>
     )
 }
 

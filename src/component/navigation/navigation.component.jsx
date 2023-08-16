@@ -5,6 +5,7 @@ import mediaQuery from "../../helper/mediaQuery";
 
 import DropMenu from "../dropMenu/dropMenu.component";
 import Typo , {TypoType} from "../typo/typo.component"
+
 import { navLinkArray, navIcon } from "./navigation.data";
 
 import { 
@@ -19,26 +20,39 @@ import {
 
 
 const Navigation = () => {
-  const [hoverState, setHoverState] = useState(false);
-  const [dropMenuOn, setDropMenuOn] = useState(false);
   const {logo1, logo2, hamWhite, globeWhite, closeBtn} = navIcon;
+  const [hoverState, setHoverState] = useState(false);
+  const [dropMenuNav, setDropMenuNav] = useState(false);
+  const [dropMenuOn, setDropMenuOn] = useState(false);
+  const [clickOne, setClickOne] = useState(false)
   const navigate = useNavigate();
   const isTablet = useMediaQuery(mediaQuery.useTablet);
 
   const navigateHandler = (link) => navigate(link);
-  const hoverHandlerOn = () => setHoverState(true);
-  const hoverHandlerOff = () => setHoverState(false);
-  const hoverLogic = (option1, option2) => hoverState || dropMenuOn  ? option1 : option2 ;
-  const navHamLogic = (option1, option2) => dropMenuOn ? option1 : option2
+  const hoverHandler = () => setHoverState(!hoverState);
+  const hoverLogic = (option1, option2) => hoverState || dropMenuNav  ? option1 : option2 ;
+  const globeLogic = (option1, option2) => hoverState && !dropMenuNav ? option1 : option2; 
+  const hamLogic = (option1, option2) => dropMenuNav ? option1 : option2
 
+  // INFO The dropMenuNav is made to keep the navigation hover color until the dropMenu comeback
+  // INFO The dropMenu take .7s to comeback that's why the 700
   const clickHandler = () => {
-    if(!dropMenuOn) setDropMenuOn(true)
-    else setDropMenuOn(false)
+    if(!dropMenuOn) {
+      setClickOne(true)
+      setDropMenuOn(true)
+      setDropMenuNav(true)
+    }
+    else {
+      setDropMenuOn(false)
+      setTimeout(() => {
+        setDropMenuNav(false)
+      }, 700)
+    } 
   };
   
     return (
       <Fragment>
-            <NavigationContainer onMouseEnter={hoverHandlerOn} onMouseLeave={hoverHandlerOff} color={hoverLogic('var(--color-050)','transparent')}>
+            <NavigationContainer onMouseEnter={hoverHandler} onMouseLeave={hoverHandler} color={hoverLogic('var(--color-050)','transparent')}>
               <NavLogoContainer onClick={() => navigateHandler('/')}>
                 <NavLogo1 src={logo1} alt="Continum-logo" />
                 <NavLogo2 isHover={hoverLogic(true, false)} src={logo2} alt="Continum-logo" />
@@ -49,14 +63,13 @@ const Navigation = () => {
                 </NavLinksContainer>
               }
               <NavIconsContainer>
-                {!dropMenuOn && <NavIcon src={globeWhite}  isHover={hoverLogic(true, false)}  alt={'language-icon'} />}
-                <NavIcon src={navHamLogic(closeBtn, hamWhite)} isHover={hoverLogic(true, false)} alt={'hamburger-icon'} onClick={clickHandler}/>
+                <NavIcon src={globeWhite}  isHover={globeLogic(true, false)}  alt={'language-icon'} />
+                <NavIcon src={hamLogic(closeBtn, hamWhite)} isHover={hoverLogic(true, false)} alt={'hamburger-icon'} onClick={clickHandler}/>
               </NavIconsContainer>
             </NavigationContainer>
-        {dropMenuOn && <DropMenu/> }
+            <DropMenu isOpen={dropMenuOn} clickOne={clickOne}/> 
       </Fragment>
     )
 }
-
 
 export default Navigation;

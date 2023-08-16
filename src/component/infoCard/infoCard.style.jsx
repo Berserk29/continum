@@ -45,8 +45,7 @@ export const TextContainer = styled.div`
     }
 `
 
-// Horizontal container
-
+// INFO Horizontal container
 export const HorizontalContainer = styled(motion.div)`
     display: flex;
     gap: 3.2rem;

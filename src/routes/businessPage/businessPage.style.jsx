@@ -23,6 +23,7 @@ export const StoryContainer = styled.div`
         gap: 6.4rem;
     }
 `
+
 export const Section = styled.div`
     display: flex;
     flex-direction: column;
@@ -31,7 +32,6 @@ export const Section = styled.div`
         gap: 4rem;
     }
 `
-
 
 export const InfoContainer = styled.div`
     display: flex;
@@ -54,7 +54,6 @@ export const InfoCardContainer = styled.div`
     flex: 1440px 0 1;
     gap: 6.4rem;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-
     @media ${mediaQuery.styledTablet}{
         gap: 3.2rem;
     }
@@ -92,7 +91,3 @@ export const FlexCenter = styled.div`
     display: flex;
     justify-content: center;
 `
-
-
-
-

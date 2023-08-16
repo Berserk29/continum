@@ -13,20 +13,16 @@ import {
 } from "./infoCard.style";
 
 import Typo, { TypoType } from "../typo/typo.component";
+import { variantUpDelay } from "../../helper/animationMotion";
 
 const InfoCard = ({props}) => {
-    const {imageUrl, heading, text, color, vertical, padding, middleGap, delay = 0} = props;
+    const { imageUrl, heading, text, color, vertical, padding, middleGap, delay = 0} = props;
     const control = useAnimation()
     const [ref, inView] = useInView({threshold: 0.2})
 
     useEffect(() => {
         if(inView) control.start('visible')
     }, [control, inView])
-
-    const variantUpDelay = {
-        visible: {opacity: 1, y: 0, transition: {duration: .8, delay: delay}},
-        hidden: {opacity: 0, y: '120px'}
-    }
 
     return (
         <>
@@ -35,7 +31,7 @@ const InfoCard = ({props}) => {
                 ref={ref} 
                 initial='hidden' 
                 animate={control}
-                variants={variantUpDelay} 
+                variants={variantUpDelay(delay)} 
                 color={color} 
                 padding={padding}
                 gap={middleGap}
@@ -54,7 +50,7 @@ const InfoCard = ({props}) => {
                 color={color}
                 animate={control}
                 initial='hidden' 
-                variants={variantUpDelay} 
+                variants={variantUpDelay(delay)} 
             >
                 <CardImgHorizon src={imageUrl}/>
                 <TextSection>

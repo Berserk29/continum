@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import mediaQuery from '../../helper/mediaQuery'
 
-// To Put motion into styled component !!! styled(motion.div) or styled(motion.h4) ... etc
-
 export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -14,7 +12,6 @@ export const CardContainer = styled.div`
     gap: 8rem;
     max-width: 144rem;
     max-height: 62.6rem;
-
     @media ${mediaQuery.styledTablet} {
         gap: 4rem;
         flex-direction: column;
@@ -26,7 +23,7 @@ export const CardContainer = styled.div`
     }
 `
 
-export const AboutImage = styled(motion.img)`
+export const AboutImage = styled.img`
     width: 50%;
     height: auto;
     @media ${mediaQuery.styledTablet} {
@@ -37,6 +34,7 @@ export const AboutImage = styled(motion.img)`
     }
 `
 
+// INFO (MOTION.HTML) TO BRING MOTION INTO STYLED COMPONENT 
 export const TextContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;

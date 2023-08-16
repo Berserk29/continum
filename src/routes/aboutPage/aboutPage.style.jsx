@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
 
-
 export const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;

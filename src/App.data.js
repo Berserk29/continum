@@ -1,12 +1,9 @@
-
 import aboutImage from '../src/assets/image/subpage_cover_01.jpg'
 import businessImage from '../src/assets/image/subpage_cover_02.jpg'
 import mediaImage from '../src/assets/image/subpage_cover_03.jpg'
 import esgImage from '../src/assets/image/subpage_cover_04.jpg'
 import contactImage from '../src/assets/image/subpage_cover_05.jpg'
 import poster from '../src/assets/image/poster.jpg'
-
-// TODO CHANGE THE POSTER BY AN JPG IMAGE
 
 export const headerArray = [
     {

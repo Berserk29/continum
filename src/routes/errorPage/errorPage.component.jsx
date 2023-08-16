@@ -1,5 +1,4 @@
 import { Container, Heading, Text, Button } from "./errorPage.style";
-
 import img from '../../assets/image/main_01.jpg'
 
 const ErrorPage = ({error, resetErrorBoundary}) => {

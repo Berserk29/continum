@@ -2,7 +2,6 @@ import styled, {css} from "styled-components";
 import { motion } from "framer-motion";
 import mediaQuery from "../../helper/mediaQuery";
 
-
 const flexCss = css`
     display: flex;
     flex-direction: column;

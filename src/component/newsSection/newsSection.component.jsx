@@ -14,8 +14,8 @@ import {
 import SectionHeading from "../sectionHeading/sectionHeading.component";
 import StoryNews from "../storyNews/storyNews.component";
 import Marker from "../marker/marker.component"
-
 import { variantUp } from "../../helper/animationMotion";
+
 import { storyArray, newsBgImg } from "./newsSection.data";
 import { headingHome03 } from "../sectionHeading/sectionHeading.data";
 import { markerObject3 } from "../marker/marker.data"
@@ -29,14 +29,9 @@ const NewsSection = () => {
         if(inView) control.start('visible')
     }, [control, inView])
 
-    const imageLogic = (image) => {
-        if(isTablet) return ''
-        return `url(${image})`;
-    }
-
     return (
        <NewsContainer ref={ref}>
-            <ImgContainer image={imageLogic(newsBgImg)}>
+            <ImgContainer image={!isTablet && newsBgImg}>
                 <Marker props={markerObject3}/>
                 <ImgContainerItems>
                     <SectionHeading props={headingHome03}/>

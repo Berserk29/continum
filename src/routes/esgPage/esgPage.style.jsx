@@ -52,7 +52,6 @@ export const LowerCardContainer = styled.div`
     flex: 1440px 0 1;
     gap: 4rem;
     grid-template-columns: repeat(auto-fit, minmax(47rem, 1fr)); 
-    
     @media ${mediaQuery.styledTablet} {
         grid-template-columns: repeat(auto-fit, minmax(40.5rem, 1fr)); 
         gap: 2.4rem;

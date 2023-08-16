@@ -1,14 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 
+import { headerArray } from "./App.data";
+
 import HomePage from "./routes/homePage/homePage.component";
 import AboutPage from "./routes/aboutPage/aboutPage.component";
 import BusinessPage from "./routes/businessPage/businessPage.component";
 import MediaPage from "./routes/mediaPage/mediaPage.component";
 import ContactPage from "./routes/contactPage/contactPage.component";
 import EsgPage from "./routes/esgPage/esgPage.component";
-
-import { headerArray } from "./App.data";
-
 
 function App() {
   return (

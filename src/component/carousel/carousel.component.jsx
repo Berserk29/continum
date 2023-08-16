@@ -5,7 +5,7 @@ import Typo ,{ TypoType } from "../typo/typo.component";
 import ViewBtn from "../viewBtn/viewBtn.component";
 
 import { markerObject2 } from "../marker/marker.data";
-import { comingRight, comingBack, comingUp } from "../../animation/animation.style";
+import { comingRight, comingBack, comingUp } from "../../animation/keyframes.style";
 import { carouselArray} from "./carousel.data";
 
 import { 
@@ -30,32 +30,25 @@ const Carousel = () => {
         setCarouselNum(num)
         setAnimationOn(true)
     }
-
-    // CAROUSEL TIMER
-        useEffect(() => { 
-            if(!inView) return;
-            const interval = setInterval(() => {
-                carouselNum === carouselArray.length - 1 ? setCarouselNum(0) : setCarouselNum(carouselNum + 1)
-                setAnimationOn(true)
-            }, 8000)
-            return () => clearInterval(interval)
-        }, [carouselNum, inView])
-
-
-        const imgControl = (i) => {
-            if(i === carouselNum) return 1
-            return 0
-        }
-
-        const CarouselLogic = (el, i) => (
-            carouselNum !== i ?
-            <CarouselItem key={i}><CarouselBtn onClick={() => CarouselHandler(i)}>{el.buttonText}</CarouselBtn></CarouselItem>
-            :
-            <CarouselItem key={i}><CarouselBtnActive>{el.buttonText}</CarouselBtnActive></CarouselItem>
-        )
-
-    // onAnimationEnd={()=> setAnimationOn(false)} At the end of the animation -> animation false !!
     
+    // INFO CAROUSEL TIMER
+    useEffect(() => { 
+        if(!inView) return;
+        const interval = setInterval(() => {
+            carouselNum === carouselArray.length - 1 ? setCarouselNum(0) : setCarouselNum(carouselNum + 1)
+            setAnimationOn(true)
+        }, 8000)
+        return () => clearInterval(interval)
+    }, [carouselNum, inView])
+    
+    const imgControl = (i) => i === carouselNum ? 1 : 0
+
+    const CarouselLogic = (el, i) => (
+        carouselNum !== i ?
+        <CarouselItem key={i}><CarouselBtn onClick={() => CarouselHandler(i)}>{el.buttonText}</CarouselBtn></CarouselItem>
+        :
+        <CarouselItem key={i}><CarouselBtnActive>{el.buttonText}</CarouselBtnActive></CarouselItem>
+    )
 
     return (
         <Section ref={ref}>

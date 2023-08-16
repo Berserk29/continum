@@ -3,9 +3,8 @@ import { TypoType } from "../typo/typo.component"
 // INFO titleTop, titleBottom, titleType, text, textType, textMaxWidth, span , viewBtn, alignItems, isBecomeOne,
 // INFO modifiedGap (num) -> [isTablet, isMobile]  modifiedAlign (start,end,center) --> [isTablet, isMobile]
 
-// TODO SOME OF THE OBJECT WILL HAVE MOTION VARIANT
 
-///////// HOMEPAGE HEADING
+//// INFO HOMEPAGE HEADING
 
 export const headingHome01 = {
     titleTop: 'The innovation pioneer',
@@ -43,7 +42,7 @@ export const headingHome04 = {
     isBecomeOne: true,
 }
 
-///////// ABOUTPAGE HEADING
+//// INFO ABOUTPAGE HEADING
 
 export const headingAbout01 = {
     titleTop: 'We create sustainable technologies',
@@ -53,7 +52,7 @@ export const headingAbout01 = {
     isBecomeOne: true,
 }
 
-//////// BUSINESSPAGE HEADING
+//// INFO BUSINESSPAGE HEADING
 
 export const headingBu01 = {
     titleTop: 'We discover untapped opportunities',
@@ -88,7 +87,7 @@ export const headingBu04 = {
     alignItems: 'center',
 }
 
-//////// ESG PAGE HEADING
+//// INFO ESG PAGE HEADING
 
 export const headingEsg01 = {
     titleTop: 'We will create a sustainable future',

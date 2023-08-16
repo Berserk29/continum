@@ -24,7 +24,7 @@ const MediaPage = ({props}) => {
   const [page, setPage] = useState(1);
   const [numPageArr, setNumPageArr] = useState([]);
   const [maxHeight , setMaxHeight] = useState(1015)
-  const {arrowLeft, arrowRight, plusIcon} = mediaIconArr;
+  const { arrowLeft, arrowRight, plusIcon } = mediaIconArr;
   const isTablet = useMediaQuery(mediaQuery.useTablet);
   const isMobile = useMediaQuery(mediaQuery.useMobile);
   const containerRef = useRef();
@@ -37,16 +37,16 @@ const MediaPage = ({props}) => {
     const height = containerRef?.current?.offsetHeight
     setMaxHeight(height)
   },[])
-
+  
   const PageType = { numberPage: isMobile ? 5 : 10 } ;
-
   const maxNumberPage =  Math.ceil(mediaArr.length / PageType.numberPage);
+  
   const pageMin = (page) => (page - 1) * PageType.numberPage;
   const pageMax = (page) => page * PageType.numberPage;
   const handlerPageUp = () => { if(page < maxNumberPage) setPage( page + 1) };
   const handlerPageDown = () => { if(page > 1) setPage( page - 1) };
   const smallerDate = (el) => el.slice(2);
-
+  
   // INFO Create an array having the number of page --> exemple [1,2,3]
   useEffect(() => {
     const numPage = []
@@ -55,7 +55,7 @@ const MediaPage = ({props}) => {
     }
     setNumPageArr(numPage)
   }, [maxNumberPage])
-
+  
   const tableMap = (el,i) => <Table key={i} type={TableType.greyHeading}>{el}</Table>;
   
   const contentMap = (el) => {

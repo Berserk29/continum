@@ -7,28 +7,25 @@ import Circle from "../circle/circle.component"
 import { ViewContainer,} from "./viewBtn.style"
 
 
-
 const ViewBtn = ({linkColor, link , animation, time}) => {
     const navigate = useNavigate()
     const [hoverState, setHoverState] = useState(false)
     
-    const hoverHandlerOn = () => setHoverState(true);
-    const hoverHandlerOff = () => setHoverState(false);
+    const hoverHandler = () => setHoverState(!hoverState);
     const viewHandler = () => navigate(link)
 
     return (
-        <ViewContainer animation={animation ? animation : ''} time={time ? time : ''}>
+        <ViewContainer animation={animation} time={time}>
               <div 
                 onClick={viewHandler}
-                onMouseEnter={hoverHandlerOn}
-                onMouseLeave={hoverHandlerOff}
+                onMouseEnter={hoverHandler}
+                onMouseLeave={hoverHandler}
               >
-               <Typo type={TypoType.Link} linkColor={linkColor}>View More</Typo>
+                <Typo type={TypoType.Link} linkColor={linkColor}>View More</Typo>
               </div>
-               <Circle activate={hoverState} color={linkColor}/>
+                <Circle activate={hoverState} color={linkColor}/>
         </ViewContainer>
     )
 }
 
 export default ViewBtn;
-

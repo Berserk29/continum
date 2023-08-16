@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { backToLife, upAndDown } from "../../animation/animation.style";
+import { backToLife, upAndDown } from "../../animation/keyframes.style";
 import mediaQuery from "../../helper/mediaQuery";
 
-// Home for homepage and Other for other page
+// INFO HOMEPAGE
 export const HeaderContainerHome = styled.div`
     position: relative;
     height: 100vh;
@@ -30,8 +30,7 @@ export const TitleHeaderHome = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation-name: ${backToLife}; 
-    animation-duration: 3s;
+    animation: ${backToLife} 3s; 
 `
 
 export const Mouse = styled.div`
@@ -44,8 +43,7 @@ export const Mouse = styled.div`
     opacity: .9;
     border-radius: 40%;
     border: 2px solid white;
-    animation-name: ${backToLife}; 
-    animation-duration: 4s;
+    animation: ${backToLife} 4s; 
     &:after {
         content: ' ';
         position: absolute;
@@ -59,8 +57,10 @@ export const Mouse = styled.div`
     }
 `
 
+// INFO OTHER PAGE
 export const HeaderContainerOther = styled.div`
     position: relative;
+    background-image: url(${props => props.imageUrl});
     width: 100%;
     height: 53rem;
     background-size: cover;
@@ -73,11 +73,9 @@ export const HeaderContainerOther = styled.div`
 
 export const TitleHeaderOther = styled.div`
     margin-top: 14rem;
+    animation: ${backToLife} 2s; 
     @media ${mediaQuery.styledMobile} {
         padding: 0 1rem;
         margin-top: 10rem;
     }
 `
-
-
-

@@ -1,13 +1,13 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
-import { useNavigate, useLocation } from "react-router-dom";
 
 import { FlexContainer } from "./footerLink.style";
 
 import Typo, { TypoType } from "../typo/typo.component";
 
 const FooterLink = ({props}) => {
-    const {path, title, linkName} = props;
+    const { path, title, linkName } = props;
     const isMobile = useMediaQuery(mediaQuery.useMobile);
     const navigate = useNavigate();
     const location = useLocation();
