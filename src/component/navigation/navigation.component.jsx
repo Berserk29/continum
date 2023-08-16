@@ -29,7 +29,7 @@ const Navigation = () => {
   const isTablet = useMediaQuery(mediaQuery.useTablet);
 
   const navigateHandler = (link) => navigate(link);
-  const hoverHandler = () => setHoverState(!hoverState);
+  const hoverHandler = (boolean) => setHoverState(boolean);
   const hoverLogic = (option1, option2) => hoverState || dropMenuNav  ? option1 : option2 ;
   const globeLogic = (option1, option2) => hoverState && !dropMenuNav ? option1 : option2; 
   const hamLogic = (option1, option2) => dropMenuNav ? option1 : option2
@@ -52,7 +52,7 @@ const Navigation = () => {
   
     return (
       <Fragment>
-            <NavigationContainer onMouseEnter={hoverHandler} onMouseLeave={hoverHandler} color={hoverLogic('var(--color-050)','transparent')}>
+            <NavigationContainer onMouseEnter={() => hoverHandler(true)} onMouseLeave={() => hoverHandler(false)} color={hoverLogic('var(--color-050)','transparent')}>
               <NavLogoContainer onClick={() => navigateHandler('/')}>
                 <NavLogo1 src={logo1} alt="Continum-logo" />
                 <NavLogo2 isHover={hoverLogic(true, false)} src={logo2} alt="Continum-logo" />

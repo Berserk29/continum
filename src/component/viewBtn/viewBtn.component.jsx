@@ -11,15 +11,15 @@ const ViewBtn = ({linkColor, link , animation, time}) => {
     const navigate = useNavigate()
     const [hoverState, setHoverState] = useState(false)
     
-    const hoverHandler = () => setHoverState(!hoverState);
+    const hoverHandler = (boolean) => setHoverState(boolean);
     const viewHandler = () => navigate(link)
 
     return (
         <ViewContainer animation={animation} time={time}>
               <div 
                 onClick={viewHandler}
-                onMouseEnter={hoverHandler}
-                onMouseLeave={hoverHandler}
+                onMouseEnter={() => hoverHandler(true)}
+                onMouseLeave={() => hoverHandler(false)}
               >
                 <Typo type={TypoType.Link} linkColor={linkColor}>View More</Typo>
               </div>
