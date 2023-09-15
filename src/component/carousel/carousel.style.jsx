@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { AnimationChoice } from "../../animation/keyframes.style";
 import mediaQuery from "../../helper/mediaQuery";
+import { SnapCss } from "../header/header.style";
 
 export const Section = styled.div`
     position: relative;
@@ -8,6 +9,7 @@ export const Section = styled.div`
     min-height: 76rem;
     width: 100%;
     background-color: black;
+    ${SnapCss}
 `
 
 export const AniContainer = styled.div`

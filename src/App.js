@@ -10,6 +10,7 @@ import ContactPage from "./routes/contactPage/contactPage.component";
 import EsgPage from "./routes/esgPage/esgPage.component";
 
 function App() {
+
   return (
     <Routes>
       <Route path="/" element={<HomePage props={headerArray[0]}/>} />

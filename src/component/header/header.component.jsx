@@ -25,6 +25,7 @@ const Header = ({props}) => {
     const {imageUrl, heading} = props;
     const isMobile = useMediaQuery(mediaQuery.useMobile)
 
+
     return(
         <Fragment>
             {   !heading ?

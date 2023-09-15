@@ -1,11 +1,33 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
+import { detect } from "detect-browser";
+import { SnapCss } from "../../component/header/header.style";
+const browser = detect();
+
+export const FooterHome = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--color-secondary);
+    ${SnapCss}
+    ${() => {
+        if(browser && browser.name === 'safari') {
+            return `
+            height: auto;
+            justify-content: center;
+            `
+        }
+    }}
+`
 
 export const FooterContainer = styled.div`
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background-color: var(--color-secondary);
 `
 

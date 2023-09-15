@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
+import { SnapCss } from "../header/header.style";
 
 export const NewsContainer = styled.div`
     display: flex;
     height: 100vh;
     min-height: 80rem;
+    ${SnapCss}
     @media ${mediaQuery.styledTablet} {
         flex-direction: column;
         justify-content: center;

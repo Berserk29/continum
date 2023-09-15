@@ -1,6 +1,23 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
+import { detect } from "detect-browser";
 import { backToLife, upAndDown } from "../../animation/keyframes.style";
 import mediaQuery from "../../helper/mediaQuery";
+const browser = detect();
+
+export const SnapCss = css`
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    /* Disable Scroll-snap for 'safari */
+    ${() => {
+        if(browser && browser.name === 'safari') {
+            return `
+            scroll-snap-align: none;
+            scroll-snap-stop: none;
+            `
+        }
+    }}
+`
+
 
 // INFO HOMEPAGE
 export const HeaderContainerHome = styled.div`
@@ -11,6 +28,7 @@ export const HeaderContainerHome = styled.div`
     background-position: center;
     overflow: hidden;
     min-height: 60rem;
+    ${SnapCss}
 `
 
 export const VideoCss = styled.video`

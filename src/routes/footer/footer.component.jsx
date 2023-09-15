@@ -5,6 +5,7 @@ import Typo, {TypoType} from "../../component/typo/typo.component";
 import { categories, footerIcon, selecterObject } from "./footer.data";
 
 import {
+    FooterHome,
     FooterContainer,
     UpperPartContainer,
     LowerPartContainer,
@@ -14,11 +15,15 @@ import {
     FlexCss
 } from "./footer.style";
 
-const Footer = () => {
+const Footer = ({isHome = false}) => {
   const { logoYoutube, logoInsta } = footerIcon
 
+  const FooterLogic = ({children}) => (
+    isHome ? <FooterHome>{children}</FooterHome> : <FooterContainer>{children}</FooterContainer>
+  )
+
   return (
-    <FooterContainer>
+    <FooterLogic>
       <UpperPartContainer>
         <CategoryContainer>
           {categories.map((el) => <FooterLink key={el.id} props={el}/>)}
@@ -35,7 +40,7 @@ const Footer = () => {
           <FooterIcon  src={logoInsta}/>
         </IconContainer>
       </LowerPartContainer>
-    </FooterContainer>
+    </FooterLogic>
   )
 }
 

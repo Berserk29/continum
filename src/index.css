@@ -46,6 +46,11 @@ a {
   color: black;
 }
 
+/* For scroll-snap-align weird behavior */
+html, body {
+  overscroll-behavior-y: none;
+}
+
 html {
   font-size: 62.5%;
 }

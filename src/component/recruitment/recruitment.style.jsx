@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SnapCss } from "../header/header.style";
 
 export const RecruitmentContainer = styled.div`
     position: relative;
@@ -14,4 +15,5 @@ export const RecruitmentContainer = styled.div`
     justify-content: center;
     text-align: center;
     padding: 0 2rem;
+    ${SnapCss}
 `

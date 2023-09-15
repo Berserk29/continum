@@ -34,8 +34,8 @@ export const NavLogoContainer = styled.div`
 `
 
 export const NavLogo1 = styled.img`
-    width: 100%;
     height: 3.35rem;
+    width: auto;
     @media ${mediaQuery.styledTablet}{
         height: 2.92rem;
     }
