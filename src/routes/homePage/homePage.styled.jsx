@@ -4,7 +4,7 @@ const browser = detect();
 
 export const Container = styled.div`
     /* Disable Scroll-snap for safari */
-        width: 100vw;
+        width: 100vw;    
         height: 100vh;
         ${() => {
         if(browser && browser.name !== 'safari') {

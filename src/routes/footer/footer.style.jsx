@@ -12,14 +12,6 @@ export const FooterHome = styled.div`
     justify-content: flex-end;
     background-color: var(--color-secondary);
     ${SnapCss}
-    ${() => {
-        if(browser && browser.name === 'safari') {
-            return `
-            height: auto;
-            justify-content: center;
-            `
-        }
-    }}
 `
 
 export const FooterContainer = styled.div`
@@ -38,6 +30,7 @@ export const UpperPartContainer = styled.div`
     padding: 9.6rem 8.8rem 8.4rem 8.8rem;
     
     @media ${mediaQuery.styledTablet} {
+        flex-wrap: nowrap;
         padding: 4rem 3.2rem 6.4rem 3.2rem;
         flex-direction: column;
         gap: 4rem;

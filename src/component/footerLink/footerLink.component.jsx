@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import mediaQuery from "../../helper/mediaQuery";
 
-import { FlexContainer } from "./footerLink.style";
+import { FlexContainer, LinkCss } from "./footerLink.style";
 
 import Typo, { TypoType } from "../typo/typo.component";
 
@@ -20,15 +20,13 @@ const FooterLink = ({props}) => {
     return (
         <FlexContainer>
             { isMobile ?
-                <div onClick={navigateHandler}>
-                    <Typo type={TypoType.LinkFooter} linkColor='var(--color-white-opa40)'>{title}</Typo>
-                </div>
+                <LinkCss onClick={navigateHandler}  color='var(--color-white-opa40)'>{title}</LinkCss>
                 :
                 <Typo type={TypoType.HeadlineFooter}>{title}</Typo>
             }
             { !isMobile && 
                 <FlexContainer gap={[1.9, 1.6]}>
-                    {linkName.map((el,i) => <div onClick={navigateHandler} key={i}><Typo type={TypoType.LinkFooter}>{el}</Typo></div>)} 
+                    {linkName.map((el,i) => <LinkCss onClick={navigateHandler} key={i} type={TypoType.LinkFooter}>{el}</LinkCss>)} 
                 </FlexContainer>
             }
         </FlexContainer>

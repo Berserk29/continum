@@ -14,13 +14,15 @@ const HomePage = ({props}) => {
 
     useEffect(() => {
         const container = containerRef.current;
-        container.focus()
         const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
         const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
         let containerScrollTop;
         let scrollDistance;
         let prevDeltaY = 0;
-
+        
+        // To focus the container do not forget to add tabIndex="0" on the element
+        container.focus()
+        
         const scrolling = () => {
             container.scrollTo({
                 top: containerScrollTop + scrollDistance,
@@ -57,7 +59,7 @@ const HomePage = ({props}) => {
 
 
     return (
-        <Container ref={containerRef}>
+        <Container ref={containerRef} tabIndex="0">
             <Header props={props}/>
             <Carousel/>
             <NewsSection/>

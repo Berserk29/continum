@@ -51,6 +51,11 @@ html, body {
   overscroll-behavior-y: none;
 }
 
+/* When the focus color disapear */
+*:focus {
+  outline: none;
+}
+
 html {
   font-size: 62.5%;
 }

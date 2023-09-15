@@ -1,6 +1,7 @@
 import FooterLink from "../../component/footerLink/footerLink.component";
 import Selecter from "../../component/selecter/selecter.component";
 import Typo, {TypoType} from "../../component/typo/typo.component";
+import { detect } from "detect-browser";
 
 import { categories, footerIcon, selecterObject } from "./footer.data";
 
@@ -17,9 +18,10 @@ import {
 
 const Footer = ({isHome = false}) => {
   const { logoYoutube, logoInsta } = footerIcon
+  const browser = detect()
 
   const FooterLogic = ({children}) => (
-    isHome ? <FooterHome>{children}</FooterHome> : <FooterContainer>{children}</FooterContainer>
+    !isHome || browser.name === 'safari' ? <FooterContainer>{children}</FooterContainer> : <FooterHome>{children}</FooterHome>
   )
 
   return (
