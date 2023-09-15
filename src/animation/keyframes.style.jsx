@@ -48,6 +48,15 @@ export const slideOutAnimation = keyframes`
     to { transform: translateY(-100%) ;} 
 `
 
+export const globeAniHiden = keyframes`
+    0% { opacity: 1}
+    99% { opacity: 0 }
+    100% {
+        opacity: 0;
+        display: none
+    }
+`
+
 export const AnimationChoice = css`
     animation: ${props => props.animation} ${props => props.time}s;
 `

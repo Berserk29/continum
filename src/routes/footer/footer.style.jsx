@@ -7,6 +7,7 @@ const browser = detect();
 export const FooterHome = styled.div`
     width: 100%;
     height: 100vh;
+    min-height: 65rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

@@ -10,6 +10,7 @@ import { navLinkArray, navIcon } from "./navigation.data";
 
 import { 
   NavIcon,
+  NavIconGloble,
   NavIconsContainer,
   NavigationContainer,
   NavLinksContainer,
@@ -63,7 +64,7 @@ const Navigation = () => {
                 </NavLinksContainer>
               }
               <NavIconsContainer>
-                <NavIcon src={globeWhite}  isHover={globeLogic(true, false)}  alt={'language-icon'} />
+                <NavIconGloble src={globeWhite} isAni={hamLogic(true,false)}  isHover={globeLogic(true, false)}  alt={'language-icon'} />
                 <NavIcon src={hamLogic(closeBtn, hamWhite)} isHover={hoverLogic(true, false)} alt={'hamburger-icon'} onClick={clickHandler}/>
               </NavIconsContainer>
             </NavigationContainer>

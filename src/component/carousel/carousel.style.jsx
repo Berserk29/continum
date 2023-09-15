@@ -6,7 +6,7 @@ import { SnapCss } from "../header/header.style";
 export const Section = styled.div`
     position: relative;
     height: 100vh;
-    min-height: 76rem;
+    min-height: 65rem;
     width: 100%;
     background-color: black;
     ${SnapCss}
@@ -38,7 +38,7 @@ export const SectionImg = styled.div`
 
 export const CarouselContainer = styled.div`
     position: absolute;
-    top: 22%;
+    top: 20%;
     margin-left: 14.4rem;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,6 @@ export const CarouselContainer = styled.div`
     }
     @media ${mediaQuery.styledMobile} {
         padding: 0 2rem;
-        top: 23%;
     }
 `
 

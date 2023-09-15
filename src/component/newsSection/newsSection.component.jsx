@@ -38,7 +38,7 @@ const NewsSection = () => {
                 </ImgContainerItems>
             </ImgContainer>
             <StoryContainer>
-                { storyArray.map(el => <StoryNews link='/media' props={el} key={el.id} animate={control} variants={variantUp}/> ) }
+                { storyArray.map(el => <StoryNews link='/media' hide={isTablet} props={el} key={el.id} animate={control} variants={variantUp}/> ) }
             </StoryContainer>
        </NewsContainer>
     )

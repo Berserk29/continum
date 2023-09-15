@@ -5,18 +5,16 @@ import { SnapCss } from "../header/header.style";
 export const NewsContainer = styled.div`
     display: flex;
     height: 100vh;
-    min-height: 80rem;
+    min-height: 65rem;
     ${SnapCss}
     @media ${mediaQuery.styledTablet} {
         flex-direction: column;
         justify-content: center;
-        gap: 4rem;
+        gap: 3rem;
         padding: 8rem;
-        height: auto;
-        min-height: none;
     }
     @media ${mediaQuery.styledMobile} {
-        padding: 6.4rem 2rem 8rem 2rem;
+        padding: 0 2rem;
     }
 `
 

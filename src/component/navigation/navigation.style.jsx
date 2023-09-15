@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import mediaQuery from "../../helper/mediaQuery";
+import { globeAniHiden } from "../../animation/keyframes.style";
 
 export const NavigationContainer = styled.div`
     position: relative;
@@ -74,4 +75,8 @@ export const NavIcon = styled.img`
     @media ${mediaQuery.styledMobile} {
         width: 2rem;
     }
+`
+
+export const NavIconGloble = styled(NavIcon)`
+    animation: ${props => props.isAni && globeAniHiden} .5s forwards;
 `

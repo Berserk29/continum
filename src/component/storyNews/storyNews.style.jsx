@@ -11,8 +11,11 @@ export const StoryContainerItems = styled(motion.div)`
     :last-child {
         border-bottom: 1.5px solid var(--color-primary);
     }
-    @media ${mediaQuery.styledMobile} {
+    @media ${mediaQuery.styledTablet} {
         padding: 2.4rem 0;
+    }
+    @media ${mediaQuery.styledMobile} {
+        padding: 2rem 0;
     }
 `
 
@@ -21,9 +24,17 @@ export const TextContainer = styled.div`
     flex-direction: column;
     gap: 1.2rem;
     @media ${mediaQuery.styledMobile} {
-        gap: 1.5rem;
+        gap: 0.5rem;
     }
 `
+
+export const TextCss = styled.div`
+    display: -webkit-box;
+    -webkit-line-clamp: ${props => props.hide ? 1 : 2};
+    -webkit-box-orient: vertical;
+    overflow: hidden;  
+`
+
 
 export const ArrowBtn = styled.img`
     cursor: pointer;

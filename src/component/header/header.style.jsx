@@ -5,17 +5,21 @@ import mediaQuery from "../../helper/mediaQuery";
 const browser = detect();
 
 export const SnapCss = css`
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-    /* Disable Scroll-snap for 'safari */
-    ${() => {
-        if(browser && browser.name === 'safari') {
-            return `
-            scroll-snap-align: none;
-            scroll-snap-stop: none;
-            `
-        }
-    }}
+    scroll-snap-align: none;
+    scroll-snap-stop: none;
+
+    /* If lower than 650px will not read this block of code*/
+    @media ${mediaQuery.styledMinHeight} {
+        ${() => {
+            // Prevent Safari 
+            if(browser && browser.name !== 'safari' ) {
+                return `
+                scroll-snap-align: center;
+                scroll-snap-stop: always;
+                `
+            }
+        }}
+    }
 `
 
 
@@ -23,6 +27,7 @@ export const SnapCss = css`
 export const HeaderContainerHome = styled.div`
     position: relative;
     height: 100vh;
+    min-height: 65rem;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -72,6 +77,9 @@ export const Mouse = styled.div`
         background-color: white;
         color: white;
         animation: ${upAndDown} 2.5s infinite;
+    }
+    @media ${mediaQuery.styledMobile} {
+        bottom: 8rem
     }
 `
 

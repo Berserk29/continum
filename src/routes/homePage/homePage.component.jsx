@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Container } from "./homePage.styled";
 import { homeDebounce } from "../../helper/helperFunction";
+import { useMediaQuery } from "react-responsive";
+import mediaQuery from "../../helper/mediaQuery";
 
 import Carousel from "../../component/carousel/carousel.component";
 import Header from "../../component/header/header.component";
@@ -11,6 +13,7 @@ import Footer from "../footer/footer.component";
 
 const HomePage = ({props}) => {
     const containerRef = useRef()
+    const isMinHeight = useMediaQuery(mediaQuery.useMinHeight)
 
     useEffect(() => {
         const container = containerRef.current;
@@ -20,6 +23,9 @@ const HomePage = ({props}) => {
         let scrollDistance;
         let prevDeltaY = 0;
         
+        // If lower than 650px do not continue
+        if(isMinHeight) return;
+
         // To focus the container do not forget to add tabIndex="0" on the element
         container.focus()
         
@@ -54,7 +60,7 @@ const HomePage = ({props}) => {
         return () => {
             container.removeEventListener('wheel', smoothScroll);
         };
-    }, [])
+    }, [isMinHeight])
 
 
 

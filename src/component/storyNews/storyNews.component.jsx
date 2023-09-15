@@ -5,13 +5,14 @@ import mediaQuery from "../../helper/mediaQuery";
 import { 
     ArrowBtn,
     StoryContainerItems,
-    TextContainer
+    TextContainer,
+    TextCss
 } from "./storyNews.style";
 
 import Typo, {TypoType} from "../typo/typo.component";
 import arrowBtn from '../../assets/icon/btn_arrow_default.png'
 
-const StoryNews = ({link, props, animate, variants}) => {
+const StoryNews = ({link, props, animate, variants, hide}) => {
     const { heading, text } = props;
     const navigate = useNavigate();
     const isMobile = useMediaQuery(mediaQuery.useMobile);
@@ -21,10 +22,10 @@ const StoryNews = ({link, props, animate, variants}) => {
     return (
         <StoryContainerItems animate={animate} variants={variants} initial='hidden'>
             <TextContainer>
-                <Typo type={TypoType.Headline6}>{heading}</Typo>
-                <Typo type={TypoType.Text4}>{text}</Typo>
+                <TextCss hide={hide}><Typo type={TypoType.Headline6}>{heading}</Typo></TextCss>
+                <TextCss hide={hide}><Typo type={TypoType.Text4}>{text}</Typo></TextCss>
             </TextContainer>
-            {!isMobile && <ArrowBtn src={arrowBtn} onClick={viewHandler}/>}
+            {!isMobile && <ArrowBtn  src={arrowBtn} onClick={viewHandler}/>}
         </StoryContainerItems>
     )
 }

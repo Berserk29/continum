@@ -7,7 +7,7 @@ export const RecruitmentContainer = styled.div`
     background-size: cover;
     background-position: center;
     height: 100vh;
-    min-height: 76rem;
+    min-height: 65rem;
     gap: 3.2rem;
     display: flex;
     flex-direction: column;
