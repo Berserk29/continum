@@ -4,18 +4,6 @@ import { detect } from "detect-browser";
 import { SnapCss } from "../../component/header/header.style";
 const browser = detect();
 
-export const FooterHome = styled.div`
-    width: 100%;
-    height: 100vh;
-    min-height: 65rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-color: var(--color-secondary);
-    ${SnapCss}
-    padding-bottom: 4rem;
-`
-
 export const FooterContainer = styled.div`
     width: 100%;
     height: auto;
@@ -23,6 +11,13 @@ export const FooterContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     background-color: var(--color-secondary);
+`
+
+export const FooterHome = styled(FooterContainer)`
+    ${SnapCss}
+    @media ${mediaQuery.styledMobile} {
+        padding-bottom: 4rem;   
+    }
 `
 
 export const UpperPartContainer = styled.div`
