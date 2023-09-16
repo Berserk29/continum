@@ -14,7 +14,7 @@ export const SnapCss = css`
             // Prevent Safari 
             if(browser && browser.name !== 'safari' ) {
                 return `
-                scroll-snap-align: end;
+                scroll-snap-align: center;
                 scroll-snap-stop: always;
                 `
             }

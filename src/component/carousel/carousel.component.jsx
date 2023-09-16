@@ -31,13 +31,30 @@ const Carousel = () => {
         setAnimationOn(true)
     }
     
-    // INFO CAROUSEL TIMER
+    const setCarouselFn = () => {
+        setCarouselNum((prevNum) => {
+            if(prevNum === carouselArray.length - 1) return 0
+            return prevNum + 1;
+        })
+    }
+
+    // When inView will change after 1.5s
+    useEffect(() => {
+        if(!inView) return;
+        const timeout = setTimeout(() => {
+            setCarouselFn()
+            setAnimationOn(true)
+        }, 1500)
+        return () => clearTimeout(timeout)
+    },[inView])
+
+    // Carousel timer, interval at each 9s
     useEffect(() => { 
         if(!inView) return;
         const interval = setInterval(() => {
-            carouselNum === carouselArray.length - 1 ? setCarouselNum(0) : setCarouselNum(carouselNum + 1)
+            setCarouselFn()
             setAnimationOn(true)
-        }, 8000)
+        }, 9000)
         return () => clearInterval(interval)
     }, [carouselNum, inView])
     

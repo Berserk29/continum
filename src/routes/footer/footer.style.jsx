@@ -13,6 +13,7 @@ export const FooterHome = styled.div`
     justify-content: flex-end;
     background-color: var(--color-secondary);
     ${SnapCss}
+    padding-bottom: 4rem;
 `
 
 export const FooterContainer = styled.div`
