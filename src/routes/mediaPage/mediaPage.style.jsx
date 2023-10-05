@@ -58,6 +58,11 @@ export const CirclePage = styled.div`
 export const NumberPage = styled(CirclePage)`
     background-color: transparent;
     color: var(--color-400);
+    cursor: pointer;
+    transition: background-color .2s;
+    :hover {
+        background-color: var(--color-200);
+    }
 `
 
 export const ArrowIcon = styled.img`

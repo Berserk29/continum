@@ -38,13 +38,14 @@ const MediaPage = ({props}) => {
     setMaxHeight(height)
   },[])
   
-  const PageType = { numberPage: isMobile ? 5 : 10 } ;
+  const PageType = { numberPage: isMobile ? 5 : 8 } ;
   const maxNumberPage =  Math.ceil(mediaArr.length / PageType.numberPage);
   
   const pageMin = (page) => (page - 1) * PageType.numberPage;
   const pageMax = (page) => page * PageType.numberPage;
   const handlerPageUp = () => { if(page < maxNumberPage) setPage( page + 1) };
   const handlerPageDown = () => { if(page > 1) setPage( page - 1) };
+  const handlerClickNum = (page) => setPage(page);
   const smallerDate = (el) => el.slice(2);
   
   // INFO Create an array having the number of page --> exemple [1,2,3]
@@ -87,7 +88,7 @@ const MediaPage = ({props}) => {
                   { !isTablet &&
                     <Fragment>
                       <ArrowIcon src={arrowLeft} onClick={handlerPageDown} marginright={1}/>
-                      {numPageArr.map((el) => page === el ? <CirclePage key={el}>{el}</CirclePage> : <NumberPage key={el}>{el}</NumberPage>)}
+                      {numPageArr.map((el) => page === el ? <CirclePage key={el}>{el}</CirclePage> : <NumberPage onClick={() => handlerClickNum(el)} key={el}>{el}</NumberPage>)}
                       <ArrowIcon src={arrowRight} onClick={handlerPageUp} marginleft={1}/>                    
                     </Fragment>
                   }    
