@@ -19,6 +19,7 @@ function App() {
       <Route path="media" element={<MediaPage props={headerArray[3]}/>} />
       <Route path="esg" element={<EsgPage props={headerArray[4]}/>} />
       <Route path="contact" element={<ContactPage props={headerArray[5]}/>} />
+      <Route path="*" element={<HomePage props={headerArray[0]}/>} />
     </Routes>
   );
 }
